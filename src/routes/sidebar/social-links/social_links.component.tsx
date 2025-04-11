@@ -1,6 +1,6 @@
 import { Fragment, ReactElement } from "react";
 import { Stack } from "react-bootstrap";
-import { FaDiscord, FaGithub, FaLinkedin, FaSteam } from "react-icons/fa";
+import { FaGithub, FaItchIo, FaLinkedin, FaSteam } from "react-icons/fa";
 import { SiRiotgames } from "react-icons/si";
 import SocialItem from "./social-item/social_item.component";
 
@@ -32,10 +32,10 @@ function SocialLinks(): ReactElement {
             link: "https://github.com/alcoranpaul",
             icon: <FaGithub />,
         },
-        discord: {
-            title: "Discord",
-            link: "https://discordlookup.com/user/581876912377561089",
-            icon: <FaDiscord />,
+        itch: {
+            title: "Itch.io",
+            link: "https://digitalino.itch.io",
+            icon: <FaItchIo />,
         },
         steam: {
             title: "Steam",
