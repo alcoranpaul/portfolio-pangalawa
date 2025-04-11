@@ -1,6 +1,6 @@
 import { Fragment, ReactElement } from "react";
 import { Stack } from "react-bootstrap";
-import NavigationItem from "./item/navigation_item.component";
+import NavigationItem from "./navigation_item/navigation_item.component";
 import './navigation.style.css';
 
 
