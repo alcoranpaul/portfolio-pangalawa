@@ -1,0 +1,62 @@
+:root{
+
+  /* Deep Base Colors */
+  --color-bg-primary: #121212;       /* Rich near-black */
+  --color-bg-secondary: #1e1e1e;     /* Slightly lighter black */
+  
+  /* Accents */
+  --color-accent-primary: #7c3aed;   /* Soft violet (modern, eye-pleasing) */
+  --color-accent-secondary: #92d1c9; /* Teal (fresh contrast) */
+  
+  /* Text & UI */
+  --color-text-primary: #e2e8f0;     /* Off-white (easy on eyes) */
+  --color-text-secondary: #94a3b8;   /* Muted gray-blue */
+  --color-border: #2d3748;           /* Dark gray (subtle separation) */
+  
+  /* Specials */
+  --color-highlight: #f59e0b;        /* Amber (for CTAs/important elements) */
+  --color-error: #ef4444;            /* Soft red (alerts) */
+
+
+    /* Light Theme */
+    /* Backgrounds */
+    /* --color-bg-primary: #f0ffceff;  Light cream (nyanza) */
+    /* --color-bg-secondary: #ccc9a1ff; Muted green (sage) */
+
+    /* Accents */
+    /* --color-accent-primary: #a53f2bff;  Warm red (chestnut) */
+    /* --color-accent-secondary: #4c230aff; Deep brown (seal-brown) */
+
+    /* Text & Borders */
+    /* --color-text-primary: #280004ff;    Near-black (black-bean) */
+    /* --color-text-inverted: #f0ffceff;   Light cream */
+    /* --color-border: #a53f2bff;          Matching accent */
+}
+
+body {
+    color: var(--color-text-primary);    /* Base text */
+}
+
+/* Type hierarchy */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-primary);
+}
+
+p, li, span {
+    color: var(--color-text-primary);
+}
+
+a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: var(--color-accent-primary);
+
+}
+
+/* Exceptions (e.g., disabled text) */
+.text-muted {
+    color: var(--color-text-secondary) !important;
+}

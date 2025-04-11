@@ -1,9 +1,9 @@
 .main {
-  background-color: red;
+  background-color: var(--color-bg-primary);
 }
 
 .sidebar{
   height: 100vh; 
-  background-color: bisque;
+  background-color:  var(--color-bg-secondary);
   box-sizing: border-box; /* Ensures padding is included in the height */
 }

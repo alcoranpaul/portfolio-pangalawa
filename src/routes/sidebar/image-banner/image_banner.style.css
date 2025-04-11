@@ -17,8 +17,8 @@
     
     border-radius: 50%;
     background-color: #2e2e2e;
-    border: 3px solid #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--color-text-primary);
+    box-shadow: 0 2px 4px var(--color-bg-primary);
     overflow: hidden; 
     position: relative; /* Contain transformed child */
   }
@@ -33,7 +33,7 @@
 }   
 
 .full_name {
-    color: white;
+    color: var(--color-accent-secondary);
     font-size: 17px;
     font-weight:500;
     text-align: center;
