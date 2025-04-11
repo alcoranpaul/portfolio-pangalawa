@@ -23,3 +23,7 @@
     font-weight: 750;
     border-radius: 10px;
 }
+
+.home_selection_stack_item.selected{
+    color: var(--color-accent-secondary);
+}

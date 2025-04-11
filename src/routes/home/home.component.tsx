@@ -19,9 +19,9 @@ import './home.style.css';
 function Home() : ReactElement {
     const descriptions: string[] = [
         'Built by faith. Driven by curiosity. Creating with code.',
-        'I build tools with intention and code with purpose — for something greater.',
         'I build reliable, efficient systems from front to back. Every solution is tailored, no shortcuts, just clean, purposeful code.',
-        'Clean, efficient, and reliable. If it’s on your desktop, it’s meant to help you get things done without the noise.'
+        'Clean, efficient, and reliable. If it’s on your desktop, it’s meant to help you get things done without the noise.',
+        'From mechanics to storytelling, every detail is designed to deliver a challenging and rewarding experience.'
     ]
 
     const gifs_path: string[] = [
