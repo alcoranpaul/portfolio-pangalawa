@@ -12,12 +12,9 @@ function App() : ReactElement {
   return (
     <Container fluid>
       <Row>
-        {/* Sidebar Column - fixed width */}
-        <Col xs={3} lg={2} className="px-3 py-3 text-white vh-100 bg-dark">
+        <Col xs={3} lg={2} className="px-3  text-white bg-dark sidebar" >
           <Sidebar />
         </Col>
-
-        {/* Main Content Column - dynamic width */}
         <Col xs={9} lg={10} className="px-5 py-5">
           <Routes>
             <Route path="/" element={<Home />} />

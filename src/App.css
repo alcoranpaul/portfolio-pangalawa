@@ -1,9 +1,9 @@
-
-
 .main {
   background-color: red;
 }
 
 .sidebar{
-  background-color: blue;
+  height: 100vh; 
+  background-color: bisque;
+  box-sizing: border-box; /* Ensures padding is included in the height */
 }
