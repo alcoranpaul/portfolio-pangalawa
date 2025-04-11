@@ -24,7 +24,7 @@ function SocialLinks(): ReactElement {
     const social_links = {
         linkedIn: {
             title: "LinkedIn",
-            link: "https://www.linkedin.com/in/paul-alcoran-4b6b3a1b0/",
+            link: "https://linkedin.com/in/paul-adrian-reyes-338139241",
             icon: <FaLinkedin />,
         },
         github: {

@@ -1,3 +1,4 @@
+
 .imageBanner_stack {
     /* background-color: royalblue; */
     width: 100%;
@@ -21,7 +22,8 @@
     box-shadow: 0 2px 4px var(--color-bg-primary);
     overflow: hidden; 
     position: relative; /* Contain transformed child */
-  }
+}
+
   
 .profile {
     width: 100%;
@@ -41,3 +43,15 @@
     width: 100%; /* Prevent text overflow */
     
   }
+
+  @media (max-width: 450px){
+  .image_container{
+    width: 60px;
+    height: 60px;
+  }
+  .full_name{
+    font-size: 13px;
+    margin-top: 0px;
+  }
+}
+  

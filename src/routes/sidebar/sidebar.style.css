@@ -25,3 +25,16 @@
     /* margin-left: -5px; */
     margin-top: -10px;
 }
+
+@media (max-width: 450px){
+    .image_banner{
+        height: 15%;
+    }
+    .navigation{
+        height: 48%;
+    }
+    .social_links{
+        height: 15%;
+    }
+
+}
