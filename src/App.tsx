@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { Outlet, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './routes/home/home.component';
+import Projects from './routes/projects/projects.component';
 import Sidebar from './routes/sidebar/sidebar.component';
 
 function Layout(): ReactElement {
@@ -25,7 +26,7 @@ function App(): ReactElement {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} /> {/* Default route */}
-        <Route path="projects" element={<p>Projects</p>} />
+        <Route path="projects" element={<Projects/>} />
         <Route path="work" element={<p>Work</p>} />
         <Route path="skills" element={<p>Skills</p>} />
         <Route path="education" element={<p>Education</p>} />

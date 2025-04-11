@@ -1,0 +1,34 @@
+.projects_content {
+    background-color: var(--color-border);
+    width: 100%;
+    /* height: 100%; Use full height of the parent container */
+    max-height: 80vh; /* Ensure it doesn't exceed the parent's height */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    padding: 10px 10px 10px 20px;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Style the scrollbar for WebKit-based browsers */
+.projects_content::-webkit-scrollbar {
+    width: 7px; /* Width of the vertical scrollbar */
+}
+
+.projects_content::-webkit-scrollbar-track {
+    background: var(--color-bg-secondary); /* Color of the scrollbar track */
+    border-radius: 2px; /* Rounded corners for the track */
+}
+
+.projects_content::-webkit-scrollbar-thumb {
+    background: var(--color-accent-secondary); /* Color of the scrollbar thumb */
+    border-radius: 7px; /* Rounded corners for the thumb */
+}
+
+.projects_content::-webkit-scrollbar-thumb:hover {
+    background: var(--color-highlight); /* Darker color when hovering over the scrollbar thumb */
+}
+
+
