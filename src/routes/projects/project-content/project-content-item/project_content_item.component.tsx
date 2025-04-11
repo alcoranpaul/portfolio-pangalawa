@@ -1,14 +1,29 @@
-import { ReactElement, useRef, useState } from "react";
+import { ReactElement, useEffect, useRef, useState } from "react";
 import { Stack } from "react-bootstrap";
 import './project_content_item.style.css';
 
+
+
+async function getRandomAnimeImage() {
+    try {
+        const response = await fetch('/api/v1/anime/gif/1'); // Use proxy
+        const data = await response.json();
+        return data.images[0]; // Return the first image URL
+    } catch (error) {
+        console.error("Error fetching image:", error);
+        return "src/assets/goku_vegeta.gif"; // Fallback image
+    }
+}
+  
+
+
 function ProjectContentItem({ item }: { item: string }): ReactElement {
+    const [imageUrl, setImageUrl] = useState<string>("src/assets/loading.webp"); // Default image URL
     const itemRef = useRef<HTMLDivElement>(null);
-    const [is3DEffectEnabled, setIs3DEffectEnabled] = useState<boolean>(true); // State to toggle 3D effect
-    const MAX_ANGLE = 40;
+
+    const MAX_ANGLE = 70;
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        if (!is3DEffectEnabled) return; // Skip 3D effect if disabled
 
         const rect = itemRef.current?.getBoundingClientRect();
         if (rect) {
@@ -21,7 +36,7 @@ function ProjectContentItem({ item }: { item: string }): ReactElement {
     };
 
     const handleMouseLeave = () => {
-        if (!is3DEffectEnabled) return; // Skip resetting if 3D effect is disabled
+    
 
         if (itemRef.current) {
             itemRef.current.style.transform = "rotateX(0deg) rotateY(0deg)"; // Reset rotation
@@ -33,21 +48,33 @@ function ProjectContentItem({ item }: { item: string }): ReactElement {
         if (itemRef.current) {
             itemRef.current.style.transform = "rotateX(0deg) rotateY(0deg)"; // Reset rotation immediately
         }
-        console.log(`3D effect ${is3DEffectEnabled ? "disabled" : "enabled"} for item: ${item}`);
+    
     };
+
+    useEffect(() => {
+        getRandomAnimeImage().then(url => setImageUrl(url));
+    }, []);
 
     return (
         <Stack
-            ref={itemRef}
-            gap={1}
-            className={`projects_content_item ${is3DEffectEnabled ? "" : "disabled"}`} // Add a class if disabled
-            onMouseMove={handleMouseMove} // Attach mouse move event
-            onMouseLeave={handleMouseLeave} // Reset rotation on mouse leave
-            onClick={handleClick} // Toggle 3D effect on click
-        >
-            <div className="projects_content_item_image">Image</div>
-            <div className="projects_content_item_name">{item}</div>
-        </Stack>
+        ref={itemRef}
+        gap={1}
+        className="projects_content_item"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        onClick={handleClick}
+      >
+        <div className="projects_content_item_image">
+          <img 
+            src={imageUrl} 
+            alt={item} 
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+            }}
+          />
+        </div>
+        <div className="projects_content_item_name">{item}</div>
+      </Stack>
     );
 }
 
