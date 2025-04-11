@@ -3,6 +3,19 @@ import { Col, Container, Row } from 'react-bootstrap';
 import HomeSelection from './home-selection/home_selection.component';
 import './home.style.css';
 
+
+
+/**
+ * The `Home` component represents the main home page of the application.
+ * It displays a selection menu, a description, and an image (GIF) that updates
+ * dynamically based on user interaction.
+ *
+ * @returns {ReactElement} The rendered `Home` component.
+ *
+ * ## Functions
+ * - `handleSelectionChange(selectedIndex: number): void`:
+ *   Updates the description and GIF based on the provided index.
+ */
 function Home() : ReactElement {
     const descriptions: string[] = [
         'Built by faith. Driven by curiosity. Creating with code.',
@@ -21,6 +34,15 @@ function Home() : ReactElement {
     const [selectedDesciption, setSelectedDescription] = useState<ReactElement>(<div>{descriptions[0]}</div>);
     const [selectedGif, setSelectedGif] = useState<ReactElement>(<img src={gifs_path[0]} alt="Gif"/>)
 
+    /**
+     * Handles the change in selection by updating the selected description and GIF.
+     *
+     * @param selectedIndex - The index of the selected item.
+     * 
+     * Updates:
+     * - `setSelectedDescription`: Sets the description corresponding to the selected index.
+     * - `setSelectedGif`: Sets the GIF image corresponding to the selected index.
+     */
     const handleSelectionChange = (selectedIndex: number): void => {
         setSelectedDescription(
             <Fragment>
