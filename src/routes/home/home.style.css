@@ -1,0 +1,16 @@
+.home_selection{
+    /* background-color: rgba(255, 0, 0, 0.021); */
+    height: 30vh
+}
+
+.home_description{
+    background-color: blue;
+    
+    height: 55vh;
+}
+
+.home_image_container{
+    background-color: green;    
+    
+    height: 85vh;
+}
