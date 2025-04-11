@@ -2,7 +2,7 @@
     background-color: var(--color-bg-primary); /* Use secondary background color */
     width: 200px;
     height: 200px;
-    border-radius: 5px;
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
     margin: 5px;

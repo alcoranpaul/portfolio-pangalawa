@@ -10,6 +10,7 @@
     overflow-y: auto; 
     overflow-x: hidden;
     scroll-behavior: smooth;
+    border-radius: 10px;
 }
 
 /* Style the scrollbar for WebKit-based browsers */
