@@ -14,12 +14,15 @@ html, body {
 
 .layout_base {
   height: 2.5vh;
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-primary);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
+  border-style: solid;
+  border-color: var( --color-border);
+  border-width: 1px;
 }
 
 .layout_content {
@@ -37,6 +40,10 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: start;
+  border-style: solid;
+  border-color: var( --color-border);
+  border-width: 1px;
+
 }
 
 .sidebar {
