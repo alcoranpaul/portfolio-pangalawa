@@ -1,0 +1,14 @@
+.activity_bar_stack{
+    background-color: yellow;
+    width: 100%; /* Full width of the parent container */
+    height: 100%; /* Full height of the parent container */
+    
+}
+
+.activity_bar_icon {
+    background-color: red;
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 5px 5px 5px 15px;
+}

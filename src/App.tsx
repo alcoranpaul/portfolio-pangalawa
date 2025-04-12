@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Outlet, Route, Routes } from 'react-router-dom';
+import ActivityBar from './activity_bar/activity_bar.component';
 import './App.css';
 import Home from './routes/home/home.component';
 import Projects from './routes/projects/projects.component';
@@ -10,16 +11,19 @@ function Layout(): ReactElement {
   return (
     <Container fluid>
       <Row className='layout_base layout_header'>header</Row>
+
       <Row className='flex-grow-1 layout_content'>
-        <Col  className="activity_bar" xs="auto">asd
+        <Col className="activity_bar p-0" xs="auto">
+          <ActivityBar />
         </Col>
         <Col className="sidebar"xs="auto" >
           <Sidebar />
         </Col>
         <Col  className="main" >
-          <Outlet /> {/* Renders child routes */}
+          <Outlet />
         </Col>
       </Row>
+
       <Row className='layout_base layout_footer'>footer</Row>
     </Container>
   );
