@@ -1,36 +1,41 @@
-:root{
+:root {
+    /* Background Colors */
+    --color-bg-primary: #0d1117; /* Main background */
+    --color-bg-secondary: #161b22; /* Secondary background */
+    --color-bg-tertiary: #010409; /* Tertiary background */
 
-  /* Deep Base Colors */
-  --color-bg-primary: #121212;       /* Rich near-black */
-  --color-bg-secondary: #1e1e1e;     /* Slightly lighter black */
-  
-  /* Accents */
-  --color-accent-primary: #7c3aed;   /* Soft violet (modern, eye-pleasing) */
-  --color-accent-secondary: #92d1c9; /* Teal (fresh contrast) */
-  
-  /* Text & UI */
-  --color-text-primary: #e2e8f0;     /* Off-white (easy on eyes) */
-  --color-text-secondary: #94a3b8;   /* Muted gray-blue */
-  --color-border: #2d3748;           /* Dark gray (subtle separation) */
-  
-  /* Specials */
-  --color-highlight: #f59e0b;        /* Amber (for CTAs/important elements) */
-  --color-error: #ef4444;            /* Soft red (alerts) */
+    /* Foreground/Text Colors */
+    --color-fg-primary: #e6edf3; /* Primary text color */
+    --color-fg-secondary: #7d8590; /* Secondary text color */
+    --color-fg-accent: #79c0ff; /* Accent text color */
 
+    /* Border Colors */
+    --color-border: #30363d; /* Default border color */
+    --color-border-accent: #1f6feb; /* Accent border color */
 
-    /* Light Theme */
-    /* Backgrounds */
-    /* --color-bg-primary: #f0ffceff;  Light cream (nyanza) */
-    /* --color-bg-secondary: #ccc9a1ff; Muted green (sage) */
+    /* Button Colors */
+    --color-button-bg: #238636; /* Button background */
+    --color-button-bg-hover: #2ea043; /* Button hover background */
+    --color-button-fg: #ffffff; /* Button text color */
 
-    /* Accents */
-    /* --color-accent-primary: #a53f2bff;  Warm red (chestnut) */
-    /* --color-accent-secondary: #4c230aff; Deep brown (seal-brown) */
+    /* Badge Colors */
+    --color-badge-bg: #1f6feb; /* Badge background */
+    --color-badge-fg: #ffffff; /* Badge text color */
 
-    /* Text & Borders */
-    /* --color-text-primary: #280004ff;    Near-black (black-bean) */
-    /* --color-text-inverted: #f0ffceff;   Light cream */
-    /* --color-border: #a53f2bff;          Matching accent */
+    /* Link Colors */
+    --color-link: #2f81f7; /* Link color */
+    --color-link-hover: #1f6feb; /* Link hover color */
+
+    /* Highlight Colors */
+    --color-highlight: #3fb950; /* Highlight color (e.g., success) */
+    --color-error: #f85149; /* Error color */
+    --color-warning: #d29922; /* Warning color */
+    --color-info: #8b949e; /* Info color */
+
+    /* Miscellaneous */
+    --color-scrollbar-bg: #8b949e33; /* Scrollbar background */
+    --color-scrollbar-hover: #8b949e3d; /* Scrollbar hover background */
+    --color-scrollbar-active: #8b949e47; /* Scrollbar active background */
 }
 
 body {
