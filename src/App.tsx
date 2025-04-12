@@ -1,8 +1,11 @@
 import { ReactElement, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+
 import { Outlet, Route, Routes } from 'react-router-dom';
+
 import ActivityBar from './activity_bar/activity_bar.component';
 import './App.css';
+import Footer from './footer/footer.component';
 import Home from './routes/home/home.component';
 import Projects from './routes/projects/projects.component';
 import Sidebar from './routes/sidebar/sidebar.component';
@@ -24,13 +27,15 @@ function Layout(): ReactElement {
            <Col className="sidebar"xs="auto" >
            <Sidebar />
          </Col>
-        )}
+      )}
         <Col  className="main" >
           <Outlet />
         </Col>
       </Row>
 
-      <Row className='layout_base layout_footer'>footer</Row>
+      <Row className='layout_base layout_footer'>
+        <Footer />
+      </Row>
     </Container>
   );
 }

@@ -13,16 +13,19 @@ html, body {
 }
 
 .layout_base {
+  margin: 0px;
   height: 2.5vh;
   background-color: var(--color-bg-primary);
   color: white;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
   font-size: 0.8rem;
   border-style: solid;
   border-color: var( --color-border);
   border-width: 1px;
+  flex-direction: column;
+
 }
 
 .layout_content {
@@ -57,3 +60,4 @@ html, body {
   height: 100%; /* Full height of the parent container */
   flex-grow: 1; /* Occupy the remaining space */
 }
+
