@@ -4,6 +4,7 @@ import { Stack } from "react-bootstrap";
 import { FaDiscord } from "react-icons/fa";
 import { GoCopilot } from "react-icons/go";
 import { IoIosArrowRoundDown, IoIosArrowRoundUp, IoIosGitBranch, IoIosNotifications, IoIosSync } from "react-icons/io";
+import { PiFileTsxDuotone } from "react-icons/pi";
 import { RiCheckDoubleFill } from "react-icons/ri";
 
 import "./footer.style.css";
@@ -19,8 +20,8 @@ function Footer() : ReactElement {
                 </Stack>
                 <Stack gap={3} className='footer_right' direction='horizontal'>
                     <div>UTF-8</div>
-                    <div>LF</div>
-                    <div>TypeScript JSX</div>
+                    <div>CRLF</div>
+                    <div><PiFileTsxDuotone size={15} />TypeScript JSX</div>
                     <div><GoCopilot size={20} /></div>
                     <div><RiCheckDoubleFill size={20}/>Prettier</div>
                     <div><IoIosNotifications size={20}/></div>

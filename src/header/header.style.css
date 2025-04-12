@@ -1,4 +1,4 @@
-.footer_stack {
+.header_stack {
     background-color: yellow;
     display: flex; /* Enable Flexbox */
     justify-content: space-between; /* Push items to the left and right */
@@ -10,12 +10,30 @@
     font-size: 0.8rem; /* Adjust font size */
   }
   
-.footer_left {
+.header_left {
   /* background-color: red; */
   text-align: left; /* Align text to the left */
 }
 
-.footer_right {
+.header_right {
   /* background-color: blue; */
   text-align: right; /* Align text to the right */
+}
+
+.header_icon{
+    width: 21px;
+    height: 20px;
+    display:flex;
+    align-items: center ;
+    padding: 3px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.header_icon:hover{
+    background-color: var(--color-link-hover);
+    border-radius: 10%;
+    cursor: pointer;
+    transform: scale(1.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
 }

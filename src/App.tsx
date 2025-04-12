@@ -6,6 +6,7 @@ import { Outlet, Route, Routes } from 'react-router-dom';
 import ActivityBar from './activity_bar/activity_bar.component';
 import './App.css';
 import Footer from './footer/footer.component';
+import Header from './header/header.component';
 import Home from './routes/home/home.component';
 import Projects from './routes/projects/projects.component';
 import Sidebar from './routes/sidebar/sidebar.component';
@@ -17,7 +18,7 @@ function Layout(): ReactElement {
 
   return (
     <Container fluid>
-      <Row className='layout_base layout_header'>header</Row>
+      <Row className='layout_base layout_header'><Header/></Row>
 
       <Row className='flex-grow-1 layout_content'>
         <Col className="activity_bar p-0" xs="auto">
@@ -28,14 +29,10 @@ function Layout(): ReactElement {
            <Sidebar />
          </Col>
       )}
-        <Col  className="main" >
-          <Outlet />
-        </Col>
+        <Col className="main"><Outlet /></Col>
       </Row>
 
-      <Row className='layout_base layout_footer'>
-        <Footer />
-      </Row>
+      <Row className='layout_base layout_footer'><Footer /></Row>
     </Container>
   );
 }
