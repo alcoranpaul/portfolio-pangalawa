@@ -9,14 +9,18 @@ import Sidebar from './routes/sidebar/sidebar.component';
 function Layout(): ReactElement {
   return (
     <Container fluid>
-      <Row>
-        <Col xs={3} lg={2} className="px-2 sidebar">
+      <Row className='layout_base layout_header'>header</Row>
+      <Row className='flex-grow-1 layout_content'>
+        <Col  className="activity_bar" xs="auto">asd
+        </Col>
+        <Col className="sidebar"xs="auto" >
           <Sidebar />
         </Col>
-        <Col xs={9} lg={10} className="px-5 py-5 main">
+        <Col  className="main" >
           <Outlet /> {/* Renders child routes */}
         </Col>
       </Row>
+      <Row className='layout_base layout_footer'>footer</Row>
     </Container>
   );
 }

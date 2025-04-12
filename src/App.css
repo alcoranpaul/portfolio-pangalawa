@@ -1,13 +1,48 @@
-.main {
-  background-color: var(--color-bg-primary);
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.container-fluid {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.layout_base {
+  height: 2.5vh;
+  background-color: var(--color-bg-secondary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.layout_content {
+  flex: 1 1 auto;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
+.activity_bar {
+  background-color: blue;
+  height: 100%;
+  width: 4%;
+}
 .sidebar{
-  position: sticky; /* Makes the sidebar sticky */
-  top: 0; /* Sticks the sidebar to the top of the viewport */
-  height: 100%; 
-  background-color:  var(--color-bg-secondary);
-  box-sizing: border-box; /* Ensures padding is included in the height */
+  background-color: purple;
+  height: 100%;
+  width: 15%;
 }
 
+.main{
+  background-color: green;
+  height: 100%;
+}

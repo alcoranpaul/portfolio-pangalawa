@@ -17,7 +17,7 @@ import SocialLinks from './social-links/social_links.component'
 function Sidebar() : ReactElement {
     return(
         <Fragment>
-            <Stack gap={5} className='sidebar_stack'>
+            <Stack gap={4} className='sidebar_stack'>
                 <div className='image_banner'><ImageBanner/></div>
                 <div className='navigation'><Navigation/></div>
                 <div className='social_links'><SocialLinks/></div>

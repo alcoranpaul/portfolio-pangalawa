@@ -1,5 +1,7 @@
 .sidebar_stack{
-    height: 100vh;
+    background-color: red;
+    height: 100%; /* Full height of the parent container */
+ 
 }
 
 .image_banner{
