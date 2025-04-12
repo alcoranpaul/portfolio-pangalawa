@@ -26,4 +26,78 @@
     width: 85%;
     height: 95%;
 
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.popup_image_banner{
+    position: relative;
+    background-color: red;
+    justify-content: center;
+    align-content: center;
+    height: 25%;
+}
+
+.popup_header {
+    position: absolute; /* Position it relative to the popup container */
+    bottom: 0; /* Align it to the bottom of the popup */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust for its own width to center it */
+    background-color: var(--color-accent-secondary);
+    width: 80%; /* Set the width to 80% of the popup */
+    max-width: 500px; /* Optional: Limit the maximum width */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    border-top: 2px solid var(--color-border); /* Optional: Add a separator */
+    text-align: center; /* Center text inside the header */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    z-index: 11; /* Ensure it appears above other elements in the popup */
+}
+
+.popup_table_of_content {
+    width: 25%; /* Set the width to 25% */
+    background-color: blue; /* Optional: Add a background color */
+    padding: 10px;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    overflow-x: hidden;
+    height: 100%; /* Ensure it fills the vertical space */
+}
+
+.popup_content {
+    width: 75%; /* Set the width to 75% */
+    background-color: red; /* Optional: Add a background color */
+    padding: 10px;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    overflow-x: hidden;
+    height: 100%; /* Ensure it fills the vertical space */
+}
+
+.project_popup_close_button{
+
+    position: absolute; /* Position the close button relative to the popup */
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    background-color: var(--color-highlight);
+    color: var(--color-bg-primary);
+    border: none;
+    border-radius: 5px;
+    padding: 3px 7px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.project_popup_close_button:hover {
+    background-color: var(--color-accent-primary);
+    color: var(--color-text-primary);
+    transform: scale(1.2); /* Slightly enlarge on hover */
+
 }

@@ -6,10 +6,11 @@ import ProjectPopup from "./project_popup/project_popup.component";
 
 function ProjectContent(): ReactElement {
     const [openedCard, setOpenedCard] = useState<boolean>(false);
+    const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
 
     const handleCardSelected = (item: ProjectData) => {
         setOpenedCard(true);
-        console.log(item);
+        setSelectedProject(item);
     }
  
 
@@ -28,7 +29,7 @@ function ProjectContent(): ReactElement {
         <Fragment>
 
                 <div className="projects_content">
-                {openedCard && (<ProjectPopup  setOpenedCard={setOpenedCard} />)}
+                {openedCard && (<ProjectPopup  setOpenedCard={setOpenedCard} selectedProject={selectedProject} />)}
                 <div
                     className={`projects_content_items ${openedCard ? "disabled" : ""}`}>
                     {RenderProjectItems()}
