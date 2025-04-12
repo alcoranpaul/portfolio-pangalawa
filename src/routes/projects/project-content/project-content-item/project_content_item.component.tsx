@@ -14,10 +14,10 @@ async function getRandomAnimeImage() {
         return "src/assets/goku_vegeta.gif"; // Fallback image
     }
 }
-  
 
 
-function ProjectContentItem({ item }: { item: string }): ReactElement {
+
+function ProjectContentItem({ item, onCardSelected }: { item: string, onCardSelected: (item: string) => void }): ReactElement {
     const [imageUrl, setImageUrl] = useState<string>("src/assets/loading.webp"); // Default image URL
     const itemRef = useRef<HTMLDivElement>(null);
 
@@ -48,7 +48,7 @@ function ProjectContentItem({ item }: { item: string }): ReactElement {
         if (itemRef.current) {
             itemRef.current.style.transform = "rotateX(0deg) rotateY(0deg)"; // Reset rotation immediately
         }
-    
+        onCardSelected(item); // Call the parent function with the selected item
     };
 
     useEffect(() => {

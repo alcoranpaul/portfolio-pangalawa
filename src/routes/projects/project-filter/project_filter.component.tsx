@@ -20,7 +20,10 @@ function ProjectFilter({ onFilterSelect }: { onFilterSelect: (index: number) => 
                         selectedFilterIndex === index ? 'selected' : ''
                     }`}
                     key={index}
-                    onClick={() => setSelectedFilterIndex(index)} // Attach the event handler
+                    onClick={() => {
+                        setSelectedFilterIndex(index);
+                        onFilterSelect(index); // Notify parent component of the selected filter
+                    }}
                     >
                     {filter}
                 </Col>

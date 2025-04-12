@@ -1,8 +1,13 @@
 .projects_content {
+    position: relative; /* Position relative to the parent container */
     background-color: var(--color-border);
     width: 100%;
-    /* height: 100%; Use full height of the parent container */
     max-height: 80vh; /* Ensure it doesn't exceed the parent's height */
+
+    border-radius: 10px;
+}
+
+.projects_content_items{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 10px;
@@ -10,26 +15,57 @@
     overflow-y: auto; 
     overflow-x: hidden;
     scroll-behavior: smooth;
-    border-radius: 10px;
+    width: 100%;
+    max-height: 80vh; /* Ensure it doesn't exceed the parent's height */
+}
+
+.projects_content_items.disabled{
+    pointer-events: none; /* Disable pointer events when the class is applied */
+    opacity: 0.5; /* Make it semi-transparent to indicate it's disabled */
+
 }
 
 /* Style the scrollbar for WebKit-based browsers */
-.projects_content::-webkit-scrollbar {
+.projects_content_items::-webkit-scrollbar {
     width: 7px; /* Width of the vertical scrollbar */
 }
 
-.projects_content::-webkit-scrollbar-track {
+.projects_content_items::-webkit-scrollbar-track {
     background: var(--color-bg-secondary); /* Color of the scrollbar track */
     border-radius: 2px; /* Rounded corners for the track */
 }
 
-.projects_content::-webkit-scrollbar-thumb {
+.projects_content_items::-webkit-scrollbar-thumb {
     background: var(--color-accent-secondary); /* Color of the scrollbar thumb */
     border-radius: 7px; /* Rounded corners for the thumb */
 }
 
-.projects_content::-webkit-scrollbar-thumb:hover {
+.projects_content_items::-webkit-scrollbar-thumb:hover {
     background: var(--color-highlight); /* Darker color when hovering over the scrollbar thumb */
 }
 
 
+.popup_overlay {
+    position: absolute; /* Position relative to the parent container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+    z-index: 9; /* Place it below the popup but above other content */
+}
+
+.popup {
+    position: absolute; /* Position the popup relative to the parent container */
+    top: 50%; /* Center vertically within the parent */
+    left: 50%; /* Center horizontally within the parent */
+    transform: translate(-50%, -50%); /* Adjust for the popup's own dimensions */
+    background-color: red;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Ensure it appears above the overlay */
+    text-align: center;
+    width: 90%;
+    height: 90%;
+}
