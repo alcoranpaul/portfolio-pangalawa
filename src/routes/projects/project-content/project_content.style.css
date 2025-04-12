@@ -1,6 +1,6 @@
 .projects_content {
     position: relative; /* Position relative to the parent container */
-    background-color: var(--color-border);
+    background-color: var(--color-bg-secondary);
     width: 100%;
     max-height: 80vh; /* Ensure it doesn't exceed the parent's height */
 

@@ -1,5 +1,5 @@
 .projects_content_item{
-    background-color: var(--color-bg-primary); /* Use secondary background color */
+    background-color: var(--color-border); /* Use secondary background color */
     width: 200px;
     height: 200px;
     border-radius: 10px;
@@ -7,7 +7,7 @@
     align-items: center;
     margin: 5px;
     padding: 5px;
-    transition: transform 0.3s ease, box-shadow 0.8s ease; /* Smooth transition for hover effects */
+    transition: transform 0.8s ease, box-shadow 0.8s ease; /* Smooth transition for hover effects */
     cursor: pointer; /* Change cursor to pointer on hover */
     transform-style: preserve-3d; /* Enable 3D transformations */
     perspective: 1000px; /* Add perspective for the 3D effect */
@@ -17,7 +17,7 @@
     transform: scale(1.05); /* Slightly enlarge the item */
     box-shadow: 2px 5px 10px #4ca095de; /* Add a shadow effect */
     background-color: var(--color-accent-secondary); /* Change background color on hover */
-    transition: transform 0.3s ease-out; /* Faster transition for pivot effect */
+    transition: transform 0.7s ease-out; /* Faster transition for pivot effect */
 }
 
 
@@ -41,7 +41,7 @@
 }
 
 .projects_content_item_name{
-    background-color: var(--color-border);
+    background-color: var(--color-bg-secondary);
     width: 100%;
     padding: 5px;
     border-radius: 5px;
