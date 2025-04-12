@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Outlet, Route, Routes } from 'react-router-dom';
 import ActivityBar from './activity_bar/activity_bar.component';
@@ -8,17 +8,23 @@ import Projects from './routes/projects/projects.component';
 import Sidebar from './routes/sidebar/sidebar.component';
 
 function Layout(): ReactElement {
+  const [showSideBar, setShowSideBar] = useState(true);
+
+  const toggleSidebar = () => setShowSideBar(!showSideBar);
+
   return (
     <Container fluid>
       <Row className='layout_base layout_header'>header</Row>
 
       <Row className='flex-grow-1 layout_content'>
         <Col className="activity_bar p-0" xs="auto">
-          <ActivityBar />
+          <ActivityBar onActivityBarClick={toggleSidebar}/>
         </Col>
-        <Col className="sidebar"xs="auto" >
-          <Sidebar />
-        </Col>
+        {showSideBar && (
+           <Col className="sidebar"xs="auto" >
+           <Sidebar />
+         </Col>
+        )}
         <Col  className="main" >
           <Outlet />
         </Col>
