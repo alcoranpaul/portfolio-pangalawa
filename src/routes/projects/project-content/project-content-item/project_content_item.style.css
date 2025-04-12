@@ -40,15 +40,23 @@
     border-radius: 5px; /* Match the container's border radius */
 }
 
-.projects_content_item_name{
+.projects_content_item_name {
     background-color: var(--color-bg-secondary);
-    width: 100%;
+    width: 100%; /* Ensure the container has a fixed width */
+    height: 20%;
     padding: 5px;
     border-radius: 5px;
-    justify-self: center;
-    align-self: center;
-    object-fit: cover;
-    font-size: 20px;
+
+    font-size: clamp(12px, 2vw, 17px); /* Dynamically adjust font size */
     font-weight: 300;
     letter-spacing: 2px;
+    /* text-align: start; Align text to the start */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the text vertically */
+    
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    overflow: hidden; /* Ensure text is clipped when it overflows */
+    min-width: 0; /* Allow the flex container to respect width constraints */
 }

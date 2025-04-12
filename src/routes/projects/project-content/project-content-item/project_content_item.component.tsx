@@ -1,5 +1,7 @@
 import { ReactElement, useEffect, useRef, useState } from "react";
 import { Stack } from "react-bootstrap";
+import { ProjectData } from "../project_class";
+
 import './project_content_item.style.css';
 
 
@@ -17,7 +19,7 @@ async function getRandomAnimeImage() {
 
 
 
-function ProjectContentItem({ item, onCardSelected }: { item: string, onCardSelected: (item: string) => void }): ReactElement {
+function ProjectContentItem({ item, onCardSelected }: { item: ProjectData, onCardSelected: (item: ProjectData) => void }): ReactElement {
     const [imageUrl, setImageUrl] = useState<string>("src/assets/loading.webp"); // Default image URL
     const itemRef = useRef<HTMLDivElement>(null);
 
@@ -67,13 +69,13 @@ function ProjectContentItem({ item, onCardSelected }: { item: string, onCardSele
         <div className="projects_content_item_image">
           <img 
             src={imageUrl} 
-            alt={item} 
+            alt={item.name} 
             onError={(e) => {
               (e.target as HTMLImageElement).src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
             }}
           />
         </div>
-        <div className="projects_content_item_name">{item}</div>
+        <div className="projects_content_item_name">{item.name}</div>
       </Stack>
     );
 }

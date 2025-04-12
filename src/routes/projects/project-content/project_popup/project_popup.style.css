@@ -1,0 +1,29 @@
+.popup_overlay {
+    position: absolute; /* Position relative to the parent container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+    z-index: 9; /* Place it below the popup but above other content */
+}
+
+.popup {
+    position: absolute; /* Position the popup relative to the parent container */
+    top: 50%; /* Center vertically within the parent */
+    left: 50%; /* Center horizontally within the parent */
+    transform: translate(-50%, -50%); /* Adjust for the popup's own dimensions */
+    background-color: var(--color-bg-secondary);
+    padding: 20px;
+    border-radius: 10px;
+    border-color: var(--color-border);
+    border-width: 10px;
+    border-style: double;
+
+    box-shadow: 1px 0px 15px 2px var(--color-accent-secondary);
+    z-index: 10; /* Ensure it appears above the overlay */
+    text-align: center;
+    width: 85%;
+    height: 95%;
+
+}
