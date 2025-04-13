@@ -11,8 +11,13 @@ export class File{
         return this.name;
     }
 
-    public Link() {
-        return this.link;
+    private HasLink() : boolean {
+        return this.link !== undefined;
+    }
+
+    public GetLink(): string {
+        if (this.HasLink()) return this.link!;
+        return "";
     }
     
 }

@@ -23,6 +23,7 @@ function Header(): ReactElement {
                     <div>Contact</div>
                     <div>About</div>
                 </Stack>
+
                 <Stack direction="horizontal" gap={2} className='header_right'>
                     <div className="header_icon"><FaLinkedinIn  size={19}/></div>
                     <div className="header_icon"><FaGithub  size={20} /></div>

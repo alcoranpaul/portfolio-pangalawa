@@ -20,7 +20,7 @@ import './sidebar.style.css';
 function Sidebar(): ReactElement {
     const directory_structure = new Directory("features",
         [
-            new File("home", "/home"),
+            new File("home", "/"),
             new File("projects", "/projects"),
             new File("work", "/work"),
             new File("skills", "/skills"),

@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 import { FaReact } from "react-icons/fa";
 import { SiCplusplus, SiCss3, SiGo, SiHtml5, SiJavascript, SiJson, SiKotlin, SiMarkdown, SiPhp, SiPython, SiRuby, SiRust, SiSharp, SiSwift, SiTypescript } from "react-icons/si";
+import { Link } from "react-router-dom";
 import { File } from "../../class/file";
 
 interface FileComponentProps {
@@ -49,9 +50,9 @@ function FileComponent({ file }: FileComponentProps): ReactElement {
             &emsp;&emsp;&emsp;
             {icon} {/* Display the appropriate icon */}
             {' '}{' '}{' '}
-            <div style={{ paddingLeft: "5px" }}>
+            <Link style={{ paddingLeft: "5px" }} to={file.GetLink()}>
                 {file.Name()}{randomExtension} {/* Append random extension */}
-            </div>
+            </Link>
         </div>
     );
 }

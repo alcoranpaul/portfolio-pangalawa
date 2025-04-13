@@ -12,7 +12,7 @@ interface DirectoryComponentProps {
 }
 
 function DirectoryComponent({ directory, icon }: DirectoryComponentProps): ReactElement {
-    const [isSelected, setIsSelected] = useState(false);
+    const [isSelected, setIsSelected] = useState(true);
 
     
     function RenderDirectory({ directory, icon }: DirectoryComponentProps): ReactElement {
