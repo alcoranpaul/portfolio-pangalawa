@@ -50,10 +50,16 @@ html, body {
 }
 
 .sidebar {
-  background-color: purple;
+  background-color: var(--color-bg-tertiary);
   height: 100%; /* Full height of the parent container */
   width: 15%; /* Occupy 15% of the parent container's width */
+  border-style: solid;
+  border-color: var(--color-border);
+  border-width: 1.5px;
+  display: flex; /* Ensure child elements can use Flexbox */
+  flex-direction: column; /* Stack child elements vertically */
 }
+
 
 .main {
   background-color: green;

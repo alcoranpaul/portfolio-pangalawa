@@ -1,42 +1,37 @@
 .sidebar_stack{
-    background-color: red;
-    height: 100%; /* Full height of the parent container */
- 
-}
-
-.image_banner{
-    /* background-color: rgb(48, 48, 48); */
+    /* background-color: red;  */
+    flex: 1;
+    padding: 0; /* Remove extra padding */
+    margin: 0; /* Remove extra margin */
+    overflow-y: auto; /* Enable scrolling if content overflows */
     width: 100%;
-    height: 20%;
-    padding: 10px;  
+    height: 100%;
+    color: var(--color-fg-primary);
+    font-size: 0.8rem;
+    cursor: default;
+    user-select: none; /* Disable text selection */
 }
 
-.navigation {
+.sidebar_header{
+    /* background-color: red; */
+    padding: 5px;
+}
+
+.sidebar_content{
     /* background-color: aqua; */
     width: 100%;
-    height: 50%;
-    padding: 1px
+    padding: 5px 0px 0px 0px;
 }
 
-.social_links {
-    /* background-color: blue;      */
-    width: 100%;
-    height: 20%;
-    padding: 2px;
-    
-    /* margin-left: -5px; */
-    margin-top: -10px;
+.sidebar_content_repo{
+    padding-left: 5px;
+    font-weight: 600;
+    font-size: 0.75rem; /* Reduce font size */
 }
+
+
 
 @media (max-width: 450px){
-    .image_banner{
-        height: 15%;
-    }
-    .navigation{
-        height: 48%;
-    }
-    .social_links{
-        height: 15%;
-    }
+ 
 
 }

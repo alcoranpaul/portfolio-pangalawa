@@ -11,6 +11,7 @@
 
     /* Border Colors */
     --color-border: #30363d; /* Default border color */
+    --color-border-secondary: #3a4149; /* Default border color */
     --color-border-accent: #1f6feb; /* Accent border color */
 
     /* Button Colors */

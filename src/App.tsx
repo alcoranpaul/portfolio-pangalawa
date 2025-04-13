@@ -25,7 +25,7 @@ function Layout(): ReactElement {
           <ActivityBar onActivityBarClick={toggleSidebar}/>
         </Col>
         {showSideBar && (
-           <Col className="sidebar"xs="auto" >
+           <Col className="sidebar px-0"xs="auto" >
            <Sidebar />
          </Col>
       )}

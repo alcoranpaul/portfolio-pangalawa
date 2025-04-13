@@ -6,7 +6,7 @@ import { IoIosArrowRoundDown, IoIosArrowRoundUp, IoIosGitBranch, IoIosNotificati
 import { PiFileTsxDuotone } from "react-icons/pi";
 import { RiCheckDoubleFill } from "react-icons/ri";
 
-import OverlayComponent from "../components/overlay.component";
+import OverlayComponent from "../components/overlay_component/overlay.component";
 
 import { GoCopilot } from "react-icons/go";
 import "./footer.style.css";
