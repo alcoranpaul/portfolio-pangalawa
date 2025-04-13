@@ -1,8 +1,9 @@
-import { ReactElement, useState } from "react";
+import { Fragment, ReactElement, useState } from "react";
 import { Stack } from "react-bootstrap";
-import { FaReact } from "react-icons/fa";
 import { MdFolder } from "react-icons/md";
 import { Directory } from "../../class/directory_class";
+
+import FileComponent from "../file_component/file.component";
 import './directory.style.css';
 
 interface DirectoryComponentProps {
@@ -11,40 +12,31 @@ interface DirectoryComponentProps {
 }
 
 function DirectoryComponent({ directory, icon }: DirectoryComponentProps): ReactElement {
-    // List of possible extensions
-    const extensions = [
-        ".tsx", ".ts", ".js", ".jsx", ".html", ".css", ".json", ".md", // Existing extensions
-        ".py", ".cs", ".cpp", ".java", ".rb", ".php", ".go", ".swift", ".kt", ".rs" // Added extensions
-    ];
-
     const [isSelected, setIsSelected] = useState(false);
 
-    // Function to randomly select an extension
-    const getRandomExtension = (): string => {
-        return extensions[Math.floor(Math.random() * extensions.length)];
-    };
+    
+    function RenderDirectory({ directory, icon }: DirectoryComponentProps): ReactElement {
+        return <div className="directory_component_directory file" onClick={() => setIsSelected(prev => !prev)}>
+            &emsp;{isSelected ? '⏷' : '⏵'}
+            {icon || <MdFolder size={15} />}
+            {' '}
+            <div className="directory_component_name">
+                {directory.Name()}
+            </div>
+        </div>;
+    }
 
     return (
         <div className="directory_component">
-            <div className="directory_component_directory file" onClick={() => setIsSelected(prev => !prev)} >
-                &emsp;{isSelected ? '⏷' : '⏵'}
-                {icon || <MdFolder size={15} />}
-                {' '}   
-                <div  className="directory_component_name">
-                    {directory.Name()}
-                </div>
-            </div>
+            {RenderDirectory({ directory, icon })}
             {isSelected && (
                 <Stack gap={1}>
                 {directory.Children().map((file, index) => (
-                    <div key={index} className="directory_component_file file">
-                        &emsp;&emsp;&emsp;
-                        <FaReact size={15} style={{ color: "var(--color-link)" }} />
-                        {' '}{' '}{' '}
-                        <div style={{ paddingLeft: "5px" }}>
-                            {file.Name()}{getRandomExtension()} {/* Append random extension */}
-                        </div>
-                    </div>
+                    file instanceof Directory ? (
+                        <Fragment>{RenderDirectory({ directory, icon })}</Fragment>
+                    ) : (
+                        <FileComponent key={index} file={file} />
+                    )
                 ))}
                 </Stack>
             )}
