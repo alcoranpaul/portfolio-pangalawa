@@ -5,6 +5,7 @@
 	display: flex; /* Enable Flexbox */
 	flex-grow: 1;
 	height: 100%;
+	
 	padding: 50px 50px 20px 50px;
 	user-select: none; /* Disable text selection */
 	color: var(--color-fg-primary);
@@ -12,7 +13,7 @@
 		padding: 20px 5px 20px 5px;
 		justify-content: start;
 		align-items: center; /* Center vertically */
-
+		
 		width: 15%;
 		.image_container {
 			display: flex;
