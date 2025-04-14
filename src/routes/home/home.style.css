@@ -125,8 +125,28 @@
 	}
 
 	.right {
-		background-color: blue;
+		/* background-color: blue; */
 		width: 50%;
+		display: flex;
+		.ascii_content{
+			flex-grow: 1;
+			background-color: yellow;
+		}
+
+		.projects_favorites{
+			height: 20%;
+			background-color: red
+		}
+
+		.github_calendar{
+			height: 30%;
+			padding: 5px;
+			display:flex;
+			justify-content: center;
+			align-items: center; /* Center vertically */
+			/* background-color: green; */
+			overflow-x: auto;
+		}
 	}
 }
 

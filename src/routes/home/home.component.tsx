@@ -2,6 +2,7 @@ import { Fragment, ReactElement } from 'react';
 import { Stack } from 'react-bootstrap';
 
 import './home.style.css';
+import GitHubCalendar from 'react-github-calendar';
 
 
 
@@ -48,18 +49,29 @@ function Home() : ReactElement {
                     <hr className="horizontal_line" />
 
                     <Stack direction='vertical'>
-                    <div className='highlights_title'>Milestones</div>
+                    <div className='highlights_title'>Quick Links</div>
                         <ul className='highlights_container'>
                             <li className='highlight'>7+ game jam projects published on itch.io</li>
                             <li className='highlight'>Full-stack development experience (MERN stack)</li>
                             <li className='highlight'>Unity/Unreal Engine gameplay programmer</li>
                             <li className='highlight'>Government tech internship experience (Agriculture Canada)</li>
                             <li className='highlight'>Procedural generation (dungeons/cities)</li>
-        {/* Figure out which design */}
                         </ul>
                     </Stack>
                 </Stack>
-                <Stack className='right'>aasdasdsd</Stack>
+                <Stack className='right' gap={2}>
+                    <div className='ascii_content'>asd</div>
+                    <div className='projects_favorites'>asd</div>
+                    <div className='github_calendar'>
+                        <GitHubCalendar
+                            username="alcoranpaul"
+                            year="last"
+                            colorScheme="dark"
+                            fontSize={14}
+                            blockSize={9}
+                        />
+                    </div>
+                </Stack>
             </Stack>
         </Fragment>
     )
