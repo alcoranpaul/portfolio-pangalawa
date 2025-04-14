@@ -2,6 +2,7 @@ import { Fragment, ReactElement } from "react";
 import { Stack } from "react-bootstrap";
 
 import './profile_section.style.css';
+import OverlayComponent from "../../../components/overlay_component/overlay.component";
 
 function ProfileSection(): ReactElement {
 
@@ -15,7 +16,14 @@ function ProfileSection(): ReactElement {
                         <div className='name'>Reyes, Paul Adrian Alcoran</div>
                         <div className='name_sub'>Software Engineer &middot; paul/pol</div>
                     </Stack>
-                    <div className='short_description'>Devoted to crafting tech with purpose—building games and apps that reflect Christ’s wonder and meaning.</div>
+                    <div className='short_description'>
+                        <OverlayComponent 
+                            elements={<span className="bible_verse_highlight">Built by faith.</span>}
+                            tooltip_title={<div>23 Work willingly at whatever you do, as though you were working for the Lord rather than for people.</div>}
+                            tooltip_body={<div>Colossians 3:23</div>}
+                        />
+                        <span>Driven by curiosity. Creating with code.</span>
+                    </div>
                     
                     <hr className="horizontal_line" />
 

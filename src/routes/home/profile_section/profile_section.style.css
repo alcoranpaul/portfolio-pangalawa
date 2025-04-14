@@ -56,7 +56,22 @@
     .short_description {
         padding: 0;
         margin: 0;
-        /* background-color: red; */
+       
+       .bible_verse_highlight{
+            background-color: var(--color-border);
+            border-radius: 10px;
+            padding: 3px;
+            transition: all 0.5s ease, background-color 0.8s ease-out;
+           
+       } 
+
+       .bible_verse_highlight:hover{
+            background-color: var(--color-border-accent);
+            cursor: default;
+            transform: translateX(4px);
+        }
+
+        
     }
 
     .highlights_title {
@@ -71,6 +86,7 @@
     }
 
     .highlights_container {
+        margin: 0;
         list-style: none;
         /* padding: 0; */
         /* margin: 10px 0 0 0; */
