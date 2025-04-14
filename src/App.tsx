@@ -1,15 +1,16 @@
 import { ReactElement, useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, Stack } from 'react-bootstrap';
 
 import { Outlet, Route, Routes } from 'react-router-dom';
 
 import ActivityBar from './activity_bar/activity_bar.component';
-import './App.css';
 import Footer from './footer/footer.component';
 import Header from './header/header.component';
 import Home from './routes/home/home.component';
 import Projects from './routes/projects/projects.component';
 import Sidebar from './routes/sidebar/sidebar.component';
+
+import './App.css';
 
 function Layout(): ReactElement {
   const [showSideBar, setShowSideBar] = useState(true);
@@ -29,7 +30,15 @@ function Layout(): ReactElement {
            <Sidebar />
          </Col>
       )}
-        <Col className="main"><Outlet /></Col>
+        <Col className="main">
+          <Stack>
+            <div className='tab_section'>asd</div>
+            <div className='main_section'>
+              <div className='source_pagnation'>{"src > App.tsx"}</div>
+              <div className='main_content'><Outlet/></div>
+            </div>
+          </Stack>
+        </Col>
       </Row>
 
       <Row className='layout_base layout_footer'><Footer /></Row>

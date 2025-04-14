@@ -62,8 +62,55 @@ html, body {
 
 
 .main {
-  background-color: green;
+  background-color:  var(--color-bg-primary);
   height: 100%; /* Full height of the parent container */
   flex-grow: 1; /* Occupy the remaining space */
+  width: 100%; /* Full width of the parent container */ 
+  display: flex; /* Enable Flexbox for horizontal layout */
+  color: var(--color-fg-primary);
+  padding: 0%;
+
+  border-style: solid;
+  border-color: var(--color-border);
+  border-width: 1px;
+  .tab_section{
+    background-color: var(--color-bg-tertiary);
+    height: 4%;
+  }
+
+  
+ 
+}
+
+.main_section{
+  flex-grow: 1; /* Occupy the remaining space */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Allow vertical scrolling */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure the main section spans the full height */
+  
+  border-style: solid;
+  border-color: var(--color-border);
+  border-width: 1px;
+.source_pagnation {
+    background-color: var(--color-bg-primary);
+    padding: 5px 5px 5px 15px;
+    font-size: clamp(7px, 2vw, 13px); /* Dynamically adjust font size */
+    height: 2%; /* Set the height */
+    display: flex; /* Use Flexbox for alignment */
+    align-items: center; /* Vertically center the text */
+    justify-content: start; /* Horizontally center the text */
+    overflow: hidden; /* Prevent text from overflowing */
+    text-overflow: ellipsis; /* Add ellipsis if the text is too long */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+  .main_content{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 15px 5px 15px;
+    flex-grow: 1;
+  }
 }
 

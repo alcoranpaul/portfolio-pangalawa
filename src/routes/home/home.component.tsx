@@ -1,6 +1,6 @@
-import { Fragment, ReactElement, useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import HomeSelection from './home-selection/home_selection.component';
+import { Fragment, ReactElement } from 'react';
+import { Stack } from 'react-bootstrap';
+
 import './home.style.css';
 
 
@@ -31,55 +31,36 @@ function Home() : ReactElement {
         'src\\assets\\obito.gif'
     ]
 
-    const [selectedDesciption, setSelectedDescription] = useState<ReactElement>(<div>{descriptions[0]}</div>);
-    const [selectedGif, setSelectedGif] = useState<ReactElement>(<img src={gifs_path[0]} alt="Gif"/>)
-
-    /**
-     * Handles the change in selection by updating the selected description and GIF.
-     *
-     * @param selectedIndex - The index of the selected item.
-     * 
-     * Updates:
-     * - `setSelectedDescription`: Sets the description corresponding to the selected index.
-     * - `setSelectedGif`: Sets the GIF image corresponding to the selected index.
-     */
-    const handleSelectionChange = (selectedIndex: number): void => {
-        setSelectedDescription(
-            <Fragment>
-               {descriptions[selectedIndex]}
-            </Fragment>
-        )
-        setSelectedGif(
-            <Fragment>
-                <img src={gifs_path[selectedIndex]} alt="Gif"/>
-            </Fragment>
-        )
-    };
 
     return  (
         <Fragment>
-            <Container>
-                <Row>
-                    <Col lg={5}>
-                        <Row  className='home_selection'>
-                            <HomeSelection onSelectionChange={handleSelectionChange}/>
-                        </Row>
-                        <Row  className='home_description'>
-                            {selectedDesciption}
-                                <div className='bible_verse'> 
-                                    <p>23 Work willingly at whatever you do, as though you were working for the Lord rather than for people.
-                                    </p>
-                                    <p>- Colossians 3:23</p>
-                            </div>
-                        </Row>
-                    </Col>
-                    <Col lg={7} >
-                        <Row className='home_image_container'>
-                            {selectedGif}
-                        </Row>
-                    </Col>
-                </Row>
-            </Container>
+            <Stack direction='horizontal' gap={1} className='home_container'>
+                <Stack className='left' gap={3}>
+                    <div className="image_container">
+                        <img src="src\assets\Sonia_Nevermind_Halfbody_Sprite_29.webp" alt="Profile" className="profile" />
+                    </div>
+                    <Stack className='name_description'>
+                        <div className='name'>Reyes, Paul Adrian Alcoran</div>
+                        <div className='name_sub'>Software Engineer &middot; paul/pol</div>
+                    </Stack>
+                    <div className='short_description'>Devoted to crafting tech with purpose—building games and apps that reflect Christ’s wonder and meaning.</div>
+                    
+                    <hr className="horizontal_line" />
+
+                    <Stack direction='vertical'>
+                    <div className='highlights_title'>Milestones</div>
+                        <ul className='highlights_container'>
+                            <li className='highlight'>7+ game jam projects published on itch.io</li>
+                            <li className='highlight'>Full-stack development experience (MERN stack)</li>
+                            <li className='highlight'>Unity/Unreal Engine gameplay programmer</li>
+                            <li className='highlight'>Government tech internship experience (Agriculture Canada)</li>
+                            <li className='highlight'>Procedural generation (dungeons/cities)</li>
+        {/* Figure out which design */}
+                        </ul>
+                    </Stack>
+                </Stack>
+                <Stack className='right'>aasdasdsd</Stack>
+            </Stack>
         </Fragment>
     )
 }
