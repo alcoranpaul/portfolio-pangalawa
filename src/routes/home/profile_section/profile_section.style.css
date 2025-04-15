@@ -2,9 +2,10 @@
     padding: 20px 5px 20px 5px;
     justify-content: start;
     align-items: center; /* Center vertically */
-    
+  
     width: 15%;
     .image_container {
+        
         display: flex;
         justify-content: center;
         align-items: center; /* Center vertically */
@@ -52,11 +53,12 @@
             2vw,
             15px
         ); /* Dynamically adjust font size */
+        /* background-color: red; */
     }
     .short_description {
         padding: 0;
         margin: 0;
-       
+        /* background-color: red; */
        .bible_verse_highlight{
             background-color: var(--color-border);
             border-radius: 10px;
@@ -83,9 +85,11 @@
         font-weight: bold;
         margin: 0px;
         padding: 0px;
+        /* background-color: red; */
     }
 
     .highlights_container {
+        /* background-color: red; */
         margin: 0;
         list-style: none;
         /* padding: 0; */
@@ -99,7 +103,7 @@
 
     .highlight {
         position: relative;
-
+       
         color: var(--color-fg-primary);
         font-size: 0.95rem;
         line-height: 1.6;
@@ -126,5 +130,15 @@
 
     .highlight:last-child {
         margin-bottom: 0;
+    }
+
+    .horizontal_line {
+        padding: 0;
+        border: 0;
+        border-radius: 10px;
+        height: 3px;
+        background-color: var(  --color-border-accent);
+        margin: 1px;
+        width: 100%; /* Make it span the full width of the container */
     }
 }
