@@ -19,7 +19,7 @@ function DirectoryComponent({ directory, icon }: DirectoryComponentProps): React
             <DirectoryContainer onClick={() => setIsSelected((prev) => !prev)}>
                 &emsp;{isSelected ? "⏷" : "⏵"}
                 {icon || <MdFolder size={15} />}{" "}
-                <div className="directory_component_name">{directory.Name()}</div>
+                <div className="directory_component_name">{directory.Name().toLowerCase()}</div>
             </DirectoryContainer>
         );
     }

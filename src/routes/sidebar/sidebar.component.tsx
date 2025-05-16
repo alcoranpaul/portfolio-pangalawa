@@ -2,9 +2,11 @@ import { Fragment, ReactElement } from "react";
 import { PiFolderStarFill } from "react-icons/pi";
 import { Directory } from "../../class/directory_class.ts";
 import { File } from "../../class/file.ts";
+
 import DirectoryComponent from "../../components/directory_component/directory.component";
 
 import { Content, Header, RepoName, SidebarContainer } from "./sidebar.styles.tsx";
+import { workDataList } from "./work.ts";
 
 /**
  * Sidebar component that serves as a container for the main sections of the sidebar.
@@ -15,7 +17,7 @@ import { Content, Header, RepoName, SidebarContainer } from "./sidebar.styles.ts
  * @component
  */
 function Sidebar(): ReactElement {
-    const directory_structure = new Directory("features", [
+    const features_directory = new Directory("features", [
         new File("home", "/"),
         new File("projects", "/projects"),
         new File("work", "/work"),
@@ -25,16 +27,25 @@ function Sidebar(): ReactElement {
         new File("about", "/about"),
     ]);
 
+    const work_directory = new Directory(
+        "work",
+        workDataList.map((data) => new File(data.title, `/work/${data.title}`))
+    );
+
+    const directories: Directory[] = [features_directory, work_directory];
+
     return (
         <Fragment>
             <SidebarContainer gap={1}>
                 <Header>&emsp; EXPLORER</Header>
                 <Content>
                     <RepoName>&#x23F7; PORTFOLIO-PANGALAWA</RepoName>
-                    <DirectoryComponent
-                        directory={directory_structure}
-                        icon={<PiFolderStarFill size={15} />}
-                    />
+                    {directories.map((directory) => (
+                        <DirectoryComponent
+                            directory={directory}
+                            icon={<PiFolderStarFill size={15} />}
+                        />
+                    ))}
                 </Content>
             </SidebarContainer>
         </Fragment>

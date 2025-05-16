@@ -80,10 +80,12 @@ function FileComponent({ file }: FileComponentProps): ReactElement {
         <FaReact size={15} style={{ color: "var(--color-link)" }} />
     ); // Default to React icon
 
+    const fileName = file.Name().toLowerCase().replace(/ /g, "_");
+
     return (
         <FileContainer to={file.GetLink()}>
             &emsp;&emsp;&emsp;
-            {icon} {/* Display the appropriate icon */} {file.Name()}
+            {icon} {/* Display the appropriate icon */} {fileName}
             {randomExtension} {/* Append random extension */}
         </FileContainer>
     );

@@ -3,6 +3,7 @@
       "title": "Gameplay Programmer",
       "company": null,
       "years": "2022 - Present",
+      "markdown": "src/assets/experiences/work/gameplay_programmer.md",
       "description": [
         "Developed core **gameplay systems**, including **interaction mechanics**, **locker-hiding stealth logic**, **dynamic quest/task tracking**, and a **modular inventory and crafting system**, contributing to an immersive player experience.",
         "Engineered a **modular Souls-like combat system**, incorporating **stamina management**, **hit detection**, **animation canceling**, and **parrying mechanics** to create a responsive, skill-based combat experience.",
@@ -17,9 +18,10 @@
       ]
     },
     {
-      "title": "Web Development Training & Self-Learning",
+      "title": "Web Development",
       "company": null,
       "years": "2020 – 2024",
+         "markdown": "src/assets/experiences/work/web_dev_train.md",
       "description": [
         "**Self-taught full-stack web development** through a variety of online resources, including courses, tutorials, and hands-on projects. Focused on core web technologies such as **React**, **JavaScript**, **TypeScript**, **Node.js**, and **Firebase**, mastering both front-end and back-end development principles.",
         "Gained in-depth knowledge of **UI/UX design**, prioritizing responsive and intuitive user interfaces, accessibility, and performance optimization to improve the overall user experience.",
@@ -33,6 +35,7 @@
       "title": "Freelance Web Developer",
       "company": null,
       "years": "2025 – Present",
+         "markdown": "src/assets/experiences/work/web_dev_freelance.md",
       "description": [
         "**Freelanced** as a web developer, designing and delivering **custom web applications** tailored to clients' needs with a strong focus on **React**, **TypeScript**, and **Node.js** to create dynamic, responsive, and user-friendly interfaces.",
         "Developed a **custom e-commerce application** using **React** and **TypeScript**, ensuring a seamless and intuitive product browsing experience that significantly enhanced user engagement and sales conversion.",
@@ -55,6 +58,7 @@
       "title": "Front Store Crew",
       "company": "Jollibee Northgate",
       "years": "July 2022 – September 2022",
+      "markdown": "src/assets/experiences/work/front_store_jb.md",
       "description": [
         "Maintained high standards of **customer service** during high-volume and fast-paced operations, ensuring customer satisfaction through efficient and friendly service.",
         "Upheld the **gold standard** of the store, including adherence to food safety management protocols and company policies on a daily basis.",
@@ -72,6 +76,7 @@
       "title": "Co-Op Software Developer",
       "company": "Agriculture and Agri-Food Canada",
       "years": "September 2021 – December 2021",
+      "markdown": "src/assets/experiences/work/agri_food_canada.md",
       "description": [
         "Developed a **web application** using **JavaScript** and **Vue** for data input and transfer to a database through **Grails**, improving data collection processes.",
         "Created a **Bridge app** in **MS Access** using **VBA**, automating the transfer of data between Excel files, saving time and reducing manual errors.",
@@ -88,6 +93,7 @@
       "title": "Audio Visual Support",
       "company": "Zion Apostolic Church",
       "years": "August 2018 – August 2024",
+      "markdown": "src/assets/experiences/work/audio_visual_zion.md",
       "description": [
         "Set up, operated, and tore down **audio/visual equipment** for weekly worship services and preaching, ensuring seamless technical support for church events and programs.",
         "Designed and created **preaching presentations** using **MS PowerPoint**, incorporating **digital media** and **visual aids** provided by pastors to enhance sermon delivery and engagement.",
@@ -103,6 +109,7 @@
       "title": "Camp Counsellor",
       "company": "Intervarsity Circle Square Ranch",
       "years": "July 2017 & July 2018",
+      "markdown": "src/assets/experiences/work/camp_counsellor.md",
       "description": [
         "Supervised and mentored groups of **school-aged children** in various outdoor and recreational activities, ensuring their safety, well-being, and engagement throughout the camp experience.",
         "Developed and led **age-appropriate activities**, including sports, arts and crafts, and team-building exercises, fostering positive social interactions and personal growth among campers.",

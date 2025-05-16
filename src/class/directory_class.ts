@@ -1,6 +1,6 @@
 import { File } from "./file.ts";
 
-export class Directory{
+export class Directory {
     private directory_name: string;
     private directory_children: (Directory | File)[];
 
@@ -16,5 +16,4 @@ export class Directory{
     public Children() {
         return this.directory_children;
     }
-
 }
