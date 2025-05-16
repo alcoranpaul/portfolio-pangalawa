@@ -1,145 +1,137 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  overflow: hidden; /* Prevent scrolling */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 .container-fluid {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 }
 
 .layout_base {
-  margin: 0px;
-  height: 2.5vh;
-  background-color: var(--color-bg-primary);
-  color: white;
-  display: flex;
-  align-items: start;
-  justify-content: start;
-  font-size: 0.8rem;
-  border-style: solid;
-  border-color: var( --color-border);
-  border-width: 1px;
-  flex-direction: column;
-
+    margin: 0px;
+    height: 2.5vh;
+    background-color: var(--color-bg-primary);
+    color: white;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    font-size: 0.8rem;
+    border-style: solid;
+    border-color: var(--color-border);
+    border-width: 1px;
+    flex-direction: column;
 }
 
 .layout_content {
-  height: 100%;
-  background-color: #f8f9fa;
-  display: flex; /* Enable Flexbox for horizontal layout */
-  overflow: hidden; /* Prevent scrolling */
+    height: 100%;
+    background-color: #f8f9fa;
+    display: flex; /* Enable Flexbox for horizontal layout */
+    overflow: hidden; /* Prevent scrolling */
 }
 
 .activity_bar {
-  background-color: blue;
-  height: 100%; /* Full height of the parent container */
-  width: 3.5%; /* Occupy 3.5% of the parent container's width */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  border-style: solid;
-  border-color: var( --color-border);
-  border-width: 1px;
-
+    background-color: blue;
+    height: 100%; /* Full height of the parent container */
+    width: 3.5%; /* Occupy 3.5% of the parent container's width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-style: solid;
+    border-color: var(--color-border);
+    border-width: 1px;
 }
 
 .sidebar {
-  background-color: var(--color-bg-tertiary);
-  height: 100%; /* Full height of the parent container */
-  width: 15%; /* Occupy 15% of the parent container's width */
-  border-style: solid;
-  border-color: var(--color-border);
-  border-width: 1.5px;
-  display: flex; /* Ensure child elements can use Flexbox */
-  flex-direction: column; /* Stack child elements vertically */
+    background-color: var(--color-bg-tertiary);
+    height: 100%; /* Full height of the parent container */
+    width: 15%; /* Occupy 15% of the parent container's width */
+    border-style: solid;
+    border-color: var(--color-border);
+    border-width: 1.5px;
+    display: flex; /* Ensure child elements can use Flexbox */
+    flex-direction: column; /* Stack child elements vertically */
 }
-
 
 .main {
-  background-color:  var(--color-bg-primary);
-  height: 100%; /* Full height of the parent container */
-  flex-grow: 1; /* Occupy the remaining space */
-  width: 100%; /* Full width of the parent container */ 
-  display: flex; /* Enable Flexbox for horizontal layout */
-  color: var(--color-fg-primary);
-  padding: 0%;
+    background-color: var(--color-bg-primary);
+    height: 100%; /* Full height of the parent container */
+    flex-grow: 1; /* Occupy the remaining space */
+    width: 100%; /* Full width of the parent container */
+    display: flex; /* Enable Flexbox for horizontal layout */
+    color: var(--color-fg-primary);
+    padding: 0%;
 
-  border-style: solid;
-  border-color: var(--color-border);
-  border-width: 1px;
-  .tab_section{
-    background-color: var(--color-bg-tertiary);
-    height: 4%;
-  }
-
-  
- 
+    border-style: solid;
+    border-color: var(--color-border);
+    border-width: 1px;
+    .tab_section {
+        background-color: var(--color-bg-tertiary);
+        height: 4%;
+    }
 }
 
-.main_section{
-  position: relative;
-  flex-grow: 1; /* Occupy the remaining space */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  overflow-y: auto; /* Allow vertical scrolling */
-  display: flex;
-  flex-direction: column;
-  height: 100%; /* Ensure the main section spans the full height */
-  
-  border-style: solid;
-  border-color: var(--color-border);
-  border-width: 1px;
-  width: 100%; /* Full width of the parent container */
-  
-.source_pagnation {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background-color: var(--color-bg-primary);
-    padding: 10px 5px 10px 15px;
-    font-size: clamp(7px, 2vw, 13px); /* Dynamically adjust font size */
-    height: 2%; /* Set the height */
-    display: flex; /* Use Flexbox for alignment */
-    align-items: center; /* Vertically center the text */
-    justify-content: start; /* Horizontally center the text */
-    overflow: hidden; /* Prevent text from overflowing */
-    text-overflow: ellipsis; /* Add ellipsis if the text is too long */
-    white-space: nowrap; /* Prevent text from wrapping */
-  }
-
-  .main_content{
+.main_section {
+    position: relative;
+    flex-grow: 1; /* Occupy the remaining space */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
     display: flex;
     flex-direction: column;
-    padding: 5px 15px 5px 15px;
-    flex-grow: 1;
-  }
+    height: 100%; /* Ensure the main section spans the full height */
 
+    border-style: solid;
+    border-color: var(--color-border);
+    border-width: 1px;
+    width: 100%; /* Full width of the parent container */
 
+    .source_pagnation {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: var(--color-bg-primary);
+        padding: 10px 5px 10px 15px;
+        font-size: clamp(7px, 2vw, 13px); /* Dynamically adjust font size */
+        height: 2%; /* Set the height */
+        display: flex; /* Use Flexbox for alignment */
+        align-items: center; /* Vertically center the text */
+        justify-content: start; /* Horizontally center the text */
+        overflow: hidden; /* Prevent text from overflowing */
+        text-overflow: ellipsis; /* Add ellipsis if the text is too long */
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
 
-
+    .main_content {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 15px 5px 15px;
+        flex-grow: 1;
+    }
 }
-
 
 /* Style the scrollbar for WebKit-based browsers */
-.main_section::-webkit-scrollbar {
-  width: 17px; /* Width of the vertical scrollbar */
+::-webkit-scrollbar {
+    width: 17px; /* Width of the vertical scrollbar */
 }
 
-.main_section::-webkit-scrollbar-track {
-  background: var(--color-scrollbar-bg); /* Color of the scrollbar track */
-  border-radius: 2px; /* Rounded corners for the track */
+::-webkit-scrollbar-track {
+    background: var(--color-scrollbar-bg); /* Color of the scrollbar track */
+    border-radius: 2px; /* Rounded corners for the track */
 }
 
-.main_section::-webkit-scrollbar-thumb {
-  background: var(--color-scrollbar-active); /* Color of the scrollbar thumb */
-  border-radius: 7px; /* Rounded corners for the thumb */
+::-webkit-scrollbar-thumb {
+    background: var(--color-scrollbar-active); /* Color of the scrollbar thumb */
+    border-radius: 7px; /* Rounded corners for the thumb */
 }
 
-.main_section::-webkit-scrollbar-thumb:hover {
-  background: var(--color-scrollbar-hover); /* Darker color when hovering over the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: var(
+        --color-scrollbar-hover
+    ); /* Darker color when hovering over the scrollbar thumb */
 }

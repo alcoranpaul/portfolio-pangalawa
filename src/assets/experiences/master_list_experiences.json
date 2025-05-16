@@ -18,20 +18,6 @@
       ]
     },
     {
-      "title": "Web Development",
-      "company": null,
-      "years": "2020 – 2024",
-         "markdown": "src/assets/experiences/work/web_dev_train.md",
-      "description": [
-        "**Self-taught full-stack web development** through a variety of online resources, including courses, tutorials, and hands-on projects. Focused on core web technologies such as **React**, **JavaScript**, **TypeScript**, **Node.js**, and **Firebase**, mastering both front-end and back-end development principles.",
-        "Gained in-depth knowledge of **UI/UX design**, prioritizing responsive and intuitive user interfaces, accessibility, and performance optimization to improve the overall user experience.",
-        "**Developed proficiency in back-end technologies**, learning **Node.js** for server-side logic and integrating with databases like **MongoDB** and **SQLite** for dynamic, data-driven applications.",
-        "Gained hands-on experience with **serverless architectures** and **API integration**, enabling the development of scalable, low-maintenance applications with **Netlify** hosting, and optimizing workflows using **Git/GitHub** for version control and collaboration.",
-        "Engaged in a range of **personal projects** to apply theoretical knowledge in real-world scenarios, including e-commerce websites, interactive web applications, and custom-built CRUD (Create, Read, Update, Delete) systems.",
-        "Constantly challenged myself by participating in coding challenges and contributing to open-source communities, which enhanced problem-solving skills and kept me up-to-date with industry trends and best practices."
-      ]
-    },
-    {
       "title": "Freelance Web Developer",
       "company": null,
       "years": "2025 – Present",
@@ -55,6 +41,20 @@
       ]
     },
     {
+      "title": "Web Development",
+      "company": null,
+      "years": "2020 – 2024",
+         "markdown": "src/assets/experiences/work/web_dev_train.md",
+      "description": [
+        "**Self-taught full-stack web development** through a variety of online resources, including courses, tutorials, and hands-on projects. Focused on core web technologies such as **React**, **JavaScript**, **TypeScript**, **Node.js**, and **Firebase**, mastering both front-end and back-end development principles.",
+        "Gained in-depth knowledge of **UI/UX design**, prioritizing responsive and intuitive user interfaces, accessibility, and performance optimization to improve the overall user experience.",
+        "**Developed proficiency in back-end technologies**, learning **Node.js** for server-side logic and integrating with databases like **MongoDB** and **SQLite** for dynamic, data-driven applications.",
+        "Gained hands-on experience with **serverless architectures** and **API integration**, enabling the development of scalable, low-maintenance applications with **Netlify** hosting, and optimizing workflows using **Git/GitHub** for version control and collaboration.",
+        "Engaged in a range of **personal projects** to apply theoretical knowledge in real-world scenarios, including e-commerce websites, interactive web applications, and custom-built CRUD (Create, Read, Update, Delete) systems.",
+        "Constantly challenged myself by participating in coding challenges and contributing to open-source communities, which enhanced problem-solving skills and kept me up-to-date with industry trends and best practices."
+      ]
+    },
+    {
       "title": "Front Store Crew",
       "company": "Jollibee Northgate",
       "years": "July 2022 – September 2022",
@@ -73,7 +73,9 @@
       ]
     },
     {
-      "title": "Co-Op Software Developer",
+      "title": "Student Programmer",
+      "full_title": "Student Programmer | Production Control",
+      "tech_stack": "HTML || CSS || JavaScript || Bootstrap || Vue.js || Grails || VBA || MS Access || MS Excel",
       "company": "Agriculture and Agri-Food Canada",
       "years": "September 2021 – December 2021",
       "markdown": "src/assets/experiences/work/agri_food_canada.md",
