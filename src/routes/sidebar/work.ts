@@ -35,3 +35,8 @@ const rawData = master_list as unknown as WorkJSON[];
 export const workDataList: WorkData[] = rawData.map(
     (data) => new WorkData(data.title, data.company, data.years, data.markdown, data.description)
 );
+
+export function getWorkData(title: string | undefined): WorkData | undefined {
+    if (title === undefined) return undefined;
+    return workDataList.find((item) => item.title === title);
+}

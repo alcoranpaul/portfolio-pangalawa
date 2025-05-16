@@ -48,7 +48,7 @@ function RenderWorkItem(data: WorkData): ReactElement {
                     </li>
                 ))}
             </DescriptionList>
-            <Button type="button">View More Details</Button> {/* <-- Here */}
+            <Button to={`/work/${data.title}`}>View More Details</Button>
         </WorkItem>
     );
 }

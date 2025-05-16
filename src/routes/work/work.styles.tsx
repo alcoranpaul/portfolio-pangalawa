@@ -1,4 +1,5 @@
 import { Stack } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const WorkContainer = styled(Stack)`
@@ -96,7 +97,7 @@ export const DescriptionList = styled.ul`
     line-height: 1.2;
 `;
 
-export const Button = styled.button`
+export const Button = styled(Link)`
     padding: 0.5rem 1.1rem;
     background-color: var(--color-button-bg);
     color: white;
