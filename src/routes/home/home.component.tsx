@@ -1,7 +1,6 @@
 import { Fragment, ReactElement } from "react";
-import { Stack } from "react-bootstrap";
 import GitHubCalendar from "react-github-calendar";
-import "./home.style.css";
+import { HomeContainer, RightContainer } from "./home.styles";
 import ProfileSection from "./profile_section/profile_section.component";
 import ProjectHighlights from "./project_highlight/project_highlight.component";
 
@@ -33,9 +32,9 @@ function Home(): ReactElement {
 
     return (
         <Fragment>
-            <Stack direction="horizontal" gap={1} className="home_container">
+            <HomeContainer direction="horizontal" gap={1}>
                 <ProfileSection />
-                <Stack className="right" gap={2}>
+                <RightContainer gap={2}>
                     <div className="project_highlights">
                         <ProjectHighlights />
                     </div>
@@ -49,8 +48,8 @@ function Home(): ReactElement {
                             blockSize={9}
                         />
                     </div>
-                </Stack>
-            </Stack>
+                </RightContainer>
+            </HomeContainer>
         </Fragment>
     );
 }

@@ -1,8 +1,25 @@
 import { ReactElement } from "react";
 import { FaReact } from "react-icons/fa";
-import { SiCplusplus, SiCss3, SiGo, SiHtml5, SiJavascript, SiJson, SiKotlin, SiMarkdown, SiPhp, SiPython, SiRuby, SiRust, SiSharp, SiSwift, SiTypescript } from "react-icons/si";
-import { Link } from "react-router-dom";
+import {
+    SiCplusplus,
+    SiCss3,
+    SiGo,
+    SiHtml5,
+    SiJavascript,
+    SiJson,
+    SiKotlin,
+    SiMarkdown,
+    SiPhp,
+    SiPython,
+    SiRuby,
+    SiRust,
+    SiSharp,
+    SiSwift,
+    SiTypescript,
+} from "react-icons/si";
+
 import { File } from "../../class/file";
+import { FileContainer } from "./file.styles";
 
 interface FileComponentProps {
     file: File;
@@ -10,8 +27,24 @@ interface FileComponentProps {
 
 function FileComponent({ file }: FileComponentProps): ReactElement {
     const extensions = [
-        ".tsx", ".ts", ".js", ".jsx", ".html", ".css", ".json", ".md", // Existing extensions
-        ".py", ".cs", ".cpp", ".java", ".rb", ".php", ".go", ".swift", ".kt", ".rs" // Added extensions
+        ".tsx",
+        ".ts",
+        ".js",
+        ".jsx",
+        ".html",
+        ".css",
+        ".json",
+        ".md", // Existing extensions
+        ".py",
+        ".cs",
+        ".cpp",
+        ".java",
+        ".rb",
+        ".php",
+        ".go",
+        ".swift",
+        ".kt",
+        ".rs", // Added extensions
     ];
 
     // Map extensions to corresponding icons
@@ -33,7 +66,7 @@ function FileComponent({ file }: FileComponentProps): ReactElement {
         ".go": <SiGo size={15} style={{ color: "#00ADD8" }} />,
         ".swift": <SiSwift size={15} style={{ color: "#FA7343" }} />,
         ".kt": <SiKotlin size={15} style={{ color: "#7F52FF" }} />,
-        ".rs": <SiRust size={15} style={{ color: "#DEA584" }} />
+        ".rs": <SiRust size={15} style={{ color: "#DEA584" }} />,
     };
 
     // Function to randomly select an extension
@@ -43,17 +76,16 @@ function FileComponent({ file }: FileComponentProps): ReactElement {
 
     // Get the random extension and corresponding icon
     const randomExtension = getRandomExtension();
-    const icon = extensionIcons[randomExtension] || <FaReact size={15} style={{ color: "var(--color-link)" }} />; // Default to React icon
+    const icon = extensionIcons[randomExtension] || (
+        <FaReact size={15} style={{ color: "var(--color-link)" }} />
+    ); // Default to React icon
 
     return (
-        <div className="directory_component_file file">
+        <FileContainer to={file.GetLink()}>
             &emsp;&emsp;&emsp;
-            {icon} {/* Display the appropriate icon */}
-            {' '}{' '}{' '}
-            <Link style={{ paddingLeft: "5px" }} to={file.GetLink()}>
-                {file.Name()}{randomExtension} {/* Append random extension */}
-            </Link>
-        </div>
+            {icon} {/* Display the appropriate icon */} {file.Name()}
+            {randomExtension} {/* Append random extension */}
+        </FileContainer>
     );
 }
 

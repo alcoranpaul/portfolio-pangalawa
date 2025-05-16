@@ -1,5 +1,6 @@
-.file{
-    
+import styled from "styled-components";
+
+export const DirectoryContainer = styled.div`
     padding: 3px 3px 3px 0px;
     /* display: flex; */
     width: 100%;
@@ -8,12 +9,9 @@
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 3px; 
-}
+    gap: 3px;
 
-
-
-
-.file:hover{
-    background-color: var(--color-bg-secondary);
-}
+    &:hover {
+        background-color: var(--color-bg-secondary);
+    }
+`;

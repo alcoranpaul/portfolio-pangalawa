@@ -1,4 +1,7 @@
-.footer_stack {
+import { Stack } from "react-bootstrap";
+import styled from "styled-components";
+
+export const FooterContainer = styled(Stack)`
     background-color: yellow;
     display: flex; /* Enable Flexbox */
     justify-content: space-between; /* Push items to the left and right */
@@ -9,24 +12,18 @@
     height: 2.5vh; /* Fixed height for the footer */
     font-size: 0.8rem; /* Adjust font size */
     cursor: default;
-  }
-  
-.footer_left {
-  /* background-color: red; */
-  text-align: left; /* Align text to the left */
-}
+`;
+export const LeftContainer = styled(Stack)`
+    text-align: left;
+`;
+export const RightContainer = styled(Stack)`
+    text-align: right;
+`;
 
-.footer_right {
-  /* background-color: blue; */
-  text-align: right; /* Align text to the right */
-}
-
-.footer_interactable{
-  padding: 1px 2px 1px 2px;
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
-}
-
-.footer_interactable:hover {
-  background-color: var(--color-border); /* Change background color on hover */
-
-}
+export const Interactable = styled.div`
+    padding: 1px 2px 1px 2px;
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color: var(--color-border);
+    }
+`;

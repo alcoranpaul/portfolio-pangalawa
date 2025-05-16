@@ -2,32 +2,43 @@ import { Fragment, ReactElement } from "react";
 import { ProjectData } from "../project_class";
 
 import { Stack } from "react-bootstrap";
-import './project_popup.style.css';
+import {
+    CloseButton,
+    Content,
+    ImageBanner,
+    Popup,
+    PopupHeader,
+    PopupOverlay,
+    TableOfContent,
+} from "./project_popup.styles";
 
-function ProjectPopup({ setOpenedCard, selectedProject }: { setOpenedCard: (value: boolean) => void, selectedProject: ProjectData | null }): ReactElement {
-
-    return(
+function ProjectPopup({
+    setOpenedCard,
+    selectedProject,
+}: {
+    setOpenedCard: (value: boolean) => void;
+    selectedProject: ProjectData | null;
+}): ReactElement {
+    return (
         <Fragment>
-            <div className="popup_overlay" onClick={() => setOpenedCard(false)}></div>
-            <div className="popup">
-                {/* <div className="popup_image_banner">asd</div> */}
+            <PopupOverlay onClick={() => setOpenedCard(false)}></PopupOverlay>
+            <Popup>
                 <Stack gap={1} direction="vertical" className="h-100">
-                    <div className="popup_image_banner flex-grow-0">
-                        <div className="popup_header">
+                    <ImageBanner className="flex-grow-0">
+                        <PopupHeader>
                             <h2>{selectedProject?.name}</h2>
                             <p>{selectedProject?.description}</p>
-                        </div>
-                    </div>
+                        </PopupHeader>
+                    </ImageBanner>
                     <Stack direction="horizontal" gap={1} className="flex-grow-1 h-100">
-                        <div className="popup_table_of_content flex-grow-1">asd
-                        </div>
-                        <div className="popup_content flex-grow-1">asd</div>
+                        <TableOfContent className="flex-grow-1">asd</TableOfContent>
+                        <Content className="flex-grow-1">asd</Content>
                     </Stack>
                 </Stack>
-                <button onClick={() => setOpenedCard(false)} className="project_popup_close_button">Close</button>
-            </div>
+                <CloseButton onClick={() => setOpenedCard(false)}>Close</CloseButton>
+            </Popup>
         </Fragment>
-    )
+    );
 }
 
 export default ProjectPopup;

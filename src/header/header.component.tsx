@@ -1,20 +1,32 @@
 import { Fragment, ReactElement } from "react";
-import { Stack } from "react-bootstrap";
-import { FaDiscord, FaGithub, FaItchIo, FaLinkedinIn, FaRegUserCircle, FaSteam, } from "react-icons/fa";
+import {
+    FaDiscord,
+    FaGithub,
+    FaItchIo,
+    FaLinkedinIn,
+    FaRegUserCircle,
+    FaSteam,
+} from "react-icons/fa";
 import { SiMyanimelist, SiRiotgames } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
-import "./header.style.css";
-
+import {
+    HeaderContainer,
+    HeaderIcon,
+    HeaderLeftContainer,
+    HeaderRightContainer,
+} from "./header.styles";
 
 function Header(): ReactElement {
     return (
-         <Fragment>
-            <Stack direction="horizontal" className="header_stack" gap={3}>
-                <Stack direction="horizontal" gap={3} className='header_left'>
-                    <div><VscVscode size={20} style={{ color: "var(--color-link)" }} /></div>
-                    <div className="header_icon">
-                        <FaRegUserCircle size={15}  />
+        <Fragment>
+            <HeaderContainer direction="horizontal" gap={3}>
+                <HeaderLeftContainer direction="horizontal" gap={3}>
+                    <div>
+                        <VscVscode size={20} style={{ color: "var(--color-link)" }} />
                     </div>
+                    <HeaderIcon>
+                        <FaRegUserCircle size={15} />
+                    </HeaderIcon>
                     <div>Home</div>
                     <div>Projects</div>
                     <div>Work</div>
@@ -22,23 +34,34 @@ function Header(): ReactElement {
                     <div>Education</div>
                     <div>Contact</div>
                     <div>About</div>
-                </Stack>
+                </HeaderLeftContainer>
 
-                <Stack direction="horizontal" gap={2} className='header_right'>
-                    <div className="header_icon"><FaLinkedinIn  size={19}/></div>
-                    <div className="header_icon"><FaGithub  size={20} /></div>
-                    <div className="header_icon"><FaItchIo size={20} /></div>
-                    <div className="header_icon"><FaSteam size={20}/></div>
-                    <div className="header_icon"><FaDiscord size={20}></FaDiscord></div>
-                    <div className="header_icon"><SiRiotgames size={20}/></div>
-                    <div className="header_icon"><SiMyanimelist size={20}/></div>
-                    
-                   
-                   
-                </Stack>
-            </Stack>
+                <HeaderRightContainer direction="horizontal" gap={2}>
+                    <HeaderIcon>
+                        <FaLinkedinIn size={19} />
+                    </HeaderIcon>
+                    <HeaderIcon>
+                        <FaGithub size={20} />
+                    </HeaderIcon>
+                    <HeaderIcon>
+                        <FaItchIo size={20} />
+                    </HeaderIcon>
+                    <HeaderIcon>
+                        <FaSteam size={20} />
+                    </HeaderIcon>
+                    <HeaderIcon>
+                        <FaDiscord size={20}></FaDiscord>
+                    </HeaderIcon>
+                    <HeaderIcon>
+                        <SiRiotgames size={20} />
+                    </HeaderIcon>
+                    <HeaderIcon>
+                        <SiMyanimelist size={20} />
+                    </HeaderIcon>
+                </HeaderRightContainer>
+            </HeaderContainer>
         </Fragment>
-    )
+    );
 }
 
 export default Header;

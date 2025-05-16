@@ -1,7 +1,7 @@
 import { Fragment, ReactElement, useState } from "react";
 import ProjectContentItem from "./project-content-item/project_content_item.component";
 import { ProjectData, projectDataList } from "./project_class";
-import "./project_content.style.css";
+import { ItemContainer, ProjectContainer } from "./project_content.styles";
 import ProjectPopup from "./project_popup/project_popup.component";
 
 function ProjectContent(): ReactElement {
@@ -30,14 +30,14 @@ function ProjectContent(): ReactElement {
 
     return (
         <Fragment>
-            <div className="projects_content">
+            <ProjectContainer>
                 {openedCard && (
                     <ProjectPopup setOpenedCard={setOpenedCard} selectedProject={selectedProject} />
                 )}
-                <div className={`projects_content_items ${openedCard ? "disabled" : ""}`}>
+                <ItemContainer className={`${openedCard ? "disabled" : ""}`}>
                     {RenderProjectItems()}
-                </div>
-            </div>
+                </ItemContainer>
+            </ProjectContainer>
         </Fragment>
     );
 }

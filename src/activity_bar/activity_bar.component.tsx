@@ -1,26 +1,24 @@
 import { ReactElement } from "react";
-
-import { Stack } from "react-bootstrap";
 import { FaRegFile } from "react-icons/fa";
-import "./activity_bar.style.css";
+
+import { Icon, StackContainer } from "./activity_bar.styles";
 
 interface ActivityBarProps {
-  onActivityBarClick: () => void;
+    onActivityBarClick: () => void;
 }
 
 function ActivityBar({ onActivityBarClick }: ActivityBarProps): ReactElement {
+    const handleClick = () => {
+        onActivityBarClick();
+    };
 
-  const handleClick =() => {
-    onActivityBarClick();
-  }
-
-  return (
-    <Stack className="activity_bar_stack" gap={4}>
-      <div className="activity_bar_icon" onClick={handleClick}>
-        <FaRegFile  size={30} />
-      </div>
-    </Stack>
-  );
+    return (
+        <StackContainer gap={4}>
+            <Icon onClick={handleClick}>
+                <FaRegFile size={30} />
+            </Icon>
+        </StackContainer>
+    );
 }
 
 export default ActivityBar;

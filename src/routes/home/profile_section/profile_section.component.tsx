@@ -1,46 +1,69 @@
 import { Fragment, ReactElement } from "react";
 import { Stack } from "react-bootstrap";
 
-import './profile_section.style.css';
 import OverlayComponent from "../../../components/overlay_component/overlay.component";
+import {
+    BibleVerseHighlight,
+    HighlightContainer,
+    HighlightItem,
+    HighlightTitle,
+    HorizontalLine,
+    Profile,
+    ProfileDescription,
+    ProfileName,
+    ProfilePicture,
+    ProfileSubName,
+    ProjectContainer,
+    ShortDescription,
+} from "./profile_section.styles";
 
 function ProfileSection(): ReactElement {
-
     return (
         <Fragment>
-            <Stack className='profile_section' gap={3}>
-                    <div className="image_container">
-                        <img src="src\assets\Sonia_Nevermind_Halfbody_Sprite_29.webp" alt="Profile" className="profile" />
-                    </div>
-                    <Stack className='name_description'>
-                        <div className='name'>Reyes, Paul Adrian Alcoran</div>
-                        <div className='name_sub'>Software Engineer &middot; paul/pol</div>
-                    </Stack>
-                    <div className='short_description'>
-                        <OverlayComponent 
-                            elements={<span className="bible_verse_highlight">Built by faith.</span>}
-                            tooltip_title={<div>23 Work willingly at whatever you do, as though you were working for the Lord rather than for people.</div>}
-                            tooltip_body={<div>Colossians 3:23</div>}
-                        />
-                        <span>Driven by curiosity. Creating with code.</span>
-                    </div>
-                    
-                    <hr className="horizontal_line" />
+            <ProjectContainer gap={3}>
+                <Profile>
+                    <ProfilePicture
+                        src="src\assets\Sonia_Nevermind_Halfbody_Sprite_29.webp"
+                        alt="Profile"
+                    />
+                </Profile>
+                <ProfileDescription>
+                    <ProfileName>Reyes, Paul Adrian Alcoran</ProfileName>
+                    <ProfileSubName>Software Engineer &middot; paul/pol</ProfileSubName>
+                </ProfileDescription>
+                <ShortDescription>
+                    <OverlayComponent
+                        elements={<BibleVerseHighlight>Built by faith.</BibleVerseHighlight>}
+                        tooltip_title={
+                            <div>
+                                23 Work willingly at whatever you do, as though you were working for
+                                the Lord rather than for people.
+                            </div>
+                        }
+                        tooltip_body={<div>Colossians 3:23</div>}
+                    />
+                    <span>Driven by curiosity. Creating with code.</span>
+                </ShortDescription>
 
-                    <Stack direction='vertical'>
-                    <div className='highlights_title'>Quick Links</div>
-                        <ul className='highlights_container'>
-                            <li className='highlight'>7+ game jam projects published on itch.io</li>
-                            <li className='highlight'>Full-stack development experience (MERN stack)</li>
-                            <li className='highlight'>Unity/Unreal Engine gameplay programmer</li>
-                            <li className='highlight'>Government tech internship experience (Agriculture Canada)</li>
-                            <li className='highlight'>Procedural generation (dungeons/cities)</li>
-                        </ul>
-                    </Stack>
+                <HorizontalLine />
+
+                <Stack direction="vertical">
+                    <HighlightTitle>Quick Links</HighlightTitle>
+                    <HighlightContainer>
+                        <HighlightItem>7+ game jam projects published on itch.io</HighlightItem>
+                        <HighlightItem>
+                            Full-stack development experience (MERN stack)
+                        </HighlightItem>
+                        <HighlightItem>Unity/Unreal Engine gameplay programmer</HighlightItem>
+                        <HighlightItem>
+                            Government tech internship experience (Agriculture Canada)
+                        </HighlightItem>
+                        <HighlightItem>Procedural generation (dungeons/cities)</HighlightItem>
+                    </HighlightContainer>
                 </Stack>
+            </ProjectContainer>
         </Fragment>
-
-    )
+    );
 }
 
 export default ProfileSection;

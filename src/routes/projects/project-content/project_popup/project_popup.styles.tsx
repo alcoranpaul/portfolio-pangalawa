@@ -1,14 +1,16 @@
-.popup_overlay {
+import styled from "styled-components";
+
+export const PopupOverlay = styled.div`
     position: absolute; /* Position relative to the parent container */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
-    z-index: 9; /* Place it below the popup but above other content */
-}
+    z-index: 9;
+`;
 
-.popup {
+export const Popup = styled.div`
     position: absolute; /* Position the popup relative to the parent container */
     top: 50%; /* Center vertically within the parent */
     left: 50%; /* Center horizontally within the parent */
@@ -31,18 +33,17 @@
 
     display: flex;
     flex-direction: column;
+`;
 
-}
-
-.popup_image_banner{
+export const ImageBanner = styled.div`
     position: relative;
     background-color: red;
     justify-content: center;
     align-content: center;
     height: 25%;
-}
+`;
 
-.popup_header {
+export const PopupHeader = styled.div`
     position: absolute; /* Position it relative to the popup container */
     bottom: 0; /* Align it to the bottom of the popup */
     left: 50%; /* Center it horizontally */
@@ -58,29 +59,27 @@
     border-top: 2px solid var(--color-border); /* Optional: Add a separator */
     text-align: center; /* Center text inside the header */
     border-radius: 5px; /* Optional: Add rounded corners */
-    z-index: 11; /* Ensure it appears above other elements in the popup */
-}
+    z-index: 11;
+`;
 
-.popup_table_of_content {
+export const TableOfContent = styled.div`
     width: 25%; /* Set the width to 25% */
     background-color: blue; /* Optional: Add a background color */
     padding: 10px;
     overflow-y: auto; /* Enable scrolling if content overflows */
     overflow-x: hidden;
-    height: 100%; /* Ensure it fills the vertical space */
-}
-
-.popup_content {
+    height: 100%;
+`;
+export const Content = styled.div`
     width: 75%; /* Set the width to 75% */
     background-color: red; /* Optional: Add a background color */
     padding: 10px;
     overflow-y: auto; /* Enable scrolling if content overflows */
     overflow-x: hidden;
-    height: 100%; /* Ensure it fills the vertical space */
-}
+    height: 100%;
+`;
 
-.project_popup_close_button{
-
+export const CloseButton = styled.button`
     position: absolute; /* Position the close button relative to the popup */
     top: 10px; /* Adjust as needed */
     right: 10px; /* Adjust as needed */
@@ -92,12 +91,11 @@
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
-}
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 
-.project_popup_close_button:hover {
-    background-color: var(--color-accent-primary);
-    color: var(--color-text-primary);
-    transform: scale(1.2); /* Slightly enlarge on hover */
-
-}
+    &:hover {
+        background-color: var(--color-accent-primary);
+        color: var(--color-text-primary);
+        transform: scale(1.2); /* Slightly enlarge on hover */
+    }
+`;

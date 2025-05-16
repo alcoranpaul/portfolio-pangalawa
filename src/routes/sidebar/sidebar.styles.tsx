@@ -1,5 +1,7 @@
-.sidebar_stack{
-    /* background-color: red;  */
+import { Stack } from "react-bootstrap";
+import styled from "styled-components";
+
+export const SidebarContainer = styled(Stack)`
     flex: 1;
     padding: 0; /* Remove extra padding */
     margin: 0; /* Remove extra margin */
@@ -9,29 +11,19 @@
     color: var(--color-fg-primary);
     font-size: 0.8rem;
     cursor: default;
-    user-select: none; /* Disable text selection */
-}
+    user-select: none;
+`;
 
-.sidebar_header{
-    /* background-color: red; */
+export const Header = styled.div`
     padding: 5px;
-}
-
-.sidebar_content{
-    /* background-color: aqua; */
+`;
+export const Content = styled.div`
     width: 100%;
     padding: 5px 0px 0px 0px;
-}
+`;
 
-.sidebar_content_repo{
+export const RepoName = styled.div`
     padding-left: 5px;
     font-weight: 600;
-    font-size: 0.75rem; /* Reduce font size */
-}
-
-
-
-@media (max-width: 450px){
- 
-
-}
+    font-size: 0.75rem;
+`;
