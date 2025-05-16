@@ -39,7 +39,7 @@ function Home(): ReactElement {
                     <div className="project_highlights">
                         <ProjectHighlights />
                     </div>
-                    <div className="projects_favorites">asd</div>
+
                     <div className="github_calendar">
                         <GitHubCalendar
                             username="alcoranpaul"
