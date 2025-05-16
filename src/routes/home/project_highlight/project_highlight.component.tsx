@@ -1,32 +1,38 @@
-import { ReactElement } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
+import { ProjectData, projectDataList } from "../../projects/project-content/project_class";
 
 export default function ProjectHighlights(): ReactElement {
+    const [randomProjects, setRandomProjects] = useState<ProjectData[]>([]); // Initialize as an empty array of ProjectData
+
+    useEffect(() => {
+        const getRandomProjects = (list: ProjectData[], count: number): ProjectData[] => {
+            // Create a copy of the original list to avoid modifying it directly
+            const shuffled = [...list].sort(() => 0.5 - Math.random());
+
+            // Take the first 'count' elements from the shuffled array
+            return shuffled.slice(0, count);
+        };
+
+        const fiveRandomProjects = getRandomProjects(projectDataList, 5);
+        setRandomProjects(fiveRandomProjects);
+    }, []);
+
     return (
         <Carousel>
-            <Carousel.Item>
-                <img src="src\\assets\\obito.gif" alt="First slide" />
-                <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-
-            <Carousel.Item>
-                <img src="src\\assets\\banana.gif" alt="Second slide" />
-                <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-
-            <Carousel.Item>
-                <img src="src\\assets\\goku vegeta.gif" alt="Third slide" />
-                <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
+            {randomProjects.map((project, index) => (
+                <Carousel.Item key={index}>
+                    {/* Assuming each project object has an 'image', 'title', and 'description' property */}
+                    <img
+                        src={"data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="}
+                        alt={project.name}
+                    />
+                    <Carousel.Caption>
+                        <h3>{project.name}</h3>
+                        <p>{project.description}</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            ))}
         </Carousel>
     );
 }
