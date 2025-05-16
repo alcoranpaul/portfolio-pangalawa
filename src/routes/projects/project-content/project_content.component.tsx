@@ -1,7 +1,7 @@
 import { Fragment, ReactElement, useState } from "react";
 import ProjectContentItem from "./project-content-item/project_content_item.component";
 import { ProjectData, projectDataList } from "./project_class";
-import './project_content.style.css';
+import "./project_content.style.css";
 import ProjectPopup from "./project_popup/project_popup.component";
 
 function ProjectContent(): ReactElement {
@@ -11,33 +11,35 @@ function ProjectContent(): ReactElement {
     const handleCardSelected = (item: ProjectData) => {
         setOpenedCard(true);
         setSelectedProject(item);
-    }
- 
+    };
 
     const RenderProjectItems = (): ReactElement[] => {
         const rows: ReactElement[] = [];
-        
+
         for (let i = 0; i < projectDataList.length; i++) {
-           rows.push(
-                <ProjectContentItem key={i} item={projectDataList[i]} onCardSelected={handleCardSelected} />
-            )
+            rows.push(
+                <ProjectContentItem
+                    key={i}
+                    item={projectDataList[i]}
+                    onCardSelected={handleCardSelected}
+                />
+            );
         }
         return rows;
     };
 
-    return(
+    return (
         <Fragment>
-
-                <div className="projects_content">
-                {openedCard && (<ProjectPopup  setOpenedCard={setOpenedCard} selectedProject={selectedProject} />)}
-                <div
-                    className={`projects_content_items ${openedCard ? "disabled" : ""}`}>
+            <div className="projects_content">
+                {openedCard && (
+                    <ProjectPopup setOpenedCard={setOpenedCard} selectedProject={selectedProject} />
+                )}
+                <div className={`projects_content_items ${openedCard ? "disabled" : ""}`}>
                     {RenderProjectItems()}
                 </div>
             </div>
-    
         </Fragment>
-    )
+    );
 }
 
 export default ProjectContent;
