@@ -5,7 +5,7 @@ export const ProjectContainer = styled.div`
     background-color: var(--color-bg-secondary);
     width: 100%;
     max-height: 80vh; /* Ensure it doesn't exceed the parent's height */
-
+    overflow: hidden;
     border-radius: 10px;
 `;
 
@@ -26,16 +26,16 @@ export const ItemContainer = styled.div`
     }
 
     &::-webkit-scrollbar {
-        width: 7px; /* Width of the vertical scrollbar */
+        width: 5px; /* Width of the vertical scrollbar */
     }
 
     &::-webkit-scrollbar-track {
-        background: var(--color-bg-secondary); /* Color of the scrollbar track */
+        background: var(--color-bg-tertiary); /* Color of the scrollbar track */
         border-radius: 2px; /* Rounded corners for the track */
     }
 
     &::-webkit-scrollbar-thumb {
-        background: var(--color-accent-secondary); /* Color of the scrollbar thumb */
+        background: var(--color-scrollbar-active); /* Color of the scrollbar thumb */
         border-radius: 7px; /* Rounded corners for the thumb */
     }
 
