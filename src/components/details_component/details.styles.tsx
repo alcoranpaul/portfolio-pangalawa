@@ -95,16 +95,26 @@ export const TableOfContent = styled.div`
 
 export const Content = styled.div`
     height: 70vh;
-
+    cursor: default;
     overflow-y: auto;
     width: 100%;
     padding: 20px;
 
     h1 {
         font-size: 2rem;
+        font-weight: 400;
     }
     h2 {
-        font-size: 1.2rem;
+        font-size: 1.7rem;
+        font-weight: 350;
+    }
+    h3 {
+        font-size: 1.35rem;
+        font-weight: 250;
+    }
+    h4 {
+        font-size: 1.15rem;
+        font-weight: 200;
     }
 
     ul p {
