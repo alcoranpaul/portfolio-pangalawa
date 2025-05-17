@@ -11,6 +11,7 @@ import Projects from "./routes/projects/projects.component";
 import Sidebar from "./routes/sidebar/sidebar.component";
 
 import "./App.css";
+import ProjectDetails from "./routes/projects/projects-details/project_details.component";
 import Work from "./routes/work/work.component";
 import WorkDetail from "./routes/work/work_details/work_details.component";
 
@@ -60,6 +61,7 @@ function App(): ReactElement {
             <Route path="/" element={<Layout />}>
                 <Route index element={<Home />} /> {/* Default route */}
                 <Route path="projects" element={<Projects />} />
+                <Route path="projects/:name" element={<ProjectDetails />} />
                 <Route path="work" element={<Work />} />
                 <Route path="work/:title" element={<WorkDetail />} />
                 <Route path="skills" element={<p>Skills</p>} />
