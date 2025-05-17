@@ -1,6 +1,6 @@
 import { Fragment, ReactElement } from "react";
+import { projectDataList } from "../../../class/project_class";
 import ProjectContentItem from "./project-content-item/project_content_item.component";
-import { projectDataList } from "./project_class";
 import { ItemContainer, ProjectContainer } from "./project_content.styles";
 
 function ProjectContent(): ReactElement {

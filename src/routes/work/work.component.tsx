@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import ReactMarkdown from "react-markdown";
-import { WorkData, workDataList } from "./work";
+import { WorkData, workDataList } from "../../class/work";
 import {
     Button,
     DescriptionList,

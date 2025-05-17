@@ -1,6 +1,6 @@
 import { ReactElement, useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
-import { ProjectData, projectDataList } from "../../projects/project-content/project_class";
+import { ProjectData, projectDataList } from "../../../class/project_class";
 
 export default function ProjectHighlights(): ReactElement {
     const [randomProjects, setRandomProjects] = useState<ProjectData[]>([]); // Initialize as an empty array of ProjectData

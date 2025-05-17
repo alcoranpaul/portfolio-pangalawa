@@ -1,10 +1,10 @@
 import { ReactElement, useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
+import { getProjectData, ProjectData } from "../../../class/project_class";
 import DetailsComponent, {
     DetailsComponentProps,
 } from "../../../components/details_component/details.component";
-import { getProjectData, ProjectData } from "../project-content/project_class";
 import { ButtonContainer, Dates, TechStack, Title } from "./project_details.styles";
 
 export default function ProjectDetails(): ReactElement {

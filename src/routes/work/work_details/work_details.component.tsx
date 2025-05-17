@@ -1,9 +1,9 @@
 import { ReactElement, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { getWorkData, WorkData } from "../../../class/work";
 import DetailsComponent, {
     DetailsComponentProps,
 } from "../../../components/details_component/details.component";
-import { getWorkData, WorkData } from "../work";
 import { CompanyName, FullTitle, TechStack, Years } from "./work_details.styles";
 
 export default function WorkDetail(): ReactElement {

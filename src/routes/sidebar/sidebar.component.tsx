@@ -5,8 +5,8 @@ import { File } from "../../class/file.ts";
 
 import DirectoryComponent from "../../components/directory_component/directory.component";
 
-import { projectDataList } from "../projects/project-content/project_class.ts";
-import { workDataList } from "../work/work.ts";
+import { projectDataList } from "../../class/project_class.ts";
+import { workDataList } from "../../class/work.ts";
 import { Content, Header, RepoName, SidebarContainer } from "./sidebar.styles.tsx";
 
 /**

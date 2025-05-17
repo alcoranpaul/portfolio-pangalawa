@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import ReactMarkdown from "react-markdown";
-import { ProjectData } from "../../routes/projects/project-content/project_class";
-import { WorkData } from "../../routes/work/work";
+import { ProjectData } from "../../class/project_class";
+import { WorkData } from "../../class/work";
 import {
     Content,
     ContentContainer,
