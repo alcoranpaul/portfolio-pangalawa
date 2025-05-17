@@ -6,8 +6,8 @@ import { File } from "../../class/file.ts";
 import DirectoryComponent from "../../components/directory_component/directory.component";
 
 import { projectDataList } from "../projects/project-content/project_class.ts";
+import { workDataList } from "../work/work.ts";
 import { Content, Header, RepoName, SidebarContainer } from "./sidebar.styles.tsx";
-import { workDataList } from "./work.ts";
 
 /**
  * Sidebar component that serves as a container for the main sections of the sidebar.

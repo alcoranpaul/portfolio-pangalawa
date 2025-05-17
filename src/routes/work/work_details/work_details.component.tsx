@@ -1,7 +1,7 @@
 import { ReactElement, useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router-dom";
-import { getWorkData, WorkData } from "../../sidebar/work";
+import { getWorkData, WorkData } from "../work";
 import {
     CompanyName,
     Content,
