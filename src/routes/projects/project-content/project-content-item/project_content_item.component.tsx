@@ -1,6 +1,6 @@
 import { ReactElement, useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ProjectData } from "../project_class";
-
 import { ContentItem, ImageContainer, ItemName } from "./project_content_item.styles";
 
 async function getRandomAnimeImage() {
@@ -14,16 +14,10 @@ async function getRandomAnimeImage() {
     }
 }
 
-function ProjectContentItem({
-    item,
-    onCardSelected,
-}: {
-    item: ProjectData;
-    onCardSelected: (item: ProjectData) => void;
-}): ReactElement {
+function ProjectContentItem({ item }: { item: ProjectData }): ReactElement {
     const [imageUrl, setImageUrl] = useState<string>("src/assets/loading.webp"); // Default image URL
     const itemRef = useRef<HTMLDivElement>(null);
-
+    const navigate = useNavigate();
     const MAX_ANGLE = 70;
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -47,7 +41,7 @@ function ProjectContentItem({
         if (itemRef.current) {
             itemRef.current.style.transform = "rotateX(0deg) rotateY(0deg)"; // Reset rotation immediately
         }
-        onCardSelected(item); // Call the parent function with the selected item
+        navigate(`/projects/${item.name}`);
     };
 
     useEffect(() => {

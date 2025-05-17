@@ -2,7 +2,6 @@ import { Fragment, ReactElement, useState } from "react";
 import ProjectContentItem from "./project-content-item/project_content_item.component";
 import { ProjectData, projectDataList } from "./project_class";
 import { ItemContainer, ProjectContainer } from "./project_content.styles";
-import ProjectPopup from "./project_popup/project_popup.component";
 
 function ProjectContent(): ReactElement {
     const [openedCard, setOpenedCard] = useState<boolean>(false);
@@ -17,13 +16,7 @@ function ProjectContent(): ReactElement {
         const rows: ReactElement[] = [];
 
         for (let i = 0; i < projectDataList.length; i++) {
-            rows.push(
-                <ProjectContentItem
-                    key={i}
-                    item={projectDataList[i]}
-                    onCardSelected={handleCardSelected}
-                />
-            );
+            rows.push(<ProjectContentItem key={i} item={projectDataList[i]} />);
         }
         return rows;
     };
@@ -31,12 +24,7 @@ function ProjectContent(): ReactElement {
     return (
         <Fragment>
             <ProjectContainer>
-                {openedCard && (
-                    <ProjectPopup setOpenedCard={setOpenedCard} selectedProject={selectedProject} />
-                )}
-                <ItemContainer className={`${openedCard ? "disabled" : ""}`}>
-                    {RenderProjectItems()}
-                </ItemContainer>
+                <ItemContainer>{RenderProjectItems()}</ItemContainer>
             </ProjectContainer>
         </Fragment>
     );
