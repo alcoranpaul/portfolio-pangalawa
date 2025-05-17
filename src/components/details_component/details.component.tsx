@@ -2,19 +2,8 @@ import { ReactElement } from "react";
 import ReactMarkdown from "react-markdown";
 import { ProjectData } from "../../class/project_class";
 import { WorkData } from "../../class/work";
-import {
-    Content,
-    ContentContainer,
-    DetailsContainer,
-    Header,
-    TableOfContent,
-} from "./details.styles";
-
-type Heading = {
-    level: number;
-    text: string;
-    id: string;
-};
+import TableOfContent, { Heading } from "../table_of_content/table_of_content.component";
+import { Content, ContentContainer, DetailsContainer, Header } from "./details.styles";
 
 export interface DetailsComponentProps {
     data: WorkData | ProjectData;
@@ -31,36 +20,7 @@ export default function DetailsComponent({
 }): ReactElement {
     return (
         <DetailsContainer direction="horizontal" gap={2}>
-            <TableOfContent>
-                {" "}
-                <ul>
-                    {detailProps.headings.map((heading) => (
-                        <li
-                            key={heading.id}
-                            className={heading.level > 1 ? "inner_heading" : "outer_heading"}
-                            style={{ marginLeft: (heading.level - 1) * 10 }}
-                        >
-                            <a
-                                href={`#${heading.id}`}
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    const el = document.getElementById(heading.id);
-                                    if (el) {
-                                        el.classList.add("highlight");
-                                        el.scrollIntoView({ behavior: "smooth", block: "start" });
-
-                                        setTimeout(() => {
-                                            el.classList.remove("highlight");
-                                        }, 3000); // 3 seconds
-                                    }
-                                }}
-                            >
-                                {heading.text}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </TableOfContent>
+            <TableOfContent headings={detailProps.headings} />
 
             <ContentContainer>
                 <Header>{detailProps.headerContent}</Header>
