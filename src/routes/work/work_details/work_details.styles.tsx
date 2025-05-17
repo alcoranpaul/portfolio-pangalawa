@@ -54,7 +54,7 @@ export const TableOfContent = styled.div`
     justify-content: start;
     align-items: flex-start;
     padding-left: 10px;
-
+    overflow-y: auto;
     ul {
         list-style: none;
         padding-left: 0;
@@ -88,6 +88,27 @@ export const TableOfContent = styled.div`
             width: 2px;
             background-color: gray;
         }
+    }
+
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+        width: 5px; /* Width of the vertical scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--color-scrollbar-bg); /* Color of the scrollbar track */
+        border-radius: 2px; /* Rounded corners for the track */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--color-scrollbar-active); /* Color of the scrollbar thumb */
+        border-radius: 7px; /* Rounded corners for the thumb */
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: var(
+            --color-scrollbar-hover
+        ); /* Darker color when hovering over the scrollbar thumb */
     }
 `;
 
