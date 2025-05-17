@@ -67,7 +67,7 @@ body {
     display: flex; /* Enable Flexbox for horizontal layout */
     color: var(--color-fg-primary);
     padding: 0%;
-
+    overflow: hidden;
     border-style: solid;
     border-color: var(--color-border);
     border-width: 1px;

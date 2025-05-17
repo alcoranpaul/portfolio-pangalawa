@@ -39,11 +39,11 @@ Bridge app: I `analyzed the existing program`, focusing on the coding language (
 
 # **Practical Experience**
 
-## Studying existing engineering works:
+## Studying existing engineering works
 
 Bridge app: I studied and analyzed the existing code, gaining an understanding of specific functions' importance.
 
-## Applying designs as parts of larger systems:
+## Applying designs as parts of larger systems
 
 Website design: I designed the code in modular parts to mitigate complexity and improve readability.
 
