@@ -40,9 +40,10 @@ function Sidebar(): ReactElement {
                 <Header>&emsp; EXPLORER</Header>
                 <Content>
                     <RepoName>&#x23F7; PORTFOLIO-PANGALAWA</RepoName>
-                    {directories.map((directory) => (
+                    {directories.map((directory, index) => (
                         <DirectoryComponent
                             directory={directory}
+                            key={index}
                             icon={<PiFolderStarFill size={15} />}
                         />
                     ))}

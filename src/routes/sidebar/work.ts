@@ -1,7 +1,9 @@
-import master_list from "../../assets/experiences/master_list_experiences.json";
+import master_list from "../../json/experiences/master_list_experiences.json";
 
 export class WorkData {
     title: string;
+    full_title: string;
+    tech_stack: string;
     company: string;
     years: string;
     markdown: string;
@@ -9,21 +11,31 @@ export class WorkData {
 
     constructor(
         title: string,
+        full_title: string,
+        tech_stack: string,
         company: string,
         years: string,
         markdown: string,
         description: string[]
     ) {
         this.title = title;
+        this.full_title = full_title;
+        this.tech_stack = tech_stack;
         this.company = company;
         this.years = years;
         this.markdown = markdown;
         this.description = description;
     }
+
+    GetFullTitle(): string {
+        return this.full_title !== null ? this.full_title : this.title;
+    }
 }
 
 interface WorkJSON {
     title: string;
+    full_title: string;
+    tech_stack: string;
     company: string;
     years: string;
     markdown: string;
@@ -33,7 +45,16 @@ interface WorkJSON {
 const rawData = master_list as unknown as WorkJSON[];
 
 export const workDataList: WorkData[] = rawData.map(
-    (data) => new WorkData(data.title, data.company, data.years, data.markdown, data.description)
+    (data) =>
+        new WorkData(
+            data.title,
+            data.full_title,
+            data.tech_stack,
+            data.company,
+            data.years,
+            data.markdown,
+            data.description
+        )
 );
 
 export function getWorkData(title: string | undefined): WorkData | undefined {

@@ -1,4 +1,4 @@
-import master_list from "../../../assets//projects/master_list_projects.json";
+import master_list from "../../../json/projects/master_list_projects.json";
 export class ProjectData {
     name: string;
     description: string;
