@@ -6,7 +6,7 @@ import TableOfContent, { Heading } from "../table_of_content/table_of_content.co
 import { Content, ContentContainer, DetailsContainer, Header } from "./details.styles";
 
 export interface DetailsComponentProps {
-    data: WorkData | ProjectData;
+    data: WorkData | ProjectData | null;
     markdownContent: string;
     headings: Heading[];
     idMap: Record<string, string>;
