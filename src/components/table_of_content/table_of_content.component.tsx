@@ -15,7 +15,7 @@ export default function TableOfContent({ headings }: { headings: Heading[] }): R
                 {headings.map((heading) => (
                     <li
                         key={heading.id}
-                        className={heading.level > 1 ? "inner_heading" : "outer_heading"}
+                        className={`heading_${heading.level}`}
                         style={{ marginLeft: (heading.level - 1) * 10 }}
                     >
                         <a
@@ -29,7 +29,7 @@ export default function TableOfContent({ headings }: { headings: Heading[] }): R
 
                                     setTimeout(() => {
                                         el.classList.remove("highlight");
-                                    }, 3000); // 3 seconds
+                                    }, 1000); // 1 seconds
                                 }
                             }}
                         >

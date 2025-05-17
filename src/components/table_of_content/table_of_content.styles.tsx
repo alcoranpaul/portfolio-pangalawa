@@ -20,12 +20,14 @@ export const Container = styled.div`
         }
     }
 
-    .outer_heading {
+    .heading_1 {
         font-size: 1.4rem;
         font-weight: 350;
     }
 
-    .inner_heading {
+    .heading_2,
+    .heading_3,
+    .heading_4 {
         font-size: 1.1rem;
         position: relative;
         padding-left: 10px;
@@ -40,6 +42,11 @@ export const Container = styled.div`
             width: 2px;
             background-color: gray;
         }
+    }
+
+    .heading_3,
+    .heading_4 {
+        font-size: 0.9rem;
     }
 
     scroll-behavior: smooth;
