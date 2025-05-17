@@ -22,9 +22,9 @@ function Sidebar(): ReactElement {
         new File("home", "/"),
         new File("projects", "/projects"),
         new File("work", "/work"),
-        new File("skills", "/skills"),
-        new File("education", "/education"),
-        new File("contact", "/contact"),
+        // new File("skills", "/skills"),
+        // new File("education", "/education"),
+        // new File("contact", "/contact"),
         new File("about", "/about"),
     ]);
 
