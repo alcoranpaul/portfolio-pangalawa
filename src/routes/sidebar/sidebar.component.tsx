@@ -5,6 +5,7 @@ import { File } from "../../class/file.ts";
 
 import DirectoryComponent from "../../components/directory_component/directory.component";
 
+import { projectDataList } from "../projects/project-content/project_class.ts";
 import { Content, Header, RepoName, SidebarContainer } from "./sidebar.styles.tsx";
 import { workDataList } from "./work.ts";
 
@@ -32,7 +33,12 @@ function Sidebar(): ReactElement {
         workDataList.map((data) => new File(data.title, `/work/${data.title}`))
     );
 
-    const directories: Directory[] = [features_directory, work_directory];
+    const project_directory = new Directory(
+        "projects",
+        projectDataList.map((data) => new File(data.name, `/projects/${data.name}`))
+    );
+
+    const directories: Directory[] = [features_directory, work_directory, project_directory];
 
     return (
         <Fragment>
@@ -45,6 +51,7 @@ function Sidebar(): ReactElement {
                             directory={directory}
                             key={index}
                             icon={<PiFolderStarFill size={15} />}
+                            defaultState={index === 0}
                         />
                     ))}
                 </Content>

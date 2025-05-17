@@ -36,7 +36,7 @@ function Layout(): ReactElement {
                 )}
                 <Col className="main">
                     <Stack>
-                        <div className="tab_section">asd</div>
+                        <div className="tab_section">This is the tab secion</div>
                         <div className="main_section">
                             <div className="source_pagnation">{"src > App.tsx"}</div>
                             <div className="main_content">

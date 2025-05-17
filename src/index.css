@@ -37,6 +37,10 @@
     --color-scrollbar-bg: #8b949e33; /* Scrollbar background */
     --color-scrollbar-hover: #8b949e3d; /* Scrollbar hover background */
     --color-scrollbar-active: #8b949e47; /* Scrollbar active background */
+
+    --color-scrollbar-bg-transparent: rgba(139, 148, 158, 0.041);
+
+    --color-scrollbar-active-thumb: rgba(27, 27, 27, 0.747);
 }
 
 body {
@@ -71,4 +75,25 @@ a:hover {
 /* Exceptions (e.g., disabled text) */
 .text-muted {
     color: var(--color-text-secondary) !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px; /* Width of the vertical scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-scrollbar-bg-transparent); /* Color of the scrollbar track */
+    border-radius: 2px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-scrollbar-active-thumb); /* Color of the scrollbar thumb */
+    border-radius: 7px; /* Rounded corners for the thumb */
+    opacity: 0.5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(
+        --color-scrollbar-hover
+    ); /* Darker color when hovering over the scrollbar thumb */
 }
