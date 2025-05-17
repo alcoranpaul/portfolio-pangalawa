@@ -1,6 +1,7 @@
 import { ReactElement, useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
+import { extractHeadings } from "../../../class/helper_functions";
 import { getProjectData, ProjectData } from "../../../class/project_class";
 import DetailsComponent, {
     DetailsComponentProps,
@@ -102,39 +103,4 @@ function formatDateUTC(date: Date | string) {
     const month = d.getUTCMonth();
     const year = d.getUTCFullYear();
     return `${monthNames[month]} ${year}`;
-}
-
-type Heading = {
-    level: number;
-    text: string;
-    id: string;
-};
-
-function extractHeadings(markdown: string): {
-    headings: Heading[];
-    idMap: Record<string, string>;
-} {
-    const headingRegex = /^(#{1,6})\s+(.*)$/gm;
-    const headings: Heading[] = [];
-    const idMap: Record<string, string> = {};
-    let match;
-
-    while ((match = headingRegex.exec(markdown)) !== null) {
-        const level = match[1].length;
-        const rawText = match[2]
-            .replace(/\*\*(.*?)\*\*/g, "$1")
-            .replace(/\*(.*?)\*/g, "$1")
-            .replace(/__(.*?)__/g, "$1")
-            .replace(/_(.*?)_/g, "$1")
-            .trim();
-        const id = rawText
-            .toLowerCase()
-            .replace(/[^\w]+/g, "-")
-            .replace(/(^-|-$)/g, "");
-
-        headings.push({ level, text: rawText, id });
-        idMap[rawText] = id;
-    }
-
-    return { headings, idMap };
 }
