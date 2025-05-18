@@ -20,12 +20,7 @@ function Layout(): ReactElement {
     const [showSideBar, setShowSideBar] = useState(true);
 
     const toggleSidebar = () => setShowSideBar(!showSideBar);
-    document.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("mouseover", (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-        });
-    });
+
     return (
         <Container fluid>
             <Row className="layout_base layout_header">

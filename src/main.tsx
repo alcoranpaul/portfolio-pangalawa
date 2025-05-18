@@ -8,7 +8,7 @@ import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <HashRouter basename="/portfolio-pangalawa">
+        <HashRouter>
             <App />
         </HashRouter>
     </StrictMode>
