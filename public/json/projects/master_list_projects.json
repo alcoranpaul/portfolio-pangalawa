@@ -122,7 +122,7 @@
     },
     {
         "name": "Toxic Bloom",
-        "image": "src/assets/projects/toxic_bloom_banner.png",
+        "image": "assets/projects/toxic_bloom_banner.png",
         "description": "Description for Toxic Bloom",
         "short_description": "",
         "markdown": "/src/json/projects/project/toxic_bloom.md",
@@ -133,7 +133,7 @@
     },
     {
         "name": "Bloody buds",
-        "image": "src/assets/projects/bloody_buds_banner.png",
+        "image": "assets/projects/bloody_buds_banner.png",
         "description": "Description for Bloody buds",
         "short_description": "",
         "markdown": "/src/json/projects/project/bloody_buds.md",
@@ -144,7 +144,7 @@
     },
     {
         "name": "Elemental Conquest",
-        "image": "src/assets/projects/elemental_conquest_banner.png",
+        "image": "assets/projects/elemental_conquest_banner.png",
         "description": "Description for Elemental Conquest",
         "short_description": "",
         "markdown": "/src/json/projects/project/elemental_conquest.md",
@@ -155,7 +155,7 @@
     },
     {
         "name": "Illuminagent",
-        "image": "src/assets/projects/illuminagent_banner.png",
+        "image": "assets/projects/illuminagent_banner.png",
         "description": "Description for Illuminagent",
         "short_description": "",
         "markdown": "/src/json/projects/project/illuminagent.md",
@@ -166,7 +166,7 @@
     },
     {
         "name": "Builder Defender",
-        "image": "src/assets/projects/builder_defender_banner.png",
+        "image": "assets/projects/builder_defender_banner.png",
         "description": "Description for Builder Defender",
         "short_description": "",
         "markdown": "/src/json/projects/project/builder_defender.md",
@@ -177,7 +177,7 @@
     },
     {
         "name": "Featherd Fiasco",
-        "image": "src/assets/projects/feathered_fiasco_banner.jpg",
+        "image": "assets/projects/feathered_fiasco_banner.jpg",
         "description": "Description for Featherd Fiasco",
         "short_description": "",
         "markdown": "/src/json/projects/project/feathered_fiasco.md",
@@ -188,7 +188,7 @@
     },
     {
         "name": "Conscious Relay",
-        "image": "src/assets/projects/conscious_relay_banner.png",
+        "image": "assets/projects/conscious_relay_banner.png",
         "description": "Conscious Relay",
         "short_description": "",
         "markdown": "/src/json/projects/project/conscious_relay.md",
@@ -199,10 +199,10 @@
     },
     {
         "name": "Khai Creates E-Commerce",
-        "image": "src/assets/projects/khai_creates_banner.jpg",
+        "image": "assets/projects/khai_creates_banner.jpg",
         "description": "Khai-Creates is a fully customized e-commerce platform designed specifically for a crochet business to enhance product visibility and streamline online orders. Built with React and TypeScript, the website delivers a responsive and user-friendly interface optimized for both desktop and mobile devices. It integrates Google Sheets as a lightweight CMS, empowering the client to manage inventory without technical expertise. Product images are dynamically loaded from Google Drive, reducing hosting costs and simplifying content updates. Serverless functions deployed on Netlify securely handle product data and order processing, providing scalable backend services without infrastructure overhead. Additional features include custom product filtering, category sorting, search functionality, a bespoke ordering system, and real-time customer support via embedded live chat. The project emphasizes performance optimization and SEO best practices to ensure fast loading times and improved search engine visibility. Client collaboration and training were integral parts of the development process, enabling independent content management post-launch.",
         "short_description": "Khai-Creates is a custom e-commerce website tailored for a crochet business, featuring a responsive React and TypeScript frontend, seamless Google Sheets-powered inventory management, dynamic Google Drive image integration, and scalable Netlify serverless backend functions.",
-        "markdown": "/src/json/projects/project/khai_creates.md",
+        "markdown": "json/projects/project/khai_creates.md",
         "tech_stack": "React || TypeScript || Vite || Netlify || Google Drive/Sheets API || Serverless Functions",
         "startDate": "2025-04-01T00:00:00.000Z",
         "source_link": "",

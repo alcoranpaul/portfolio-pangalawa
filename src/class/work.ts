@@ -1,4 +1,4 @@
-import master_list from "../json/experiences/master_list_experiences.json";
+import master_list from "../../public/json/experiences/master_list_experiences.json";
 
 export class WorkData {
     title: string;
