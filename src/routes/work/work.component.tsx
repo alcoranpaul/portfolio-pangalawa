@@ -1,10 +1,12 @@
 import { ReactElement } from "react";
 import ReactMarkdown from "react-markdown";
 import { WorkData, workDataList } from "../../class/work";
+import TableOfContent, {
+    Heading,
+} from "../../components/table_of_content/table_of_content.component";
 import {
     Button,
     DescriptionList,
-    TableOfContentContainer,
     WorkContainer,
     WorkContent,
     WorkHeader,
@@ -14,41 +16,37 @@ import {
 export default function Work(): ReactElement {
     const workList: WorkData[] = workDataList;
 
+    const headings: Heading[] = workList.map((work) => ({
+        level: 1,
+        text: work.title,
+        id: encodeURIComponent(work.title),
+    }));
+
     return (
         <WorkContainer direction="horizontal">
-            <TableOfContentContainer>
-                <nav>
-                    <ul>
-                        {workList.map((data) => (
-                            <li key={data.title}>
-                                <a href={`#${encodeURIComponent(data.title)}`}>{data.title}</a>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-            </TableOfContentContainer>
+            <TableOfContent headings={headings} />
 
-            <WorkContent gap={3}>{workList.map((data) => RenderWorkItem(data))}</WorkContent>
-        </WorkContainer>
-    );
-}
-
-function RenderWorkItem(data: WorkData): ReactElement {
-    return (
-        <WorkItem>
-            <WorkHeader>
-                <h1 id={data.title}>{data.title}</h1>
-                <div>{data.years}</div>
-            </WorkHeader>
-            <h3>{data.company}</h3>
-            <DescriptionList>
-                {data.description.map((item, index) => (
-                    <li>
-                        <ReactMarkdown key={index}>{item}</ReactMarkdown>
-                    </li>
+            <WorkContent gap={3}>
+                {workList.map((data) => (
+                    <WorkItem key={data.title}>
+                        <WorkHeader>
+                            <h1 id={encodeURIComponent(data.title)}>{data.title}</h1>
+                            <div>{data.years}</div>
+                        </WorkHeader>
+                        <h3>{data.company}</h3>
+                        <DescriptionList>
+                            {data.description.map((item, index) => (
+                                <li key={index}>
+                                    <ReactMarkdown>{item}</ReactMarkdown>
+                                </li>
+                            ))}
+                        </DescriptionList>
+                        <Button to={`/work/${encodeURIComponent(data.title)}`}>
+                            View More Details
+                        </Button>
+                    </WorkItem>
                 ))}
-            </DescriptionList>
-            <Button to={`/work/${data.title}`}>View More Details</Button>
-        </WorkItem>
+            </WorkContent>
+        </WorkContainer>
     );
 }

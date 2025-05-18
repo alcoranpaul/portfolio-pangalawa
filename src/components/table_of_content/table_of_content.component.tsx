@@ -18,7 +18,9 @@ export default function TableOfContent({ headings }: { headings: Heading[] }): R
                         className={`heading_${heading.level}`}
                         style={{ marginLeft: (heading.level - 1) * 10 }}
                     >
-                        <a
+                        <span
+                            role="button"
+                            tabIndex={0}
                             onClick={(e) => {
                                 e.preventDefault();
                                 const el = document.getElementById(heading.id);
@@ -33,7 +35,7 @@ export default function TableOfContent({ headings }: { headings: Heading[] }): R
                             }}
                         >
                             {heading.text}
-                        </a>
+                        </span>
                     </li>
                 ))}
             </ul>
