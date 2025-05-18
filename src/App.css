@@ -4,6 +4,7 @@ body {
     padding: 0;
     height: 100vh;
     overflow: hidden; /* Prevent scrolling */
+    background-color: red;
 }
 
 .container-fluid {
@@ -57,6 +58,7 @@ body {
     border-width: 1.5px;
     display: flex; /* Ensure child elements can use Flexbox */
     flex-direction: column; /* Stack child elements vertically */
+    overflow: auto;
 }
 
 .main {
@@ -115,23 +117,40 @@ body {
     }
 }
 
-/* Style the scrollbar for WebKit-based browsers */
+/* Vertical scrollbar (your existing styles) */
 ::-webkit-scrollbar {
-    width: 17px; /* Width of the vertical scrollbar */
+    width: 3px; /* Affects VERTICAL scrollbar width */
+    height: 5px; /* Hides HORIZONTAL scrollbar by default */
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-scrollbar-bg); /* Color of the scrollbar track */
-    border-radius: 2px; /* Rounded corners for the track */
+    background: var(--color-scrollbar-bg);
+    border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--color-scrollbar-active); /* Color of the scrollbar thumb */
-    border-radius: 7px; /* Rounded corners for the thumb */
+    background: var(--color-scrollbar-active);
+    border-radius: 7px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(
-        --color-scrollbar-hover
-    ); /* Darker color when hovering over the scrollbar thumb */
+    background: var(--color-scrollbar-hover);
+}
+
+/* Horizontal scrollbar (new styles) */
+::-webkit-scrollbar:horizontal {
+    height: 5px; /* Horizontal scrollbar height */
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background: var(--color-scrollbar-active);
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover {
+    background: var(--color-scrollbar-hover);
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent; /* Makes it invisible */
 }
