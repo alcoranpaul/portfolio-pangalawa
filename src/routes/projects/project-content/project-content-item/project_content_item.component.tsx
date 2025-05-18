@@ -51,8 +51,13 @@ function ProjectContentItem({
     };
 
     useEffect(() => {
-        if (setAnimeImg) getRandomAnimeImage().then((url) => setImageUrl(url));
+        if (setAnimeImg && imageUrl === "src/assets/loading.webp")
+            getRandomAnimeImage().then((url) => setImageUrl(url));
     }, []);
+    useEffect(() => {
+        if (setAnimeImg && imageUrl === "src/assets/loading.webp")
+            getRandomAnimeImage().then((url) => setImageUrl(url));
+    }, [setAnimeImg]);
 
     return (
         <ContentItem
@@ -67,6 +72,16 @@ function ProjectContentItem({
                     <img
                         src={imageUrl}
                         alt={item.name}
+                        onError={(e) => {
+                            (e.target as HTMLImageElement).src =
+                                "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+                        }}
+                    />
+                ) : item.image !== "" ? (
+                    <img
+                        src={item.image}
+                        alt={item.name}
+                        style={{ objectFit: "cover", width: "100%", height: "100%" }}
                         onError={(e) => {
                             (e.target as HTMLImageElement).src =
                                 "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";

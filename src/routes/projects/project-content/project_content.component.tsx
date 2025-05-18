@@ -5,7 +5,7 @@ import ProjectContentItem from "./project-content-item/project_content_item.comp
 import { ItemContainer, ProjectContainer } from "./project_content.styles";
 
 function ProjectContent(): ReactElement {
-    const [isEnabled, setIsEnabled] = useState(true);
+    const [isEnabled, setIsEnabled] = useState(false);
     const [renderedProjectItems, setRenderedProjectItems] = useState<ReactElement[]>();
     const RenderProjectItems = (setAnimeImg: boolean): ReactElement[] => {
         const rows: ReactElement[] = [];
