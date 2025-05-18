@@ -3,18 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { ProjectData } from "../../../../class/project_class";
 import { ContentItem, ImageContainer, ItemName } from "./project_content_item.styles";
 
-async function getRandomAnimeImage() {
-    try {
-        const baseUrl =
-            import.meta.env.MODE === "development" ? "/api" : "https://any-anime-api.vercel.app";
-
-        const response = await fetch(`${baseUrl}/v1/anime/gif/1`);
-        const data = await response.json();
-        return data.images[0]; // Return the first image URL
-    } catch (error) {
-        console.error("Error fetching image:", error);
-        return `${import.meta.env.BASE_URL}assets/goku_vegeta.gif`; // Fallback image
-    }
+function getRandomAnimeImage() {
+    return `${import.meta.env.BASE_URL}assets/goku vegeta.gif`; // Fallback image
 }
 
 function ProjectContentItem({
@@ -54,12 +44,10 @@ function ProjectContentItem({
     };
 
     useEffect(() => {
-        if (setAnimeImg && imageUrl === "assets/loading.webp")
-            getRandomAnimeImage().then((url) => setImageUrl(url));
+        if (setAnimeImg && imageUrl === "assets/loading.webp") setImageUrl(getRandomAnimeImage());
     }, []);
     useEffect(() => {
-        if (setAnimeImg && imageUrl === "assets/loading.webp")
-            getRandomAnimeImage().then((url) => setImageUrl(url));
+        if (setAnimeImg && imageUrl === "assets/loading.webp") setImageUrl(getRandomAnimeImage());
     }, [setAnimeImg]);
 
     return (
