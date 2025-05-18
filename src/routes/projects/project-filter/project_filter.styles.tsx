@@ -5,6 +5,7 @@ export const FilterContainer = styled(Row)`
     width: 100%;
     justify-self: center;
     align-self: center;
+    height: 50px;
 `;
 
 export const Item = styled(Col)`
