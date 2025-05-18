@@ -5,12 +5,15 @@ import { ContentItem, ImageContainer, ItemName } from "./project_content_item.st
 
 async function getRandomAnimeImage() {
     try {
-        const response = await fetch("/api/v1/anime/gif/1"); // Use proxy
+        const baseUrl =
+            import.meta.env.MODE === "development" ? "/api" : "https://any-anime-api.vercel.app";
+
+        const response = await fetch(`${baseUrl}/v1/anime/gif/1`);
         const data = await response.json();
         return data.images[0]; // Return the first image URL
     } catch (error) {
         console.error("Error fetching image:", error);
-        return "src/assets/goku_vegeta.gif"; // Fallback image
+        return `${import.meta.env.BASE_URL}assets/goku_vegeta.gif`; // Fallback image
     }
 }
 
@@ -21,7 +24,7 @@ function ProjectContentItem({
     item: ProjectData;
     setAnimeImg: boolean; // Now correctly typed as boolean
 }): ReactElement {
-    const [imageUrl, setImageUrl] = useState<string>("src/assets/loading.webp"); // Default image URL
+    const [imageUrl, setImageUrl] = useState<string>("assets/loading.webp"); // Default image URL
     const itemRef = useRef<HTMLDivElement>(null);
     const navigate = useNavigate();
     const MAX_ANGLE = 70;
@@ -51,11 +54,11 @@ function ProjectContentItem({
     };
 
     useEffect(() => {
-        if (setAnimeImg && imageUrl === "src/assets/loading.webp")
+        if (setAnimeImg && imageUrl === "assets/loading.webp")
             getRandomAnimeImage().then((url) => setImageUrl(url));
     }, []);
     useEffect(() => {
-        if (setAnimeImg && imageUrl === "src/assets/loading.webp")
+        if (setAnimeImg && imageUrl === "assets/loading.webp")
             getRandomAnimeImage().then((url) => setImageUrl(url));
     }, [setAnimeImg]);
 
