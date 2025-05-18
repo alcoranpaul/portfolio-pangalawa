@@ -1,7 +1,7 @@
 [
     {
         "name": "Level up Tracker",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Description for Level up Tracker",
         "short_description": "A surreal narrative horror set during a child’s birthday in Navotas, where you play as both a mother and her son—unraveling a chilling mystery around a sinister clown, blurring the line between fear and reality.",
         "markdown": "/src/json/projects/project/level_up_tracker.md",
@@ -12,7 +12,7 @@
     },
     {
         "name": "Miguel’s Birthday",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "In a quiet home in Navotas, a cheerful birthday party turns into a surreal nightmare. You play as both Miguel, a sensitive 4-year-old boy, and his hardworking mother preparing for the big day. What starts as innocent fun quickly unravels as Miguel begins to see disturbing visions tied to the hired clown—who may be more than he appears.",
         "short_description": "A surreal narrative horror set during a child’s birthday in Navotas, where you play as both a mother and her son—unraveling a chilling mystery around a sinister clown, blurring the line between fear and reality.",
         "markdown": "/src/json/projects/project/miguels_birthday.md",
@@ -23,7 +23,7 @@
     },
     {
         "name": "SCOG",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Description for SCOG",
         "short_description": "",
         "markdown": "/src/json/projects/project/scog.md",
@@ -34,7 +34,7 @@
     },
     {
         "name": "Dungeon Generator",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Description for Dungeon Generator",
         "short_description": "A modular procedural dungeon generator for Flax Engine using grid-based placement, triangulation, and pathfinding algorithms.",
         "markdown": "/src/json/projects/project/dungeon_generator.md",
@@ -45,7 +45,7 @@
     },
     {
         "name": "Tower Of Babel",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Description for Tower Of Babel",
         "short_description": "",
         "markdown": "/src/json/projects/project/tower_of_babel.md",
@@ -56,7 +56,7 @@
     },
     {
         "name": "Grid system",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Description for Grid system",
         "short_description": "",
         "markdown": "/src/json/projects/project/grid_system.md",
@@ -67,7 +67,7 @@
     },
     {
         "name": "Goblin S",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Description for Goblin S",
         "short_description": "",
         "markdown": "/src/json/projects/project/goblin_slayer.md",
@@ -78,7 +78,7 @@
     },
     {
         "name": "Taho Toss",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Description for Taho Toss",
         "short_description": "",
         "markdown": "/src/json/projects/project/taho_toss.md",
@@ -89,7 +89,7 @@
     },
     {
         "name": "Face-Recog",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Description for Face-Recog",
         "short_description": "",
         "markdown": "/src/json/projects/project/face_recog.md",
@@ -100,7 +100,7 @@
     },
     {
         "name": "Crwn-clothing",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Description for Crwn-clothing",
         "short_description": "",
         "markdown": "/src/json/projects/project/crwn_clothing.md",
@@ -111,7 +111,7 @@
     },
     {
         "name": "Toxic Bloom",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Description for Toxic Bloom",
         "short_description": "",
         "markdown": "/src/json/projects/project/toxic_bloom.md",
@@ -122,7 +122,7 @@
     },
     {
         "name": "Bloody buds",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Description for Bloody buds",
         "short_description": "",
         "markdown": "/src/json/projects/project/bloody_buds.md",
@@ -133,7 +133,7 @@
     },
     {
         "name": "Elemental Conquest",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Description for Elemental Conquest",
         "short_description": "",
         "markdown": "/src/json/projects/project/elemental_conquest.md",
@@ -144,7 +144,7 @@
     },
     {
         "name": "Illuminagent",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Description for Illuminagent",
         "short_description": "",
         "markdown": "/src/json/projects/project/illuminagent.md",
@@ -155,7 +155,7 @@
     },
     {
         "name": "Builder Defender",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Description for Builder Defender",
         "short_description": "",
         "markdown": "/src/json/projects/project/builder_defender.md",
@@ -166,7 +166,7 @@
     },
     {
         "name": "Featherd Fiasco",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Description for Featherd Fiasco",
         "short_description": "",
         "markdown": "/src/json/projects/project/feathered_fiasco.md",
@@ -177,7 +177,7 @@
     },
     {
         "name": "Khai Creates E-Commerce",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Khai-Creates is a fully customized e-commerce platform designed specifically for a crochet business to enhance product visibility and streamline online orders. Built with React and TypeScript, the website delivers a responsive and user-friendly interface optimized for both desktop and mobile devices. It integrates Google Sheets as a lightweight CMS, empowering the client to manage inventory without technical expertise. Product images are dynamically loaded from Google Drive, reducing hosting costs and simplifying content updates. Serverless functions deployed on Netlify securely handle product data and order processing, providing scalable backend services without infrastructure overhead. Additional features include custom product filtering, category sorting, search functionality, a bespoke ordering system, and real-time customer support via embedded live chat. The project emphasizes performance optimization and SEO best practices to ensure fast loading times and improved search engine visibility. Client collaboration and training were integral parts of the development process, enabling independent content management post-launch.",
         "short_description": "Khai-Creates is a custom e-commerce website tailored for a crochet business, featuring a responsive React and TypeScript frontend, seamless Google Sheets-powered inventory management, dynamic Google Drive image integration, and scalable Netlify serverless backend functions.",
         "markdown": "/src/json/projects/project/khai_creates.md",
@@ -190,7 +190,7 @@
     },
     {
         "name": "Text To Brainrot",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Description for Text to Brainrot",
         "short_description": "",
         "markdown": "/src/json/projects/project/text_to_brainrot.md",
@@ -201,7 +201,7 @@
     },
     {
         "name": "Bible Chronicles",
-        "image": "/api/v1/anime/gif/1",
+        "image": "",
         "description": "Description for Bible Chronicles",
         "short_description": "",
         "markdown": "/src/json/projects/project/bible_chronicles.md",
