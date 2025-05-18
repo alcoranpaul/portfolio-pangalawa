@@ -1,6 +1,5 @@
 import { Fragment, ReactElement } from "react";
 
-import "./image_banner.style.css";
 import { BannerContainer, FullName, ImageContainer } from "./image_banner.styles";
 
 /**
