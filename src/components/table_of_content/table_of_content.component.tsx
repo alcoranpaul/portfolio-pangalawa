@@ -19,7 +19,6 @@ export default function TableOfContent({ headings }: { headings: Heading[] }): R
                         style={{ marginLeft: (heading.level - 1) * 10 }}
                     >
                         <a
-                            href="#"
                             onClick={(e) => {
                                 e.preventDefault();
                                 const el = document.getElementById(heading.id);
