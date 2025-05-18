@@ -3,5 +3,6 @@ import styled from "styled-components";
 
 export const ProjectContainer = styled(Stack)`
     width: 100%;
-    height: 100%;
+    max-height: 85vh;
+    overflow: hidden;
 `;
