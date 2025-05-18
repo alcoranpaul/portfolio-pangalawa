@@ -4,7 +4,6 @@ body {
     padding: 0;
     height: 100vh;
     overflow: hidden; /* Prevent scrolling */
-    background-color: red;
 }
 
 .container-fluid {
@@ -31,13 +30,12 @@ body {
 
 .layout_content {
     height: 100%;
-    background-color: #f8f9fa;
+
     display: flex; /* Enable Flexbox for horizontal layout */
     overflow: hidden; /* Prevent scrolling */
 }
 
 .activity_bar {
-    background-color: blue;
     height: 100%; /* Full height of the parent container */
     width: 3.5%; /* Occupy 3.5% of the parent container's width */
     display: flex;
