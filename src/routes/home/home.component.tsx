@@ -16,20 +16,6 @@ import ProjectHighlights from "./project_highlight/project_highlight.component";
  *   Updates the description and GIF based on the provided index.
  */
 function Home(): ReactElement {
-    const descriptions: string[] = [
-        "Built by faith. Driven by curiosity. Creating with code.",
-        "I build reliable, efficient systems from front to back. Every solution is tailored, no shortcuts, just clean, purposeful code.",
-        "Clean, efficient, and reliable. If it’s on your desktop, it’s meant to help you get things done without the noise.",
-        "From mechanics to storytelling, every detail is designed to deliver a challenging and rewarding experience.",
-    ];
-
-    const gifs_path: string[] = [
-        "src\\assets\\goku vegeta.gif",
-        "src\\assets\\banana.gif",
-        "src\\assets\\killua.gif",
-        "src\\assets\\obito.gif",
-    ];
-
     return (
         <Fragment>
             <HomeContainer direction="horizontal" gap={1}>
