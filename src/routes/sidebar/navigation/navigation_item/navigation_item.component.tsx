@@ -1,7 +1,5 @@
 import { Fragment, ReactElement } from "react";
-import { Link } from "react-router-dom";
-import './navigation_item.style.css';
-
+import { ItemContainer } from "./navigation_item.styles";
 
 /**
  * A functional component that renders a navigation item as a styled link.
@@ -20,19 +18,18 @@ import './navigation_item.style.css';
  * <NavigationItem title="Home" linkTo="/home" />
  * ```
  */
-function NavigationItem({ title, linkTo }: { title: string;  linkTo: string}) : ReactElement {
-
+function NavigationItem({ title, linkTo }: { title: string; linkTo: string }): ReactElement {
     const capitalizeFirstLetter = (str: string): string => {
         return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
     };
 
-    return(
+    return (
         <Fragment>
-            <Link to= {`${linkTo.toLowerCase()}`} className="navigation_item">
+            <ItemContainer to={`${linkTo.toLowerCase()}`}>
                 {capitalizeFirstLetter(title)}
-            </Link>
+            </ItemContainer>
         </Fragment>
-    )
+    );
 }
 
 export default NavigationItem;

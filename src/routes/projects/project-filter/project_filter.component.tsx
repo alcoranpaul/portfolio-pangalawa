@@ -1,34 +1,30 @@
 import { ReactElement, useState } from "react";
-import { Col, Row } from "react-bootstrap";
-import './project_filter.style.css';
+import { FilterContainer, Item } from "./project_filter.styles";
 
-function ProjectFilter({ onFilterSelect }: { onFilterSelect: (index: number) => void }): ReactElement {
-    const filters = [
-        "All Softwares",
-        "Websites",
-        "Applications",
-        "Games",
-    ];
+function ProjectFilter({
+    onFilterSelect,
+}: {
+    onFilterSelect: (index: number) => void;
+}): ReactElement {
+    const filters = ["All Softwares", "Websites", "Applications", "Games"];
 
     const [selectedFilterIndex, setSelectedFilterIndex] = useState<number>(0);
 
     return (
-        <Row className="projects_filter">
+        <FilterContainer>
             {filters.map((filter, index) => (
-                <Col
-                    className={`projects_filter_item ${
-                        selectedFilterIndex === index ? 'selected' : ''
-                    }`}
+                <Item
+                    className={`${selectedFilterIndex === index ? "selected" : ""}`}
                     key={index}
                     onClick={() => {
                         setSelectedFilterIndex(index);
                         onFilterSelect(index); // Notify parent component of the selected filter
                     }}
-                    >
+                >
                     {filter}
-                </Col>
+                </Item>
             ))}
-        </Row>
+        </FilterContainer>
     );
 }
 
