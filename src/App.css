@@ -1,13 +1,154 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.container-fluid {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.layout_base {
+    margin: 0px;
+    height: 2.5vh;
+    background-color: var(--color-bg-primary);
+    color: white;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    font-size: 0.8rem;
+    border-style: solid;
+    border-color: var(--color-border);
+    border-width: 1px;
+    flex-direction: column;
+}
+
+.layout_content {
+    height: 100%;
+
+    display: flex; /* Enable Flexbox for horizontal layout */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.activity_bar {
+    height: 100%; /* Full height of the parent container */
+    width: 3.5%; /* Occupy 3.5% of the parent container's width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-style: solid;
+    border-color: var(--color-border);
+    border-width: 1px;
+}
+
+.sidebar {
+    background-color: var(--color-bg-tertiary);
+    height: 100%; /* Full height of the parent container */
+    width: 15%; /* Occupy 15% of the parent container's width */
+    border-style: solid;
+    border-color: var(--color-border);
+    border-width: 1.5px;
+    display: flex; /* Ensure child elements can use Flexbox */
+    flex-direction: column; /* Stack child elements vertically */
+    overflow: auto;
+}
+
 .main {
-  background-color: var(--color-bg-primary);
-  overflow: hidden;
+    background-color: var(--color-bg-primary);
+    height: 100%; /* Full height of the parent container */
+    flex-grow: 1; /* Occupy the remaining space */
+    width: 100%; /* Full width of the parent container */
+    display: flex; /* Enable Flexbox for horizontal layout */
+    color: var(--color-fg-primary);
+    padding: 0%;
+    overflow: hidden;
+    border-style: solid;
+    border-color: var(--color-border);
+    border-width: 1px;
+    .tab_section {
+        background-color: var(--color-bg-tertiary);
+        height: 4%;
+    }
 }
 
-.sidebar{
-  position: sticky; /* Makes the sidebar sticky */
-  top: 0; /* Sticks the sidebar to the top of the viewport */
-  height: 100%; 
-  background-color:  var(--color-bg-secondary);
-  box-sizing: border-box; /* Ensures padding is included in the height */
+.main_section {
+    position: relative;
+    flex-grow: 1; /* Occupy the remaining space */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure the main section spans the full height */
+
+    border-style: solid;
+    border-color: var(--color-border);
+    border-width: 1px;
+    width: 100%; /* Full width of the parent container */
+
+    .source_pagnation {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: var(--color-bg-primary);
+        padding: 10px 5px 10px 15px;
+        font-size: clamp(7px, 2vw, 13px); /* Dynamically adjust font size */
+        height: 2%; /* Set the height */
+        display: flex; /* Use Flexbox for alignment */
+        align-items: center; /* Vertically center the text */
+        justify-content: start; /* Horizontally center the text */
+        overflow: hidden; /* Prevent text from overflowing */
+        text-overflow: ellipsis; /* Add ellipsis if the text is too long */
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+
+    .main_content {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 15px 5px 15px;
+        flex-grow: 1;
+    }
 }
 
+/* Vertical scrollbar (your existing styles) */
+::-webkit-scrollbar {
+    width: 3px; /* Affects VERTICAL scrollbar width */
+    height: 5px; /* Hides HORIZONTAL scrollbar by default */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-scrollbar-bg);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-scrollbar-active);
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-scrollbar-hover);
+}
+
+/* Horizontal scrollbar (new styles) */
+::-webkit-scrollbar:horizontal {
+    height: 5px; /* Horizontal scrollbar height */
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background: var(--color-scrollbar-active);
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover {
+    background: var(--color-scrollbar-hover);
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent; /* Makes it invisible */
+}

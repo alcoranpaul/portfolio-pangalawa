@@ -1,8 +1,7 @@
 import { Fragment, ReactElement } from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import './social_item.style.css';
-
+import { Container, Row } from "react-bootstrap";
+import "./social_item.style.css";
+import { ItemContainer, ItemIcon, ItemText } from "./social_item.styles";
 
 /**
  * A functional component that renders a social media item with an icon and title.
@@ -12,29 +11,34 @@ import './social_item.style.css';
  * @param {string} props.title - The title of the social media item, used for display and CSS class naming.
  * @param {string} props.linkTo - The URL or route to navigate to when the item is clicked.
  * @param {ReactElement} props.icon - The icon to display alongside the title.
- * 
+ *
  * @returns {ReactElement} A JSX element representing the social media item.
  */
-function SocialItem({ title, linkTo, icon }: { title: string;  linkTo: string, icon: ReactElement}) : ReactElement {
-
-    const _className = `social_item ${title}`;
-    return(
+function SocialItem({
+    title,
+    linkTo,
+    icon,
+}: {
+    title: string;
+    linkTo: string;
+    icon: ReactElement;
+}): ReactElement {
+    return (
         <Fragment>
-            <Link to= {`${linkTo.toLowerCase()}`} className={_className}>
+            <ItemContainer to={`${linkTo.toLowerCase()}`}>
                 <Container>
                     <Row>
-                        <Col xs={2} className="social_item_icon">
+                        <ItemIcon xs={2} className="social_item_icon">
                             {icon}
-                        </Col>
-                        <Col xs={10} className="social_item_text">
+                        </ItemIcon>
+                        <ItemText xs={10} className="social_item_text">
                             {title}
-                        </Col>
+                        </ItemText>
                     </Row>
                 </Container>
-                
-            </Link>
+            </ItemContainer>
         </Fragment>
-    )
+    );
 }
 
 export default SocialItem;

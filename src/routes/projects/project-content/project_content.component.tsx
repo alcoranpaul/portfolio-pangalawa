@@ -1,43 +1,45 @@
-import { Fragment, ReactElement, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
+import { Form } from "react-bootstrap";
+import { projectDataList } from "../../../class/project_class";
 import ProjectContentItem from "./project-content-item/project_content_item.component";
-import { ProjectData, projectDataList } from "./project_class";
-import './project_content.style.css';
-import ProjectPopup from "./project_popup/project_popup.component";
+import { ItemContainer, ProjectContainer } from "./project_content.styles";
 
 function ProjectContent(): ReactElement {
-    const [openedCard, setOpenedCard] = useState<boolean>(false);
-    const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
-
-    const handleCardSelected = (item: ProjectData) => {
-        setOpenedCard(true);
-        setSelectedProject(item);
-    }
- 
-
-    const RenderProjectItems = (): ReactElement[] => {
+    const [isEnabled, setIsEnabled] = useState(false);
+    const [renderedProjectItems, setRenderedProjectItems] = useState<ReactElement[]>();
+    const RenderProjectItems = (setAnimeImg: boolean): ReactElement[] => {
         const rows: ReactElement[] = [];
-        
+
         for (let i = 0; i < projectDataList.length; i++) {
-           rows.push(
-                <ProjectContentItem key={i} item={projectDataList[i]} onCardSelected={handleCardSelected} />
-            )
+            rows.push(
+                <ProjectContentItem key={i} item={projectDataList[i]} setAnimeImg={setAnimeImg} />
+            );
         }
         return rows;
     };
 
-    return(
-        <Fragment>
+    const handleOnSwitchChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const newState = e.target.checked;
+        setIsEnabled(newState);
+    };
 
-                <div className="projects_content">
-                {openedCard && (<ProjectPopup  setOpenedCard={setOpenedCard} selectedProject={selectedProject} />)}
-                <div
-                    className={`projects_content_items ${openedCard ? "disabled" : ""}`}>
-                    {RenderProjectItems()}
-                </div>
-            </div>
-    
-        </Fragment>
-    )
+    useEffect(() => setRenderedProjectItems(RenderProjectItems(isEnabled)), [isEnabled]);
+    useEffect(() => setRenderedProjectItems(RenderProjectItems(isEnabled)), []);
+
+    return (
+        <>
+            <ProjectContainer>
+                <Form.Check // prettier-ignore
+                    type="switch"
+                    id="custom-switch"
+                    label={isEnabled ? "lololol.....q(≧▽≦q)" : "Click me....o(TヘTo)"}
+                    checked={isEnabled}
+                    onChange={handleOnSwitchChanged}
+                />
+                <ItemContainer>{renderedProjectItems}</ItemContainer>
+            </ProjectContainer>
+        </>
+    );
 }
 
 export default ProjectContent;
