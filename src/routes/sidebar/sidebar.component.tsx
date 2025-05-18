@@ -1,4 +1,4 @@
-import { Fragment, ReactElement } from "react";
+import { ReactElement } from "react";
 import { PiFolderStarFill } from "react-icons/pi";
 import { Directory } from "../../class/directory_class.ts";
 import { File } from "../../class/file.ts";
@@ -41,22 +41,20 @@ function Sidebar(): ReactElement {
     const directories: Directory[] = [features_directory, work_directory, project_directory];
 
     return (
-        <Fragment>
-            <SidebarContainer gap={1}>
-                <Header>&emsp; EXPLORER</Header>
-                <Content>
-                    <RepoName>&#x23F7; PORTFOLIO-PANGALAWA</RepoName>
-                    {directories.map((directory, index) => (
-                        <DirectoryComponent
-                            directory={directory}
-                            key={index}
-                            icon={<PiFolderStarFill size={15} />}
-                            defaultState={index === 0}
-                        />
-                    ))}
-                </Content>
-            </SidebarContainer>
-        </Fragment>
+        <SidebarContainer gap={1}>
+            <Header>&emsp; EXPLORER</Header>
+            <Content>
+                <RepoName>&#x23F7; PORTFOLIO-PANGALAWA</RepoName>
+                {directories.map((directory, index) => (
+                    <DirectoryComponent
+                        directory={directory}
+                        key={index}
+                        icon={<PiFolderStarFill size={15} />}
+                        defaultState={index === 0}
+                    />
+                ))}
+            </Content>
+        </SidebarContainer>
     );
 }
 

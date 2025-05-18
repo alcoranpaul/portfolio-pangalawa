@@ -12,6 +12,47 @@ export const SidebarContainer = styled(Stack)`
     font-size: 0.8rem;
     cursor: default;
     user-select: none;
+    overflow-x: auto;
+    overflow-y: auto;
+    white-space: nowrap;
+
+    /* Vertical scrollbar (your existing styles) */
+    &::-webkit-scrollbar {
+        width: 3px; /* Affects VERTICAL scrollbar width */
+        height: 5px; /* Hides HORIZONTAL scrollbar by default */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--color-scrollbar-bg);
+        border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--color-scrollbar-active);
+        border-radius: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: var(--color-scrollbar-hover);
+    }
+
+    /* Horizontal scrollbar (new styles) */
+    &::-webkit-scrollbar:horizontal {
+        height: 5px; /* Horizontal scrollbar height */
+    }
+
+    &::-webkit-scrollbar-thumb:horizontal {
+        background: var(--color-scrollbar-active);
+        border-radius: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb:horizontal:hover {
+        background: var(--color-scrollbar-hover);
+    }
+
+    &::-webkit-scrollbar-corner {
+        background: transparent; /* Makes it invisible */
+    }
 `;
 
 export const Header = styled.div`
