@@ -1,6 +1,6 @@
 import { ReactElement, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ProjectData } from "../project_class";
+import { ProjectData } from "../../../../class/project_class";
 import { ContentItem, ImageContainer, ItemName } from "./project_content_item.styles";
 
 async function getRandomAnimeImage() {
@@ -14,7 +14,13 @@ async function getRandomAnimeImage() {
     }
 }
 
-function ProjectContentItem({ item }: { item: ProjectData }): ReactElement {
+function ProjectContentItem({
+    item,
+    setAnimeImg,
+}: {
+    item: ProjectData;
+    setAnimeImg: boolean; // Now correctly typed as boolean
+}): ReactElement {
     const [imageUrl, setImageUrl] = useState<string>("src/assets/loading.webp"); // Default image URL
     const itemRef = useRef<HTMLDivElement>(null);
     const navigate = useNavigate();
@@ -45,7 +51,7 @@ function ProjectContentItem({ item }: { item: ProjectData }): ReactElement {
     };
 
     useEffect(() => {
-        getRandomAnimeImage().then((url) => setImageUrl(url));
+        if (setAnimeImg) getRandomAnimeImage().then((url) => setImageUrl(url));
     }, []);
 
     return (
@@ -57,14 +63,18 @@ function ProjectContentItem({ item }: { item: ProjectData }): ReactElement {
             onClick={handleClick}
         >
             <ImageContainer>
-                <img
-                    src={imageUrl}
-                    alt={item.name}
-                    onError={(e) => {
-                        (e.target as HTMLImageElement).src =
-                            "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
-                    }}
-                />
+                {setAnimeImg ? (
+                    <img
+                        src={imageUrl}
+                        alt={item.name}
+                        onError={(e) => {
+                            (e.target as HTMLImageElement).src =
+                                "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+                        }}
+                    />
+                ) : (
+                    <div>N/A</div>
+                )}
             </ImageContainer>
             <ItemName>{item.name}</ItemName>
         </ContentItem>

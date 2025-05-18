@@ -4,26 +4,11 @@ export const ProjectContainer = styled.div`
     position: relative; /* Position relative to the parent container */
     background-color: var(--color-bg-secondary);
     width: 100%;
-    max-height: 80vh; /* Ensure it doesn't exceed the parent's height */
-    overflow: hidden;
+
     border-radius: 10px;
-`;
-
-export const ItemContainer = styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 10px;
-    padding: 10px 10px 10px 20px;
-    overflow-y: auto;
     overflow-x: hidden;
+    overflow-y: auto;
     scroll-behavior: smooth;
-    width: 100%;
-    max-height: 80vh;
-
-    .disabled {
-        pointer-events: none; /* Disable pointer events when the class is applied */
-        opacity: 0.5; /* Make it semi-transparent to indicate it's disabled */
-    }
 
     &::-webkit-scrollbar {
         width: 5px; /* Width of the vertical scrollbar */
@@ -43,5 +28,18 @@ export const ItemContainer = styled.div`
         background: var(
             --color-highlight
         ); /* Darker color when hovering over the scrollbar thumb */
+    }
+`;
+
+export const ItemContainer = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    padding: 20px 10px 20px 20px;
+    width: 100%;
+
+    .disabled {
+        pointer-events: none; /* Disable pointer events when the class is applied */
+        opacity: 0.5; /* Make it semi-transparent to indicate it's disabled */
     }
 `;
