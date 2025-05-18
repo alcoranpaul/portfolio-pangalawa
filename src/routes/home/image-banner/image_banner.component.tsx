@@ -20,7 +20,7 @@ function ImageBanner(): ReactElement {
                 <div className="profile_image">
                     <ImageContainer>
                         <img
-                            src="@/assets/Sonia_Nevermind_Halfbody_Sprite_29.webp"
+                            src="/assets/Sonia_Nevermind_Halfbody_Sprite_29.webp"
                             alt="Profile"
                             className="profile"
                         />
