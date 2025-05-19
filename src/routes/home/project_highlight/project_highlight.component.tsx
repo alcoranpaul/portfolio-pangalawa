@@ -23,13 +23,28 @@ export default function ProjectHighlights(): ReactElement {
             {randomProjects.map((project, index) => (
                 <Carousel.Item key={index}>
                     {/* Assuming each project object has an 'image', 'title', and 'description' property */}
-                    <img
-                        src={"data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="}
-                        alt={project.name}
-                    />
-                    <Carousel.Caption>
-                        <h3>{project.name}</h3>
-                        <p>{project.getShortDescription()}</p>
+                    {project.image !== "" ? (
+                        <img
+                            src={project.image}
+                            alt={project.name}
+                            style={{ height: "500px", objectFit: "contain", borderRadius: "50px" }}
+                        />
+                    ) : (
+                        <img
+                            src={"data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="}
+                            alt={project.name}
+                            style={{ height: "500px", objectFit: "contain", borderRadius: "50px" }}
+                        />
+                    )}
+                    <Carousel.Caption
+                        style={{
+                            backgroundColor: "rgba(0, 0, 0, 0.6)",
+                            borderRadius: "10px",
+                            padding: "1rem",
+                        }}
+                    >
+                        <h3 className="text-light fw-bold">{project.name}</h3>
+                        <p className="text-light fst-italic">{project.getShortDescription()}</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             ))}

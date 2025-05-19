@@ -1,7 +1,7 @@
 [
     {
         "name": "Portfolio Version 1",
-        "image": "",
+        "image": "assets/projects/portfolio_1.png",
         "description": "Portfolio Version 1 is my first personal portfolio website created using React. This single-page application demonstrates my frontend development skills with a responsive layout that works across devices. The project includes sections for showcasing my work, an about me page, and contact information. Built with modern React practices, it features component-based architecture and efficient state management. Deployed via GitHub Pages, this portfolio served as my initial online presence to display my growing skills as a developer.",
         "short_description": "A responsive personal portfolio website built with React, showcasing my projects and skills. Features clean design, easy navigation, and GitHub deployment.",
         "markdown": "json/projects/project/portfolio_version_1.md",
@@ -13,7 +13,7 @@
     },
     {
         "name": "Level up Tracker",
-        "image": "",
+        "image": "assets/projects/level_up_tracker.png",
         "description": "Level Up Tracker is a gamified productivity application that monitors active PC usage, analyzing time spent on applications to help users optimize efficiency. Built with a Python backend for data tracking and processing and a Unity frontend for an interactive experience, it transforms productivity into a reward-based system—offering insights, goal-setting, and progress visualization. Inspired by task managers, it encourages focused work by identifying distractions and providing actionable feedback, with future plans for achievements, alerts, and advanced analytics.",
         "short_description": "A gamified productivity tracker that monitors PC application usage, analyzes time spent, and helps users optimize efficiency—built with Python (backend) and Unity (frontend).",
         "markdown": "json/projects/project/level_up_tracker.md",
@@ -22,9 +22,20 @@
         "source_link": "",
         "live_link": ""
     },
+{
+    "name": "Christmas Horror Game",
+    "image": "assets/projects/christmas_horror.png",
+    "description": "Christmas Horror Game is a suspenseful indie horror experience inspired by the 'Granny' game. Set in a cozy yet eerie home during the holidays, players take on the role of a child left alone to complete chores while their grandparents are out shopping. As the child explores the decorated house, strange and unsettling events begin to unfold—twisting the festive atmosphere into something darker. Built using the Flax engine, the game blends atmospheric horror with puzzle-solving, environmental storytelling, and escalating tension as the night progresses. It's a unique take on psychological horror with a seasonal twist.",
+    "short_description": "A chilling Christmas-themed horror game built in Flax Engine where a child, left alone to do chores, uncovers dark secrets in a seemingly festive house.",
+    "markdown": "json/projects/project/christmas_horror_game.md",
+    "tech_stack": "Flax Engine | C#",
+    "startDate": "2024-12-12T00:00:00.000Z",
+    "source_link": "",
+    "live_link": ""
+},
     {
         "name": "Miguel’s Birthday",
-        "image": "",
+        "image": "assets/projects/miguel.png",
         "description": "In a quiet home in Manila, a cheerful birthday party turns into a surreal nightmare. You play as both Miguel, a sensitive 4-year-old boy, and his hardworking mother preparing for the big day. What starts as innocent fun quickly unravels as Miguel begins to see disturbing visions tied to the hired clown—who may be more than he appears.",
         "short_description": "A surreal narrative horror set during a child’s birthday in Manila, where you play as both a mother and her son—unraveling a chilling mystery around a sinister clown, blurring the line between fear and reality.",
         "markdown": "json/projects/project/miguels_birthday.md",
@@ -35,7 +46,7 @@
     },
     {
         "name": "DunGen",
-        "image": "",
+        "image": "assets/projects/dungen.png",
         "description": "DunGen is a procedural dungeon generator built for Flax Engine, leveraging grid-based placement, A pathfinding**, and Delaunay triangulation (Bowyer-Watson algorithm) to dynamically create interconnected dungeons. Inspired by vazgriz’s procedural generation techniques, it combines Prim’s algorithm for minimal spanning trees with modular asset placement, ensuring logically navigable layouts. The system supports custom rules for room spawning, corridor generation, and debugging (using ToadNet’s assets), offering a flexible foundation for game developers. Designed for extensibility, it integrates third-party tools while maintaining clean C# architecture.",
         "short_description": "A procedural dungeon generator for Flax Engine (C#) using grid systems, A pathfinding, and Delaunay triangulation to create modular, navigable layouts.",
         "markdown": "json/projects/project/dungeon_generator.md",
@@ -47,7 +58,7 @@
     },
     {
         "name": "Grid system",
-        "image": "",
+        "image": "assets/projects/grid_system.png",
         "description": "Grid System is a versatile C# library designed for game development, providing essential tools for tile-based worlds, including grid management, A pathfinding, and coordinate transformations (world-to-grid and vice versa). Built for modularity, it supports customizable cell sizes, obstacle tagging, and dynamic grid resizing, making it ideal for strategy games, roguelikes, or procedural generation projects. The clean API and documented code (available on GitHub) allow seamless integration with engines like Unity or Flax, while performance optimizations ensure efficiency for large-scale maps.",
         "short_description": "A flexible grid system library for game development in C#, featuring pathfinding, coordinate conversions, and tile-based operations.",
         "markdown": "json/projects/project/grid_system.md",
@@ -59,7 +70,7 @@
     },
     {
         "name": "Face-Recog",
-        "image": "",
+        "image": "assets/projects/facerecog.png",
         "description": "Face-Recog is a full-stack facial recognition application that leverages the Clarifai API to detect faces in images. The frontend is built with React and Tachyons CSS for a responsive interface, while the backend uses Node.js with Express.js and PostgreSQL for secure user authentication and data storage. The system features clean, modular code architecture and demonstrates seamless integration of external APIs with custom user management.",
         "short_description": "Face recognition web app built with React and Node.js, featuring Clarifai API integration, user authentication, and PostgreSQL database.",
         "markdown": "json/projects/project/face_recog.md",
@@ -71,7 +82,7 @@
     },
     {
         "name": "Crwn-clothing",
-        "image": "",
+        "image": "assets/projects/cwrn-clothing.png",
         "description": "Crwn-clothing is a modern e-commerce platform for fashion retail, built with React, Redux, and Firebase. The app features user authentication, a shopping cart system, and integrated Stripe API for secure payments. With styled-components for UI design and Redux for state management, it offers a seamless shopping experience. The project demonstrates full-stack capabilities with Firebase handling backend services (database, auth, and cloud functions) while deployed live on Netlify as a production-ready PWA (Progressive Web App).",
         "short_description": "A full-stack e-commerce clothing store built with React, featuring Stripe payments, Firebase authentication, and Redux state management.",
         "markdown": "json/projects/project/crwn_clothing.md",
@@ -167,7 +178,7 @@
     },
     {
         "name": "Khai Creates E-Commerce",
-        "image": "assets/projects/khai_creates_banner.jpg",
+        "image": "assets/projects/khai_creates_banner.png",
         "description": "Khai-Creates is a fully customized e-commerce platform designed specifically for a crochet business to enhance product visibility and streamline online orders. Built with React and TypeScript, the website delivers a responsive and user-friendly interface optimized for both desktop and mobile devices. It integrates Google Sheets as a lightweight CMS, empowering the client to manage inventory without technical expertise. Product images are dynamically loaded from Google Drive, reducing hosting costs and simplifying content updates. Serverless functions deployed on Netlify securely handle product data and order processing, providing scalable backend services without infrastructure overhead. Additional features include custom product filtering, category sorting, search functionality, a bespoke ordering system, and real-time customer support via embedded live chat. The project emphasizes performance optimization and SEO best practices to ensure fast loading times and improved search engine visibility. Client collaboration and training were integral parts of the development process, enabling independent content management post-launch.",
         "short_description": "Khai-Creates is a custom e-commerce website tailored for a crochet business, featuring a responsive React and TypeScript frontend, seamless Google Sheets-powered inventory management, dynamic Google Drive image integration, and scalable Netlify serverless backend functions.",
         "markdown": "json/projects/project/khai_creates.md",
@@ -179,7 +190,7 @@
     },
     {
         "name": "Text To Brainrot",
-        "image": "",
+        "image": "assets/projects/text-to-brainrot.png",
         "description": "A satirical text transformation tool that converts normal text into exaggerated 'brainrot' internet slang, built with Python. The program systematically replaces standard vocabulary with terminally online phrases, meme references, and absurdist humor patterns, demonstrating NLP techniques through playful linguistic degradation.",
         "short_description": "Python text converter that mutates normal writing into absurd internet slang",
         "markdown": "json/projects/project/text_to_brainrot.md",
@@ -191,7 +202,7 @@
     },
     {
         "name": "Bible Chronicles",
-        "image": "",
+        "image": "assets/projects/b_chronicles.png",
         "description": "A C# console application that gamifies Bible reading through interactive challenges, achievement tracking, and progress systems. The app transforms scripture study into an engaging experience with daily reading goals, quiz elements, and unlockable content, all implemented with clean object-oriented architecture.",
         "short_description": "C# console game that makes Bible reading interactive through gamification",
         "markdown": "json/projects/project/bible_chronicles.md",
