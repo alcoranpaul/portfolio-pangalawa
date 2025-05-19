@@ -5,7 +5,7 @@ import DetailsComponent, {
 } from "../../components/details_component/details.component";
 
 export default function About(): ReactElement {
-    const aboutPath = "src/json/about/about.md";
+    const aboutPath = "json/about/about.md";
 
     const [detailsComponentProps, setDetailsComponentProps] = useState<DetailsComponentProps>({
         data: null,
