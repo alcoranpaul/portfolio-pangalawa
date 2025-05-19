@@ -22,6 +22,9 @@ export default function DetailsComponent({
     const [error, setError] = useState(false);
 
     useEffect(() => {
+        setMarkdownContent(null); // Reset previous content
+        setError(false); // Reset previous error state
+
         fetch(detailProps.markdownContent)
             .then((res) => {
                 if (!res.ok) throw new Error("File not found");
@@ -30,6 +33,7 @@ export default function DetailsComponent({
             .then(setMarkdownContent)
             .catch(() => setError(true));
     }, [detailProps.markdownContent]);
+
     return (
         <DetailsContainer direction="horizontal" gap={2}>
             <TableOfContent headings={detailProps.headings} />
