@@ -23,9 +23,7 @@ function ProfileSection(): ReactElement {
             <ProjectContainer gap={3}>
                 <Profile>
                     <ProfilePicture
-                        src={`${
-                            import.meta.env.BASE_URL
-                        }assets/Sonia_Nevermind_Halfbody_Sprite_29.webp`}
+                        src={`${import.meta.env.BASE_URL}images/pfp.jpg`}
                         alt="Profile"
                     />
                 </Profile>

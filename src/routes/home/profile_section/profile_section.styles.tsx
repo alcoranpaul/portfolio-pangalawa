@@ -28,8 +28,6 @@ export const ProfilePicture = styled.img`
     height: 100%;
     object-fit: cover; /* Changed from 'contain' to prevent whitespace */
     object-position: center 30%; /* Focus on upper portion */
-    transform: scale(1.2);
-    transform-origin: center;
 `;
 
 export const ProfileDescription = styled(Stack)`
