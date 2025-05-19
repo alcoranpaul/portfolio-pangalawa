@@ -48,15 +48,17 @@ function ProfileSection(): ReactElement {
                 <HorizontalLine />
 
                 <Stack direction="vertical">
-                    <HighlightTitle>Quick Links</HighlightTitle>
+                    <HighlightTitle>Highlights</HighlightTitle>
                     <HighlightContainer>
-                        <HighlightItem>7+ game jam projects published on itch.io</HighlightItem>
                         <HighlightItem>
                             Full-stack development experience (MERN stack)
                         </HighlightItem>
-                        <HighlightItem>Unity/Unreal Engine gameplay programmer</HighlightItem>
                         <HighlightItem>
                             Government tech internship experience (Agriculture Canada)
+                        </HighlightItem>
+                        <HighlightItem>7+ game jam projects published on itch.io</HighlightItem>
+                        <HighlightItem>
+                            Unity/Unreal Engine/Flax Engine gameplay programmer
                         </HighlightItem>
                         <HighlightItem>Procedural generation (dungeons/cities)</HighlightItem>
                     </HighlightContainer>
