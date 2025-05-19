@@ -102,5 +102,6 @@ function formatDateUTC(date: Date | string) {
     ];
     const month = d.getUTCMonth();
     const year = d.getUTCFullYear();
-    return `${monthNames[month]} ${year}`;
+    const day = d.getUTCDate();
+    return `${monthNames[month]} ${day} ${year}`;
 }

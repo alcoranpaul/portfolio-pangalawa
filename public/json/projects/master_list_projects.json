@@ -43,7 +43,7 @@
         "startDate": "2024-10-15T00:00:00.000Z",
         "source_link": "https://github.com/alcoranpaul/DunGen",
         "live_link": "",
-        "endDate": "2024-11-1T00:00:00.000Z"
+        "endDate": "2024-11-01T00:00:00.000Z"
     },
     {
         "name": "Grid system",
@@ -55,7 +55,7 @@
         "startDate": "2024-10-30T00:00:00.000Z",
         "source_link": "https://github.com/alcoranpaul/GridSystem",
         "live_link": "",
-        "endDate": "2024-12-2T00:00:00.000Z"
+        "endDate": "2024-12-02T00:00:00.000Z"
     },
     {
         "name": "Face-Recog",
@@ -76,7 +76,7 @@
         "short_description": "A full-stack e-commerce clothing store built with React, featuring Stripe payments, Firebase authentication, and Redux state management.",
         "markdown": "json/projects/project/crwn_clothing.md",
         "tech_stack": "React | Redux | Firebase | Stripe API | styled-components | Progressive Web App (PWA) | Netlify",
-        "startDate": "2023-05-2T00:00:00.000Z",
+        "startDate": "2023-05-02T00:00:00.000Z",
         "source_link": "https://github.com/alcoranpaul/crwn-clothing",
         "live_link": "https://crwn-clothingapp.netlify.app",
         "endDate": "2023-05-29T00:00:00.000Z"
@@ -115,7 +115,7 @@
         "startDate": "2024-01-05T00:00:00.000Z",
         "source_link": "",
         "live_link": "https://ihoist.itch.io/elemental-conquest",
-        "endDate": "2024-02-5T00:00:00.000Z"
+        "endDate": "2024-02-05T00:00:00.000Z"
     },
     {
         "name": "Illuminagent",
@@ -148,7 +148,7 @@
         "short_description": "Unreal Engine physics-based bird simulator",
         "markdown": "json/projects/project/feathered_fiasco.md",
         "tech_stack": "Unreal Engine | Blueprints | Physics Simulation",
-        "startDate": "2024-01-2T00:00:00.000Z",
+        "startDate": "2024-01-02T00:00:00.000Z",
         "source_link": "",
         "live_link": "https://calveingames.itch.io/feathered-fiasco",
         "endDate": "2024-01-08T00:00:00.000Z"
@@ -172,10 +172,10 @@
         "short_description": "Khai-Creates is a custom e-commerce website tailored for a crochet business, featuring a responsive React and TypeScript frontend, seamless Google Sheets-powered inventory management, dynamic Google Drive image integration, and scalable Netlify serverless backend functions.",
         "markdown": "json/projects/project/khai_creates.md",
         "tech_stack": "React || TypeScript || Vite || Netlify || Google Drive/Sheets API || Serverless Functions",
-        "startDate": "2025-04-01T00:00:00.000Z",
+        "startDate": "2025-04-17T00:00:00.000Z",
         "source_link": "",
         "live_link": "https://khaicreates.netlify.app",
-        "endDate": "2025-04-01T00:00:00.000Z"
+        "endDate": "2025-05-14T00:00:00.000Z"
     },
     {
         "name": "Text To Brainrot",
