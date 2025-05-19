@@ -40,7 +40,7 @@ function Layout(): ReactElement {
                     <Stack>
                         <div className="tab_section"></div>
                         <div className="main_section">
-                            <div className="source_pagnation">{"src > App.tsx"}</div>
+                            {/* <div className="source_pagnation">{"src > App.tsx"}</div> */}
                             <div className="main_content">
                                 <Outlet />
                             </div>
