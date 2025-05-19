@@ -1,5 +1,6 @@
 import { Fragment, ReactElement } from "react";
 import { Stack } from "react-bootstrap";
+import { navigationItems } from "../../../class/navigations";
 import NavigationItem from "./navigation_item/navigation_item.component";
 
 /**
@@ -13,16 +14,6 @@ import NavigationItem from "./navigation_item/navigation_item.component";
  * @returns {ReactElement} A React fragment containing a stack of navigation items.
  */
 function Navigation(): ReactElement {
-    const navigationItems = [
-        ["Home", ""],
-        ["Projects", "projects"],
-        ["Work", "work"],
-        ["Skills", "skills"],
-        ["Education", "education"],
-        ["Contact", "contact"],
-        ["About", "about"],
-    ];
-
     const renderNavigationItems = (): ReactElement[] => {
         const elements: ReactElement[] = [];
         for (let i = 0; i < navigationItems.length; i++) {

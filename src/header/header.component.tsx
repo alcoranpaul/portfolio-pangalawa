@@ -9,6 +9,8 @@ import {
 } from "react-icons/fa";
 import { SiMyanimelist, SiRiotgames } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
+import { Link } from "react-router-dom";
+import { navigationItems } from "../class/navigations";
 import {
     HeaderContainer,
     HeaderIcon,
@@ -27,13 +29,11 @@ function Header(): ReactElement {
                     <HeaderIcon>
                         <FaRegUserCircle size={15} />
                     </HeaderIcon>
-                    <div>Home</div>
-                    <div>Projects</div>
-                    <div>Work</div>
-                    <div>Skills</div>
-                    <div>Education</div>
-                    <div>Contact</div>
-                    <div>About</div>
+                    {navigationItems.map((item, index) => (
+                        <Link to={`${item[1].toLowerCase()}`} key={index}>
+                            {item[0]}
+                        </Link>
+                    ))}
                 </HeaderLeftContainer>
 
                 <HeaderRightContainer direction="horizontal" gap={2}>
