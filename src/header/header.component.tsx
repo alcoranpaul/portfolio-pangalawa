@@ -15,6 +15,7 @@ import {
     HeaderContainer,
     HeaderIcon,
     HeaderLeftContainer,
+    HeaderProfile,
     HeaderRightContainer,
 } from "./header.styles";
 
@@ -26,10 +27,10 @@ function Header(): ReactElement {
                     <div>
                         <VscVscode size={20} style={{ color: "var(--color-link)" }} />
                     </div>
-                    <HeaderIcon>
+                    <HeaderProfile to={""}>
                         <FaRegUserCircle size={15} />
-                    </HeaderIcon>
-                    {navigationItems.map((item, index) => (
+                    </HeaderProfile>
+                    {navigationItems.slice(1).map((item, index) => (
                         <Link to={`${item[1].toLowerCase()}`} key={index}>
                             {item[0]}
                         </Link>

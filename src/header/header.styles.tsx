@@ -1,4 +1,5 @@
 import { Stack } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const HeaderContainer = styled(Stack)`
@@ -18,6 +19,14 @@ export const HeaderLeftContainer = styled(Stack)`
 `;
 export const HeaderRightContainer = styled(Stack)`
     text-align: right;
+`;
+
+export const HeaderProfile = styled(Link)`
+    width: 21px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    padding: 3px;
 `;
 
 export const HeaderIcon = styled.div`
