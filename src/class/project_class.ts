@@ -35,6 +35,10 @@ export class ProjectData {
         this.live_link = live_link;
     }
 
+    getShortDescription(): string {
+        return this.short_description !== "" ? this.short_description : this.description;
+    }
+
     isImageALink(): boolean {
         return (
             this.image.startsWith("http://") ||

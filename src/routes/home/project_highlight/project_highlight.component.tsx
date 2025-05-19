@@ -29,7 +29,7 @@ export default function ProjectHighlights(): ReactElement {
                     />
                     <Carousel.Caption>
                         <h3>{project.name}</h3>
-                        <p>{project.description}</p>
+                        <p>{project.getShortDescription()}</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             ))}
