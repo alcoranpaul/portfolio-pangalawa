@@ -19,3 +19,17 @@ export const Icon = styled.div`
         transform: scale(1.1); /* Scale up the icon on hover */
     }
 `;
+export const SocialIcon = styled.div<{ brandColor: string }>`
+    color: var(--color-fg-secondary);
+
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 5px 15px 5px 25px;
+    height: fit-content;
+    &:hover {
+        color: ${(props) => props.brandColor};
+
+        transform: scale(1.1); /* Scale up the icon on hover */
+    }
+`;
