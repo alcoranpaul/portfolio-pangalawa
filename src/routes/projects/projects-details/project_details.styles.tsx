@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
-    font-size: 2rem;
+    font-size: 1%.5;
 `;
 
 export const TechStack = styled.div`
@@ -10,6 +10,29 @@ export const TechStack = styled.div`
 
 export const Dates = styled.div`
     font-size: 0.9rem;
+`;
+
+export const HeaderContainer = styled.div<{ imgUrl: string }>`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    background-image: url(${(props) => props.imgUrl});
+    background-size: cover;
+    background-position: center;
+`;
+
+export const HeaderCover = styled.div`
+    background-color: #0000009d;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    padding: 10px;
 `;
 
 export const ButtonContainer = styled.div`
@@ -25,6 +48,7 @@ export const ButtonContainer = styled.div`
         border: none;
         border-radius: 8px;
         font-weight: 760;
+        font-size: 0.9rem;
         background-color: var(--color-button-bg);
         color: #ffffff;
         cursor: pointer;

@@ -6,7 +6,14 @@ import { getProjectData, ProjectData } from "../../../class/project_class";
 import DetailsComponent, {
     DetailsComponentProps,
 } from "../../../components/details_component/details.component";
-import { ButtonContainer, Dates, TechStack, Title } from "./project_details.styles";
+import {
+    ButtonContainer,
+    Dates,
+    HeaderContainer,
+    HeaderCover,
+    TechStack,
+    Title,
+} from "./project_details.styles";
 
 export default function ProjectDetails(): ReactElement {
     const { name } = useParams();
@@ -33,37 +40,41 @@ export default function ProjectDetails(): ReactElement {
                         headings: headings,
                         idMap: idMap,
                         headerContent: (
-                            <>
-                                <Title>{projectData.name}</Title>
-                                <Dates>
-                                    {formatDateUTC(projectData.startDate)} -{" "}
-                                    {projectData.endDate ? formatDateUTC(projectData.endDate) : ""}
-                                </Dates>
-                                <TechStack>{projectData.tech_stack}</TechStack>
-                                <ButtonContainer>
-                                    <button
-                                        disabled={!projectData.live_link}
-                                        onClick={() => {
-                                            if (projectData.live_link) {
-                                                window.open(projectData.live_link, "_blank"); // open external URL in new tab
-                                            }
-                                        }}
-                                    >
-                                        Live
-                                    </button>
+                            <HeaderContainer imgUrl={projectData.image}>
+                                <HeaderCover>
+                                    <Title>{projectData.name}</Title>
+                                    <Dates>
+                                        {formatDateUTC(projectData.startDate)} -{" "}
+                                        {projectData.endDate
+                                            ? formatDateUTC(projectData.endDate)
+                                            : ""}
+                                    </Dates>
+                                    <TechStack>{projectData.tech_stack}</TechStack>
+                                    <ButtonContainer>
+                                        <button
+                                            disabled={!projectData.live_link}
+                                            onClick={() => {
+                                                if (projectData.live_link) {
+                                                    window.open(projectData.live_link, "_blank"); // open external URL in new tab
+                                                }
+                                            }}
+                                        >
+                                            Live
+                                        </button>
 
-                                    <button
-                                        disabled={!projectData.source_link}
-                                        onClick={() => {
-                                            if (projectData.source_link) {
-                                                window.open(projectData.source_link, "_blank"); // open external URL in new tab
-                                            }
-                                        }}
-                                    >
-                                        Source Code
-                                    </button>
-                                </ButtonContainer>
-                            </>
+                                        <button
+                                            disabled={!projectData.source_link}
+                                            onClick={() => {
+                                                if (projectData.source_link) {
+                                                    window.open(projectData.source_link, "_blank"); // open external URL in new tab
+                                                }
+                                            }}
+                                        >
+                                            Source Code
+                                        </button>
+                                    </ButtonContainer>
+                                </HeaderCover>
+                            </HeaderContainer>
                         ), // or your actual ReactElement
                     });
                 })
