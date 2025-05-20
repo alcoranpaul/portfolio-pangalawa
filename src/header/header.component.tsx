@@ -1,19 +1,19 @@
 import { Fragment, ReactElement } from "react";
+import { FaRegUserCircle } from "react-icons/fa";
 import {
-    FaDiscord,
-    FaGithub,
-    FaItchIo,
-    FaLinkedinIn,
-    FaRegUserCircle,
-    FaSteam,
-} from "react-icons/fa";
-import { SiMyanimelist, SiRiotgames } from "react-icons/si";
-import { VscVscode } from "react-icons/vsc";
+    VscChip,
+    VscChromeMaximize,
+    VscChromeMinimize,
+    VscLayout,
+    VscLayoutPanel,
+    VscLayoutSidebarLeft,
+    VscLayoutSidebarLeftOff,
+    VscVscode,
+} from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { navigationItems } from "../class/navigations";
 import {
     HeaderContainer,
-    HeaderIcon,
     HeaderLeftContainer,
     HeaderProfile,
     HeaderRightContainer,
@@ -38,27 +38,13 @@ function Header(): ReactElement {
                 </HeaderLeftContainer>
 
                 <HeaderRightContainer direction="horizontal" gap={2}>
-                    <HeaderIcon>
-                        <FaLinkedinIn size={19} />
-                    </HeaderIcon>
-                    <HeaderIcon>
-                        <FaGithub size={20} />
-                    </HeaderIcon>
-                    <HeaderIcon>
-                        <FaItchIo size={20} />
-                    </HeaderIcon>
-                    <HeaderIcon>
-                        <FaSteam size={20} />
-                    </HeaderIcon>
-                    <HeaderIcon>
-                        <FaDiscord size={20}></FaDiscord>
-                    </HeaderIcon>
-                    <HeaderIcon>
-                        <SiRiotgames size={20} />
-                    </HeaderIcon>
-                    <HeaderIcon>
-                        <SiMyanimelist size={20} />
-                    </HeaderIcon>
+                    <VscLayout size={20} />
+                    <VscLayoutSidebarLeft size={20} />
+                    <VscLayoutPanel size={20} />
+                    <VscLayoutSidebarLeftOff size={20} />
+                    <VscChromeMinimize size={20} />
+                    <VscChromeMaximize size={20} />
+                    <VscChip size={20} />
                 </HeaderRightContainer>
             </HeaderContainer>
         </Fragment>
