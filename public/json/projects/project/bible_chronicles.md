@@ -9,15 +9,13 @@
 
 ## ⚙️ Technologies Used
 
-| Category             | Technology                        |
-|----------------------|-----------------------------------|
-| **Language**         | C#                                |
-| **Framework**        | .NET 8                            |
-| **Logging**          | Serilog (console + file)          |
-| **Data Handling**    | Newtonsoft.Json                   |
-| **Auto-Updating**    | GitHub Releases API               |
-| **CI/CD**            | GitHub Actions                    |
-| **Startup Integration (Windows)** | Microsoft.Win32.Registry |
+- **Language:** C#
+- **Framework:** .NET 8
+- **Logging:** Serilog (console + file)
+- **Data Handling:** Newtonsoft.Json
+- **Auto-Updating:** GitHub Releases API
+- **CI/CD:** GitHub Actions (build, test, release automation)
+- **Startup Integration (Windows):** Microsoft.Win32.Registry
 
 ---
 
