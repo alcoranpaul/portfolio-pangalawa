@@ -1,5 +1,3 @@
-Bible Chronicles – ADHD-Friendly Bible Reader Console Application
-
 # Project Overview
 
 Bible Chronicles is a console-based application designed to support consistent Bible reading habits through interactive typing sessions and progress-based unlocks. Developed as a lightweight, cross-platform C# .NET 8 application, it launches on startup and guides users through Scripture in a way that promotes focus and engagement—particularly for individuals with ADHD or short attention spans.
