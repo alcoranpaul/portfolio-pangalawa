@@ -1,156 +1,145 @@
-# Bible Chronicles – ADHD-Friendly Bible Reader Console App
+# Bible Chronicles – ADHD-Friendly Bible Reader Console Application
 
-## 🧾 Project Overview
-**Bible Chronicles** is a personal console-based application designed to help maintain consistent Bible reading habits through interactive typing sessions and progress-based unlocks. Built as a lightweight, cross-platform **C# .NET 8** app, it opens on startup and guides users through Scripture in a way that encourages focus and engagement — especially for those with ADHD or short attention spans.
+## Project Overview
 
-> The app was created out of personal need: being at my computer most of the day, I wanted an always-accessible, distraction-free Bible reader that felt rewarding to use.
+Bible Chronicles is a console-based application designed to support consistent Bible reading habits through interactive typing sessions and progress-based unlocks. Developed as a lightweight, cross-platform C# .NET 8 application, it launches on startup and guides users through Scripture in a way that promotes focus and engagement—particularly for individuals with ADHD or short attention spans.
 
----
-
-## ⚙️ Technologies Used
-
-- **Language:** C#
-- **Framework:** .NET 8
-- **Logging:** Serilog (console + file)
-- **Data Handling:** Newtonsoft.Json
-- **Auto-Updating:** GitHub Releases API
-- **CI/CD:** GitHub Actions (build, test, release automation)
-- **Startup Integration (Windows):** Microsoft.Win32.Registry
+This project was born from a personal need: spending most of the day at the computer, I wanted a distraction-free Bible reader that felt both accessible and rewarding to use.
 
 ---
 
-## 💡 Key Features & Implementation Details
+## Technologies Used
 
-### 💬 Console-Based Interactive Reading
-- Users read and type out Bible passages to "complete" them.
-- Real-time feedback shows accuracy and allows retrying.
-- Gamified mechanics to maintain focus.
-
-> **Why it matters:** Encourages active reading over passive scanning, improving retention and engagement — ideal for ADHD users.
-
----
-
-### 📁 Progress Tracking with JSON
-- Tracks current book/chapter, completed verses, unlockable characters/traits.
-- Persistent data using structured JSON files.
-- Handles different environments: development (`bin/Debug`) vs. release (`bin/Publish`).
-
-> **Why it matters:** Ensures progress isn't lost across updates or environments.
+- Language: C#
+- Framework: .NET 8
+- Logging: Serilog (console and file outputs)
+- Data Handling: Newtonsoft.Json
+- Auto-Updating: GitHub Releases API
+- CI/CD: GitHub Actions
+- Startup Integration (Windows): Microsoft.Win32.Registry
 
 ---
 
-### 🔁 Auto-Updating via GitHub Releases
-- Fetches latest version using GitHub API.
-- Downloads, extracts, and installs updates via PowerShell.
-- Automatically restarts with the updated `.exe`.
+## Key Features and Implementation Details
 
-> **Why it matters:** Seamless updates with no manual intervention.
+### Console-Based Interactive Reading
 
----
+- Users type out Bible passages to complete them.
+- Real-time feedback shows typing accuracy and offers retry functionality.
+- Designed with gamified mechanics to encourage attention and focus.
 
-### 🧰 Startup Integration (Windows Only)
-- Optional toggle to "Run at Startup".
-- Adds/removes app from Windows Registry:
-  `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`
-- Handles permissions and path setup.
-
-> **Why it matters:** Encourages daily use by launching automatically.
+**Purpose:** Reinforces active reading over passive scanning, improving engagement and retention.
 
 ---
 
-### 🌐 Cross-Platform Development
-- Self-contained builds for:
-  - `win-x64`
-  - `linux-x64`
-  - `osx-x64`, `osx-arm64`
+### Progress Tracking with JSON
 
-> **Why it matters:** Enables broader usage and future scalability.
+- Stores current book/chapter, completed verses, and unlockable characters or traits.
+- Utilizes structured JSON files to persist data across sessions.
+- Manages path differences between development and release builds.
 
----
-
-### 🛠 CI/CD Pipeline via GitHub Actions
-- Automated workflows for:
-  - Building and testing
-  - Publishing builds
-  - Changelog generation
-  - Creating GitHub Releases
-
-> **Why it matters:** Reliable, fast, and consistent deployments.
+**Purpose:** Ensures progress is preserved even during updates or environment transitions.
 
 ---
 
-## 🧪 Challenges & Solutions
+### Auto-Updating via GitHub Releases
 
-### ❗ Typing Session UX in Console
+- Queries the GitHub API for the latest version.
+- Downloads update packages and installs them via PowerShell.
+- Automatically restarts the updated executable.
+
+**Purpose:** Maintains application currency without requiring manual updates.
+
+---
+
+### Windows Startup Integration
+
+- Optional feature to enable or disable "Run at Startup."
+- Modifies Windows Registry entries under `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`.
+- Handles permission and path management robustly.
+
+**Purpose:** Facilitates daily use by launching the application automatically.
+
+---
+
+### Cross-Platform Compatibility
+
+- Self-contained builds available for:
+  - Windows (win-x64)
+  - Linux (linux-x64)
+  - macOS (osx-x64, osx-arm64)
+
+**Purpose:** Increases accessibility and future scalability across different platforms.
+
+---
+
+### CI/CD Pipeline with GitHub Actions
+
+- Automates:
+  - Build and test operations
+  - Creation of self-contained builds
+  - Generation of changelogs from commit history
+  - Packaging and publishing of GitHub Releases
+
+**Purpose:** Enables reliable, repeatable deployments with minimal manual intervention.
+
+---
+
+## Challenges and Solutions
+
+### Typing Session UX in Console
+
+**Challenge:** Creating a smooth, engaging typing experience within the constraints of a console application.
+
 **Solution:**
-- Custom typing engine with live comparison
-- Visual feedback (correct/incorrect)
-- Sound effects + success messages
+- Developed a custom typing engine with real-time comparison.
+- Included visual indicators for correct and incorrect inputs.
+- Added auditory feedback and success messages.
 
-✅ **Result:** Engaging console-based experience.
+**Result:** A responsive, immersive typing interaction within a console environment.
 
 ---
 
-### ❗ Managing Save Data Across Environments
+### Managing Save Data Across Environments
+
+**Challenge:** Ensuring persistent and consistent data handling across development and production environments.
+
 **Solution:**
-- Clear JSON structure
-- Separate dev/release path logic
-- Robust file IO
+- Implemented structured JSON formats with clear, consistent keys.
+- Segregated logic for handling dev and release file paths.
+- Used robust file I/O practices.
 
-✅ **Result:** Reliable and persistent data handling.
+**Result:** Reliable and environment-agnostic data storage.
 
 ---
 
-### ❗ SmartScreen Warnings on First Run
+### Cross-Platform Build Pipeline
+
+**Challenge:** Building and packaging the application for multiple operating systems.
+
 **Solution:**
-- Prepared code-signing (future)
-- Added trust instructions
+- Configured the project to target multiple Runtime Identifiers (RIDs).
+- Integrated OS detection into the auto-update script.
 
-✅ **Result:** Built trust foundation for smoother first-run experiences.
-
----
-
-### ❗ Building for Multiple Platforms
-**Solution:**
-- Targeted multiple RIDs via `.csproj`
-- Platform detection in update scripts
-
-✅ **Result:** Fully automated cross-platform publishing.
+**Result:** Fully functional cross-platform build and update system.
 
 ---
 
-## 🔄 Collaboration & Future Plans
+## Outcome and Impact
 
-Though currently a personal tool, **Bible Chronicles** has potential to become a community-driven application.
-
-### 🚀 Planned Improvements
-- GUI version for broader accessibility
-- Mobile companion app
-- Cloud sync for multi-device support
-- Unlock system with story-based progression
-
----
-
-## 📈 Outcome & Impact
-
-✅ Created a personal, ADHD-friendly Bible reader  
-✅ Strengthened C# skills in:
-- Console interactivity
-- File management
-- DevOps practices
-
-✅ Gained experience in:
-- Cross-platform publishing
-- Auto-updating
-- Logging and diagnostics
-
-✅ Integrated CI/CD in a solo project  
-✅ Developed confidence in full-stack app creation
+- Developed a custom Bible reading application tailored to daily workflows
+- Improved core competencies in:
+  - C# console interactivity
+  - File handling and structured data management
+  - CI/CD and release automation
+- Gained practical experience in:
+  - Cross-platform deployment
+  - Auto-update infrastructure
+  - Logging and diagnostics integration
+- Demonstrated ability to design and implement a full-stack application independently
 
 ---
 
-## 🧩 Summary
+## Summary
 
-**Bible Chronicles** is more than just a Bible reader — it's a reflection of personal growth through purpose-driven development.
-
-This project blends **spiritual discipline** with **software craftsmanship** to deliver an engaging, repeatable, and meaningful experience. It proves that even small tools can make a big impact when built with **intention**, **care**, and **user-focused design**.
+Bible Chronicles exemplifies how purpose-driven development can combine personal needs with professional skill-building. By integrating spiritual practice with focused software design, the application delivers a meaningful and repeatable user experience. It stands as a case study in how simple tools, when built with clarity and care, can create substantial value.
