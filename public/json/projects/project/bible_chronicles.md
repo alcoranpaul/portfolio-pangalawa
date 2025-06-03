@@ -1,6 +1,6 @@
-# Bible Chronicles – ADHD-Friendly Bible Reader Console Application
+Bible Chronicles – ADHD-Friendly Bible Reader Console Application
 
-## Project Overview
+# Project Overview
 
 Bible Chronicles is a console-based application designed to support consistent Bible reading habits through interactive typing sessions and progress-based unlocks. Developed as a lightweight, cross-platform C# .NET 8 application, it launches on startup and guides users through Scripture in a way that promotes focus and engagement—particularly for individuals with ADHD or short attention spans.
 
@@ -8,7 +8,7 @@ This project was born from a personal need: spending most of the day at the comp
 
 ---
 
-## Technologies Used
+# Technologies Used
 
 - Language: C#
 - Framework: .NET 8
@@ -20,9 +20,9 @@ This project was born from a personal need: spending most of the day at the comp
 
 ---
 
-## Key Features and Implementation Details
+# Key Features and Implementation Details
 
-### Console-Based Interactive Reading
+## Console-Based Interactive Reading
 
 - Users type out Bible passages to complete them.
 - Real-time feedback shows typing accuracy and offers retry functionality.
@@ -32,7 +32,7 @@ This project was born from a personal need: spending most of the day at the comp
 
 ---
 
-### Progress Tracking with JSON
+## Progress Tracking with JSON
 
 - Stores current book/chapter, completed verses, and unlockable characters or traits.
 - Utilizes structured JSON files to persist data across sessions.
@@ -42,7 +42,7 @@ This project was born from a personal need: spending most of the day at the comp
 
 ---
 
-### Auto-Updating via GitHub Releases
+## Auto-Updating via GitHub Releases
 
 - Queries the GitHub API for the latest version.
 - Downloads update packages and installs them via PowerShell.
@@ -52,7 +52,7 @@ This project was born from a personal need: spending most of the day at the comp
 
 ---
 
-### Windows Startup Integration
+## Windows Startup Integration
 
 - Optional feature to enable or disable "Run at Startup."
 - Modifies Windows Registry entries under `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`.
@@ -62,7 +62,7 @@ This project was born from a personal need: spending most of the day at the comp
 
 ---
 
-### Cross-Platform Compatibility
+## Cross-Platform Compatibility
 
 - Self-contained builds available for:
   - Windows (win-x64)
@@ -73,7 +73,7 @@ This project was born from a personal need: spending most of the day at the comp
 
 ---
 
-### CI/CD Pipeline with GitHub Actions
+## CI/CD Pipeline with GitHub Actions
 
 - Automates:
   - Build and test operations
@@ -85,9 +85,9 @@ This project was born from a personal need: spending most of the day at the comp
 
 ---
 
-## Challenges and Solutions
+# Challenges and Solutions
 
-### Typing Session UX in Console
+## Typing Session UX in Console
 
 **Challenge:** Creating a smooth, engaging typing experience within the constraints of a console application.
 
@@ -100,7 +100,7 @@ This project was born from a personal need: spending most of the day at the comp
 
 ---
 
-### Managing Save Data Across Environments
+## Managing Save Data Across Environments
 
 **Challenge:** Ensuring persistent and consistent data handling across development and production environments.
 
@@ -113,7 +113,7 @@ This project was born from a personal need: spending most of the day at the comp
 
 ---
 
-### Cross-Platform Build Pipeline
+## Cross-Platform Build Pipeline
 
 **Challenge:** Building and packaging the application for multiple operating systems.
 
@@ -125,7 +125,7 @@ This project was born from a personal need: spending most of the day at the comp
 
 ---
 
-## Outcome and Impact
+# Outcome and Impact
 
 - Developed a custom Bible reading application tailored to daily workflows
 - Improved core competencies in:
@@ -140,6 +140,6 @@ This project was born from a personal need: spending most of the day at the comp
 
 ---
 
-## Summary
+# Summary
 
 Bible Chronicles exemplifies how purpose-driven development can combine personal needs with professional skill-building. By integrating spiritual practice with focused software design, the application delivers a meaningful and repeatable user experience. It stands as a case study in how simple tools, when built with clarity and care, can create substantial value.
