@@ -11,6 +11,17 @@ export const DetailsContainer = styled(Stack)`
     overflow: hidden;
 `;
 
+export const ImageContainer = styled.img`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
+`;
+
 export const Header = styled(Stack)`
     display: flex;
     justify-content: center;
