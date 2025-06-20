@@ -1,6 +1,6 @@
 # **Project Overview**
 
-Developed a fully customized Product Tracker system to streamline inventory movement and task tracking within a production environment. The system is actively used by a mid-sized company to manage daily operations, reduce manual errors, and enhance data transparency. Since deployment, the company has estimated a **25–30% increase in workflow efficiency**.
+Developed a fully customized Product Tracker system to streamline inventory movement and task tracking within a production environment. The system is actively used by a reputable financial services company to manage daily operations, reduce manual errors, and enhance data transparency. Since deployment, the company has estimated a **25–30% increase in workflow efficiency**.
 
 # **Technologies Used**
 
@@ -72,7 +72,7 @@ Developed a fully customized Product Tracker system to streamline inventory move
 
 # **Outcome & Impact**
 
-- Actively used by a company to manage and track thousands of product movements per month.  
+- Actively used by a reputable financial services company to manage and track thousands of product movements per month.  
 - Improved production task visibility and accountability across departments.  
 - Reduced manual entry errors by **20%**, directly enhancing product traceability and inventory accuracy.  
 - Enabled seamless team collaboration with reliable, simultaneous access to shared data.  
