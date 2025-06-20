@@ -211,5 +211,17 @@
         "source_link": "https://github.com/alcoranpaul/b_chronicles",
         "live_link": "",
         "endDate": "2025-05-07T00:00:00.000Z"
+    },
+    {
+        "name": "Asset Management Tracker",
+        "image": "assets/projects/asset_tracker_banner.png",
+        "description": "Designed and built a product tracking solution using Excel, Access, and VBA to streamline inventory flow and reduce manual errors. The system supports multi-user access, tracks user actions, and generates real-time reports to enhance operational visibility and accountability.",
+        "short_description": "Developed a custom product tracking system in Excel and Access using VBA, enabling real-time task monitoring, multi-user support, and automated reporting.",
+        "markdown": "json/projects/project/asset_tracker.md",
+        "tech_stack": "MS Access | MS Excel | VBA",
+        "startDate": "2025-06-01T00:00:00.000Z",
+        "source_link": "",
+        "live_link": "",
+        "endDate": "2025-06-19T00:00:00.000Z"
     }
 ]
