@@ -18,8 +18,8 @@ Developed a fully customized Product Tracker system to streamline inventory move
 
 ## Seamless Transition to Multi-User Support
 
-- Migrated the system from Excel to Access to support concurrent access by multiple users without data collisions.  
-- Adopted a **front-end/back-end database split**, enhancing performance and data integrity.
+- Developed separate applications for **Excel (single-user)** and **Access (multi-user)** to accommodate the client’s operational constraints and requirements.  
+- Adopted a **front-end/back-end database split** in Access, enhancing performance and data integrity while supporting simultaneous users.
 
 ## UID-Based Data Logging
 
@@ -55,11 +55,8 @@ Developed a fully customized Product Tracker system to streamline inventory move
 
 # **Challenges & Solutions**
 
-- **Challenge:** Transitioning from a single-user Excel environment to a scalable multi-user platform.  
-  - **Solution:** Leveraged MS Access with a split database design to maintain performance and enable simultaneous user sessions.
-
-- **Challenge:** Preventing data overwrite or conflict in a multi-user environment.  
-  - **Solution:** Implemented lockout logic and robust user validation to control access during critical operations.
+- **Challenge:** Transitioning from a single-user Excel environment to a scalable multi-user platform, despite client restrictions on Access usage in their production environment.  
+  - **Solution:** Developed separate Excel and Access applications, enabling single-user usage with Excel and multi-user support through Access with a split database design.
 
 - **Challenge:** Ensuring ease of use for non-technical users.  
   - **Solution:** Built intuitive forms with clear prompts, tooltips, and automated logging, requiring minimal training.
