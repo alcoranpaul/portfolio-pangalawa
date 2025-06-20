@@ -26,6 +26,7 @@ export default function ProjectDetails(): ReactElement {
         headings: [],
         idMap: {},
         headerContent: <></>, // Empty React fragment as default
+        bannerImage: "",
     });
     useEffect(() => {
         if (projectData?.markdown) {
@@ -76,6 +77,7 @@ export default function ProjectDetails(): ReactElement {
                                 </HeaderCover>
                             </HeaderContainer>
                         ), // or your actual ReactElement
+                        bannerImage: projectData.image,
                     });
                 })
                 .catch((err) => {

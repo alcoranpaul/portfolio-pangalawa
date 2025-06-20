@@ -3,7 +3,13 @@ import ReactMarkdown from "react-markdown";
 import { ProjectData } from "../../class/project_class";
 import { WorkData } from "../../class/work";
 import TableOfContent, { Heading } from "../table_of_content/table_of_content.component";
-import { Content, ContentContainer, DetailsContainer, Header } from "./details.styles";
+import {
+    Content,
+    ContentContainer,
+    DetailsContainer,
+    Header,
+    ImageContainer,
+} from "./details.styles";
 
 export interface DetailsComponentProps {
     data: WorkData | ProjectData | null;
@@ -11,6 +17,7 @@ export interface DetailsComponentProps {
     headings: Heading[];
     idMap: Record<string, string>;
     headerContent: ReactElement;
+    bannerImage: string;
 }
 
 export default function DetailsComponent({
@@ -47,36 +54,49 @@ export default function DetailsComponent({
                             {".·´¯`(>▂<)´¯`·."}{" "}
                         </p>
                     ) : markdownContent ? (
-                        <ReactMarkdown
-                            components={{
-                                h1: ({ node, ...props }) => {
-                                    const text = getHeadingText(props.children);
-                                    return <h1 id={detailProps.idMap[text] || ""} {...props} />;
-                                },
-                                h2: ({ node, ...props }) => {
-                                    const text = getHeadingText(props.children);
-                                    return <h2 id={detailProps.idMap[text] || ""} {...props} />;
-                                },
-                                h3: ({ node, ...props }) => {
-                                    const text = getHeadingText(props.children);
-                                    return <h3 id={detailProps.idMap[text] || ""} {...props} />;
-                                },
-                                h4: ({ node, ...props }) => {
-                                    const text = getHeadingText(props.children);
-                                    return <h4 id={detailProps.idMap[text] || ""} {...props} />;
-                                },
-                                h5: ({ node, ...props }) => {
-                                    const text = getHeadingText(props.children);
-                                    return <h5 id={detailProps.idMap[text] || ""} {...props} />;
-                                },
-                                h6: ({ node, ...props }) => {
-                                    const text = getHeadingText(props.children);
-                                    return <h6 id={detailProps.idMap[text] || ""} {...props} />;
-                                },
-                            }}
-                        >
-                            {detailProps.markdownContent}
-                        </ReactMarkdown>
+                        <>
+                            <ReactMarkdown
+                                components={{
+                                    h1: ({ node, ...props }) => {
+                                        const text = getHeadingText(props.children);
+                                        return <h1 id={detailProps.idMap[text] || ""} {...props} />;
+                                    },
+                                    h2: ({ node, ...props }) => {
+                                        const text = getHeadingText(props.children);
+                                        return <h2 id={detailProps.idMap[text] || ""} {...props} />;
+                                    },
+                                    h3: ({ node, ...props }) => {
+                                        const text = getHeadingText(props.children);
+                                        return <h3 id={detailProps.idMap[text] || ""} {...props} />;
+                                    },
+                                    h4: ({ node, ...props }) => {
+                                        const text = getHeadingText(props.children);
+                                        return <h4 id={detailProps.idMap[text] || ""} {...props} />;
+                                    },
+                                    h5: ({ node, ...props }) => {
+                                        const text = getHeadingText(props.children);
+                                        return <h5 id={detailProps.idMap[text] || ""} {...props} />;
+                                    },
+                                    h6: ({ node, ...props }) => {
+                                        const text = getHeadingText(props.children);
+                                        return <h6 id={detailProps.idMap[text] || ""} {...props} />;
+                                    },
+                                }}
+                            >
+                                {detailProps.markdownContent}
+                            </ReactMarkdown>
+
+                            {detailProps.bannerImage ? (
+                                <>
+                                    <hr />
+                                    <hr />
+                                    <ImageContainer
+                                        src={detailProps.bannerImage}
+                                        alt="Banner Image"
+                                    />
+                                </>
+                            ) : null}
+                        </>
                     ) : (
                         <p>Loading...</p>
                     )}
